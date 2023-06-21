@@ -56,9 +56,9 @@
             this.buttonMCYIncMinus = new System.Windows.Forms.Button();
             this.buttonMCXIncPlus = new System.Windows.Forms.Button();
             this.buttonMCXIncMinus = new System.Windows.Forms.Button();
-            this.textBoxMCYOut = new System.Windows.Forms.TextBox();
+            this.textbox_Distance_Y = new System.Windows.Forms.TextBox();
             this.labelMCY = new System.Windows.Forms.Label();
-            this.textBoxMCXOut = new System.Windows.Forms.TextBox();
+            this.textbox_Distance_X = new System.Windows.Forms.TextBox();
             this.labelMCX = new System.Windows.Forms.Label();
             this.labelMCAbs = new System.Windows.Forms.Label();
             this.labelMCInc = new System.Windows.Forms.Label();
@@ -66,21 +66,21 @@
             this.labelMCSlash = new System.Windows.Forms.Label();
             this.labelMCTitle = new System.Windows.Forms.Label();
             this.panelSS = new System.Windows.Forms.Panel();
-            this.textBoxSSYDec = new System.Windows.Forms.TextBox();
-            this.textBoxSSXDec = new System.Windows.Forms.TextBox();
+            this.textbox_Dec_Y = new System.Windows.Forms.TextBox();
+            this.textbox_Dec_X = new System.Windows.Forms.TextBox();
             this.labelSSDec = new System.Windows.Forms.Label();
-            this.textBoxSSYAcc = new System.Windows.Forms.TextBox();
-            this.textBoxSSXAcc = new System.Windows.Forms.TextBox();
+            this.textbox_Acc_Y = new System.Windows.Forms.TextBox();
+            this.textbox_Acc_X = new System.Windows.Forms.TextBox();
             this.labelSSAcc = new System.Windows.Forms.Label();
-            this.textBoxSSYMax = new System.Windows.Forms.TextBox();
-            this.textBoxSSXMax = new System.Windows.Forms.TextBox();
+            this.textbox_Max_Y = new System.Windows.Forms.TextBox();
+            this.textbox_Max_X = new System.Windows.Forms.TextBox();
             this.labelSSMax = new System.Windows.Forms.Label();
             this.buttonSSYSetup = new System.Windows.Forms.Button();
             this.buttonSSXSetup = new System.Windows.Forms.Button();
             this.labelSSSetup = new System.Windows.Forms.Label();
-            this.textBoxSSYStart = new System.Windows.Forms.TextBox();
+            this.textbox_Start_Y = new System.Windows.Forms.TextBox();
             this.labelSSY = new System.Windows.Forms.Label();
-            this.textBoxSSXStart = new System.Windows.Forms.TextBox();
+            this.textbox_Start_X = new System.Windows.Forms.TextBox();
             this.labelSSX = new System.Windows.Forms.Label();
             this.labelSSXStart = new System.Windows.Forms.Label();
             this.labelSSSlash = new System.Windows.Forms.Label();
@@ -171,13 +171,13 @@
             this.btnSetLogic = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Btn_save_config = new System.Windows.Forms.Button();
-            this.Btn_alarm_Y = new System.Windows.Forms.Button();
-            this.Btn_alarm_X = new System.Windows.Forms.Button();
-            this.Btn_servo_Y = new System.Windows.Forms.Button();
-            this.Btn_servo_X = new System.Windows.Forms.Button();
-            this.Btn_current_Y = new System.Windows.Forms.Button();
-            this.Btn_current_X = new System.Windows.Forms.Button();
+            this.btn_save_config = new System.Windows.Forms.Button();
+            this.btn_Alarm_Y = new System.Windows.Forms.Button();
+            this.btn_Alarm_X = new System.Windows.Forms.Button();
+            this.btn_Servo_Y = new System.Windows.Forms.Button();
+            this.btn_Servo_X = new System.Windows.Forms.Button();
+            this.btn_Current_Y = new System.Windows.Forms.Button();
+            this.btn_Current_X = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
@@ -258,9 +258,9 @@
             this.panelMC.Controls.Add(this.buttonMCYIncMinus);
             this.panelMC.Controls.Add(this.buttonMCXIncPlus);
             this.panelMC.Controls.Add(this.buttonMCXIncMinus);
-            this.panelMC.Controls.Add(this.textBoxMCYOut);
+            this.panelMC.Controls.Add(this.textbox_Distance_Y);
             this.panelMC.Controls.Add(this.labelMCY);
-            this.panelMC.Controls.Add(this.textBoxMCXOut);
+            this.panelMC.Controls.Add(this.textbox_Distance_X);
             this.panelMC.Controls.Add(this.labelMCX);
             this.panelMC.Controls.Add(this.labelMCAbs);
             this.panelMC.Controls.Add(this.labelMCInc);
@@ -513,15 +513,15 @@
             this.buttonMCXIncMinus.UseVisualStyleBackColor = true;
             this.buttonMCXIncMinus.Click += new System.EventHandler(this.buttonMCXIncMinus_Click);
             // 
-            // textBoxMCYOut
+            // textbox_Distance_Y
             // 
-            this.textBoxMCYOut.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxMCYOut.Location = new System.Drawing.Point(157, 56);
-            this.textBoxMCYOut.Name = "textBoxMCYOut";
-            this.textBoxMCYOut.Size = new System.Drawing.Size(76, 22);
-            this.textBoxMCYOut.TabIndex = 9;
-            this.textBoxMCYOut.Text = "0";
-            this.textBoxMCYOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Distance_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_Y.Location = new System.Drawing.Point(157, 56);
+            this.textbox_Distance_Y.Name = "textbox_Distance_Y";
+            this.textbox_Distance_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Distance_Y.TabIndex = 9;
+            this.textbox_Distance_Y.Text = "0";
+            this.textbox_Distance_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelMCY
             // 
@@ -534,15 +534,15 @@
             this.labelMCY.Text = "Y";
             this.labelMCY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxMCXOut
+            // textbox_Distance_X
             // 
-            this.textBoxMCXOut.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxMCXOut.Location = new System.Drawing.Point(83, 56);
-            this.textBoxMCXOut.Name = "textBoxMCXOut";
-            this.textBoxMCXOut.Size = new System.Drawing.Size(76, 22);
-            this.textBoxMCXOut.TabIndex = 7;
-            this.textBoxMCXOut.Text = "0";
-            this.textBoxMCXOut.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Distance_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_X.Location = new System.Drawing.Point(83, 56);
+            this.textbox_Distance_X.Name = "textbox_Distance_X";
+            this.textbox_Distance_X.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Distance_X.TabIndex = 7;
+            this.textbox_Distance_X.Text = "0";
+            this.textbox_Distance_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelMCX
             // 
@@ -614,21 +614,21 @@
             // panelSS
             // 
             this.panelSS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSS.Controls.Add(this.textBoxSSYDec);
-            this.panelSS.Controls.Add(this.textBoxSSXDec);
+            this.panelSS.Controls.Add(this.textbox_Dec_Y);
+            this.panelSS.Controls.Add(this.textbox_Dec_X);
             this.panelSS.Controls.Add(this.labelSSDec);
-            this.panelSS.Controls.Add(this.textBoxSSYAcc);
-            this.panelSS.Controls.Add(this.textBoxSSXAcc);
+            this.panelSS.Controls.Add(this.textbox_Acc_Y);
+            this.panelSS.Controls.Add(this.textbox_Acc_X);
             this.panelSS.Controls.Add(this.labelSSAcc);
-            this.panelSS.Controls.Add(this.textBoxSSYMax);
-            this.panelSS.Controls.Add(this.textBoxSSXMax);
+            this.panelSS.Controls.Add(this.textbox_Max_Y);
+            this.panelSS.Controls.Add(this.textbox_Max_X);
             this.panelSS.Controls.Add(this.labelSSMax);
             this.panelSS.Controls.Add(this.buttonSSYSetup);
             this.panelSS.Controls.Add(this.buttonSSXSetup);
             this.panelSS.Controls.Add(this.labelSSSetup);
-            this.panelSS.Controls.Add(this.textBoxSSYStart);
+            this.panelSS.Controls.Add(this.textbox_Start_Y);
             this.panelSS.Controls.Add(this.labelSSY);
-            this.panelSS.Controls.Add(this.textBoxSSXStart);
+            this.panelSS.Controls.Add(this.textbox_Start_X);
             this.panelSS.Controls.Add(this.labelSSX);
             this.panelSS.Controls.Add(this.labelSSXStart);
             this.panelSS.Controls.Add(this.labelSSSlash);
@@ -638,25 +638,25 @@
             this.panelSS.Size = new System.Drawing.Size(236, 165);
             this.panelSS.TabIndex = 32;
             // 
-            // textBoxSSYDec
+            // textbox_Dec_Y
             // 
-            this.textBoxSSYDec.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSYDec.Location = new System.Drawing.Point(157, 98);
-            this.textBoxSSYDec.Name = "textBoxSSYDec";
-            this.textBoxSSYDec.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSYDec.TabIndex = 43;
-            this.textBoxSSYDec.Text = "1000";
-            this.textBoxSSYDec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Dec_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_Y.Location = new System.Drawing.Point(157, 98);
+            this.textbox_Dec_Y.Name = "textbox_Dec_Y";
+            this.textbox_Dec_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Dec_Y.TabIndex = 43;
+            this.textbox_Dec_Y.Text = "1000";
+            this.textbox_Dec_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBoxSSXDec
+            // textbox_Dec_X
             // 
-            this.textBoxSSXDec.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSXDec.Location = new System.Drawing.Point(83, 98);
-            this.textBoxSSXDec.Name = "textBoxSSXDec";
-            this.textBoxSSXDec.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSXDec.TabIndex = 42;
-            this.textBoxSSXDec.Text = "1000";
-            this.textBoxSSXDec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Dec_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_X.Location = new System.Drawing.Point(83, 98);
+            this.textbox_Dec_X.Name = "textbox_Dec_X";
+            this.textbox_Dec_X.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Dec_X.TabIndex = 42;
+            this.textbox_Dec_X.Text = "1000";
+            this.textbox_Dec_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSSDec
             // 
@@ -669,25 +669,25 @@
             this.labelSSDec.Text = "Dec";
             this.labelSSDec.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSSYAcc
+            // textbox_Acc_Y
             // 
-            this.textBoxSSYAcc.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSYAcc.Location = new System.Drawing.Point(157, 77);
-            this.textBoxSSYAcc.Name = "textBoxSSYAcc";
-            this.textBoxSSYAcc.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSYAcc.TabIndex = 40;
-            this.textBoxSSYAcc.Text = "1000";
-            this.textBoxSSYAcc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Acc_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_Y.Location = new System.Drawing.Point(157, 77);
+            this.textbox_Acc_Y.Name = "textbox_Acc_Y";
+            this.textbox_Acc_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Acc_Y.TabIndex = 40;
+            this.textbox_Acc_Y.Text = "1000";
+            this.textbox_Acc_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBoxSSXAcc
+            // textbox_Acc_X
             // 
-            this.textBoxSSXAcc.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSXAcc.Location = new System.Drawing.Point(83, 77);
-            this.textBoxSSXAcc.Name = "textBoxSSXAcc";
-            this.textBoxSSXAcc.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSXAcc.TabIndex = 39;
-            this.textBoxSSXAcc.Text = "1000";
-            this.textBoxSSXAcc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Acc_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_X.Location = new System.Drawing.Point(83, 77);
+            this.textbox_Acc_X.Name = "textbox_Acc_X";
+            this.textbox_Acc_X.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Acc_X.TabIndex = 39;
+            this.textbox_Acc_X.Text = "1000";
+            this.textbox_Acc_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSSAcc
             // 
@@ -700,25 +700,25 @@
             this.labelSSAcc.Text = "Acc";
             this.labelSSAcc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSSYMax
+            // textbox_Max_Y
             // 
-            this.textBoxSSYMax.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSYMax.Location = new System.Drawing.Point(157, 119);
-            this.textBoxSSYMax.Name = "textBoxSSYMax";
-            this.textBoxSSYMax.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSYMax.TabIndex = 34;
-            this.textBoxSSYMax.Text = "1000";
-            this.textBoxSSYMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Max_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_Y.Location = new System.Drawing.Point(157, 119);
+            this.textbox_Max_Y.Name = "textbox_Max_Y";
+            this.textbox_Max_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Max_Y.TabIndex = 34;
+            this.textbox_Max_Y.Text = "1000";
+            this.textbox_Max_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBoxSSXMax
+            // textbox_Max_X
             // 
-            this.textBoxSSXMax.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSXMax.Location = new System.Drawing.Point(84, 119);
-            this.textBoxSSXMax.Name = "textBoxSSXMax";
-            this.textBoxSSXMax.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSXMax.TabIndex = 33;
-            this.textBoxSSXMax.Text = "1000";
-            this.textBoxSSXMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Max_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_X.Location = new System.Drawing.Point(84, 119);
+            this.textbox_Max_X.Name = "textbox_Max_X";
+            this.textbox_Max_X.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Max_X.TabIndex = 33;
+            this.textbox_Max_X.Text = "1000";
+            this.textbox_Max_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSSMax
             // 
@@ -762,15 +762,15 @@
             this.labelSSSetup.Text = "Setup";
             this.labelSSSetup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSSYStart
+            // textbox_Start_Y
             // 
-            this.textBoxSSYStart.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSYStart.Location = new System.Drawing.Point(157, 56);
-            this.textBoxSSYStart.Name = "textBoxSSYStart";
-            this.textBoxSSYStart.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSYStart.TabIndex = 9;
-            this.textBoxSSYStart.Text = "100";
-            this.textBoxSSYStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Start_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_Y.Location = new System.Drawing.Point(157, 56);
+            this.textbox_Start_Y.Name = "textbox_Start_Y";
+            this.textbox_Start_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Start_Y.TabIndex = 9;
+            this.textbox_Start_Y.Text = "100";
+            this.textbox_Start_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSSY
             // 
@@ -783,15 +783,15 @@
             this.labelSSY.Text = "Y";
             this.labelSSY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxSSXStart
+            // textbox_Start_X
             // 
-            this.textBoxSSXStart.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxSSXStart.Location = new System.Drawing.Point(83, 56);
-            this.textBoxSSXStart.Name = "textBoxSSXStart";
-            this.textBoxSSXStart.Size = new System.Drawing.Size(76, 22);
-            this.textBoxSSXStart.TabIndex = 7;
-            this.textBoxSSXStart.Text = "100";
-            this.textBoxSSXStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_Start_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_X.Location = new System.Drawing.Point(83, 56);
+            this.textbox_Start_X.Name = "textbox_Start_X";
+            this.textbox_Start_X.Size = new System.Drawing.Size(76, 22);
+            this.textbox_Start_X.TabIndex = 7;
+            this.textbox_Start_X.Text = "100";
+            this.textbox_Start_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelSSX
             // 
@@ -1886,13 +1886,13 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.Btn_save_config);
-            this.tabPage1.Controls.Add(this.Btn_alarm_Y);
-            this.tabPage1.Controls.Add(this.Btn_alarm_X);
-            this.tabPage1.Controls.Add(this.Btn_servo_Y);
-            this.tabPage1.Controls.Add(this.Btn_servo_X);
-            this.tabPage1.Controls.Add(this.Btn_current_Y);
-            this.tabPage1.Controls.Add(this.Btn_current_X);
+            this.tabPage1.Controls.Add(this.btn_save_config);
+            this.tabPage1.Controls.Add(this.btn_Alarm_Y);
+            this.tabPage1.Controls.Add(this.btn_Alarm_X);
+            this.tabPage1.Controls.Add(this.btn_Servo_Y);
+            this.tabPage1.Controls.Add(this.btn_Servo_X);
+            this.tabPage1.Controls.Add(this.btn_Current_Y);
+            this.tabPage1.Controls.Add(this.btn_Current_X);
             this.tabPage1.Controls.Add(this.panelConnection);
             this.tabPage1.Controls.Add(this.btnSetLogic);
             this.tabPage1.Controls.Add(this.panelSS);
@@ -1915,73 +1915,73 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Btn_save_config
+            // btn_save_config
             // 
-            this.Btn_save_config.Location = new System.Drawing.Point(761, 63);
-            this.Btn_save_config.Name = "Btn_save_config";
-            this.Btn_save_config.Size = new System.Drawing.Size(75, 23);
-            this.Btn_save_config.TabIndex = 70;
-            this.Btn_save_config.Text = "Save";
-            this.Btn_save_config.UseVisualStyleBackColor = true;
-            this.Btn_save_config.Click += new System.EventHandler(this.Btn_save_config_Click);
+            this.btn_save_config.Location = new System.Drawing.Point(761, 63);
+            this.btn_save_config.Name = "btn_save_config";
+            this.btn_save_config.Size = new System.Drawing.Size(75, 23);
+            this.btn_save_config.TabIndex = 70;
+            this.btn_save_config.Text = "Save";
+            this.btn_save_config.UseVisualStyleBackColor = true;
+            this.btn_save_config.Click += new System.EventHandler(this.btn_save_config_Click);
             // 
-            // Btn_alarm_Y
+            // btn_Alarm_Y
             // 
-            this.Btn_alarm_Y.Location = new System.Drawing.Point(737, 607);
-            this.Btn_alarm_Y.Name = "Btn_alarm_Y";
-            this.Btn_alarm_Y.Size = new System.Drawing.Size(75, 23);
-            this.Btn_alarm_Y.TabIndex = 69;
-            this.Btn_alarm_Y.Text = "Alarm";
-            this.Btn_alarm_Y.UseVisualStyleBackColor = true;
+            this.btn_Alarm_Y.Location = new System.Drawing.Point(737, 607);
+            this.btn_Alarm_Y.Name = "btn_Alarm_Y";
+            this.btn_Alarm_Y.Size = new System.Drawing.Size(75, 23);
+            this.btn_Alarm_Y.TabIndex = 69;
+            this.btn_Alarm_Y.Text = "Alarm";
+            this.btn_Alarm_Y.UseVisualStyleBackColor = true;
             // 
-            // Btn_alarm_X
+            // btn_Alarm_X
             // 
-            this.Btn_alarm_X.Location = new System.Drawing.Point(656, 607);
-            this.Btn_alarm_X.Name = "Btn_alarm_X";
-            this.Btn_alarm_X.Size = new System.Drawing.Size(75, 23);
-            this.Btn_alarm_X.TabIndex = 69;
-            this.Btn_alarm_X.Text = "Alarm";
-            this.Btn_alarm_X.UseVisualStyleBackColor = true;
+            this.btn_Alarm_X.Location = new System.Drawing.Point(656, 607);
+            this.btn_Alarm_X.Name = "btn_Alarm_X";
+            this.btn_Alarm_X.Size = new System.Drawing.Size(75, 23);
+            this.btn_Alarm_X.TabIndex = 69;
+            this.btn_Alarm_X.Text = "Alarm";
+            this.btn_Alarm_X.UseVisualStyleBackColor = true;
             // 
-            // Btn_servo_Y
+            // btn_Servo_Y
             // 
-            this.Btn_servo_Y.Location = new System.Drawing.Point(737, 578);
-            this.Btn_servo_Y.Name = "Btn_servo_Y";
-            this.Btn_servo_Y.Size = new System.Drawing.Size(75, 23);
-            this.Btn_servo_Y.TabIndex = 68;
-            this.Btn_servo_Y.Text = "Servo";
-            this.Btn_servo_Y.UseVisualStyleBackColor = true;
+            this.btn_Servo_Y.Location = new System.Drawing.Point(737, 578);
+            this.btn_Servo_Y.Name = "btn_Servo_Y";
+            this.btn_Servo_Y.Size = new System.Drawing.Size(75, 23);
+            this.btn_Servo_Y.TabIndex = 68;
+            this.btn_Servo_Y.Text = "Servo";
+            this.btn_Servo_Y.UseVisualStyleBackColor = true;
             // 
-            // Btn_servo_X
+            // btn_Servo_X
             // 
-            this.Btn_servo_X.Location = new System.Drawing.Point(656, 578);
-            this.Btn_servo_X.Name = "Btn_servo_X";
-            this.Btn_servo_X.Size = new System.Drawing.Size(75, 23);
-            this.Btn_servo_X.TabIndex = 68;
-            this.Btn_servo_X.Text = "Servo";
-            this.Btn_servo_X.UseVisualStyleBackColor = true;
-            this.Btn_servo_X.Click += new System.EventHandler(this.Btn_servo_X_Click);
+            this.btn_Servo_X.Location = new System.Drawing.Point(656, 578);
+            this.btn_Servo_X.Name = "btn_Servo_X";
+            this.btn_Servo_X.Size = new System.Drawing.Size(75, 23);
+            this.btn_Servo_X.TabIndex = 68;
+            this.btn_Servo_X.Text = "Servo";
+            this.btn_Servo_X.UseVisualStyleBackColor = true;
+            this.btn_Servo_X.Click += new System.EventHandler(this.Btn_servo_X_Click);
             // 
-            // Btn_current_Y
+            // btn_Current_Y
             // 
-            this.Btn_current_Y.Location = new System.Drawing.Point(737, 549);
-            this.Btn_current_Y.Name = "Btn_current_Y";
-            this.Btn_current_Y.Size = new System.Drawing.Size(75, 23);
-            this.Btn_current_Y.TabIndex = 67;
-            this.Btn_current_Y.Text = "Current";
-            this.Btn_current_Y.UseVisualStyleBackColor = true;
+            this.btn_Current_Y.Location = new System.Drawing.Point(737, 549);
+            this.btn_Current_Y.Name = "btn_Current_Y";
+            this.btn_Current_Y.Size = new System.Drawing.Size(75, 23);
+            this.btn_Current_Y.TabIndex = 67;
+            this.btn_Current_Y.Text = "Current";
+            this.btn_Current_Y.UseVisualStyleBackColor = true;
             // 
-            // Btn_current_X
+            // btn_Current_X
             // 
-            this.Btn_current_X.BackColor = System.Drawing.Color.Lime;
-            this.Btn_current_X.ForeColor = System.Drawing.Color.Black;
-            this.Btn_current_X.Location = new System.Drawing.Point(656, 549);
-            this.Btn_current_X.Name = "Btn_current_X";
-            this.Btn_current_X.Size = new System.Drawing.Size(75, 23);
-            this.Btn_current_X.TabIndex = 67;
-            this.Btn_current_X.Text = "Current";
-            this.Btn_current_X.UseVisualStyleBackColor = false;
-            this.Btn_current_X.Click += new System.EventHandler(this.Btn_current_X_Click);
+            this.btn_Current_X.BackColor = System.Drawing.Color.Lime;
+            this.btn_Current_X.ForeColor = System.Drawing.Color.Black;
+            this.btn_Current_X.Location = new System.Drawing.Point(656, 549);
+            this.btn_Current_X.Name = "btn_Current_X";
+            this.btn_Current_X.Size = new System.Drawing.Size(75, 23);
+            this.btn_Current_X.TabIndex = 67;
+            this.btn_Current_X.Text = "Current";
+            this.btn_Current_X.UseVisualStyleBackColor = false;
+            this.btn_Current_X.Click += new System.EventHandler(this.Btn_current_X_Click);
             // 
             // tabPage2
             // 
@@ -1993,7 +1993,7 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // MotionController
+            // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -2001,7 +2001,7 @@
             this.Controls.Add(this.tabControl1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "MotionController";
+            this.Name = "GUI";
             this.Text = "MotionControler";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MotionControler_FormClosed);
             this.Load += new System.EventHandler(this.MotionController_Load);
@@ -2051,9 +2051,7 @@
         private System.Windows.Forms.Button buttonMCYIncMinus;
         private System.Windows.Forms.Button buttonMCXIncPlus;
         private System.Windows.Forms.Button buttonMCXIncMinus;
-        private System.Windows.Forms.TextBox textBoxMCYOut;
         private System.Windows.Forms.Label labelMCY;
-        private System.Windows.Forms.TextBox textBoxMCXOut;
         private System.Windows.Forms.Label labelMCX;
         private System.Windows.Forms.Label labelMCAbs;
         private System.Windows.Forms.Label labelMCInc;
@@ -2061,18 +2059,69 @@
         private System.Windows.Forms.Label labelMCSlash;
         private System.Windows.Forms.Label labelMCTitle;
         private System.Windows.Forms.Panel panelSS;
-        private System.Windows.Forms.TextBox textBoxSSYAcc;
-        private System.Windows.Forms.TextBox textBoxSSXAcc;
+
+
         private System.Windows.Forms.Label labelSSAcc;
-        private System.Windows.Forms.TextBox textBoxSSYMax;
-        private System.Windows.Forms.TextBox textBoxSSXMax;
+
+
+        /*
+         * textbox distance   
+         */
+        private System.Windows.Forms.TextBox textbox_Distance_Y;
+        public System.Windows.Forms.TextBox Textbox_Distance_Y
+        { get { return textbox_Distance_Y; } set { textbox_Distance_Y = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Distance_X;
+        public System.Windows.Forms.TextBox Textbox_Distance_X
+        { get { return textbox_Distance_X; } set { textbox_Distance_X = value; } }
+
+
+        /*
+         * textbox speed
+         */
+        private System.Windows.Forms.TextBox textbox_Acc_Y;
+        public System.Windows.Forms.TextBox Textbox_Acc_Y
+        { get { return textbox_Acc_Y; } set { textbox_Acc_Y = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Acc_X;
+        public System.Windows.Forms.TextBox Textbox_Acc_X
+        { get { return textbox_Acc_X; } set { textbox_Acc_X = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Max_Y;
+        public System.Windows.Forms.TextBox Textbox_Max_Y
+        { get { return textbox_Max_Y; } set { textbox_Max_Y = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Max_X;
+        public System.Windows.Forms.TextBox Textbox_Max_X
+        { get { return textbox_Max_X; } set { textbox_Max_X = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Start_Y;
+        public System.Windows.Forms.TextBox Textbox_Start_Y
+        { get { return textbox_Start_Y; } set { textbox_Start_Y = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Start_X;
+        public System.Windows.Forms.TextBox Textbox_Start_X
+        { get { return textbox_Start_X; } set { textbox_Start_X = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Dec_Y;
+        public System.Windows.Forms.TextBox Textbox_Dec_Y
+        { get { return textbox_Dec_Y; } set { textbox_Dec_Y = value; } }
+
+        private System.Windows.Forms.TextBox textbox_Dec_X;
+        public System.Windows.Forms.TextBox Textbox_Dec_X
+        { get { return textbox_Dec_X; } set { textbox_Dec_X = value; } }
+
+
+
         private System.Windows.Forms.Label labelSSMax;
         private System.Windows.Forms.Button buttonSSYSetup;
         private System.Windows.Forms.Button buttonSSXSetup;
         private System.Windows.Forms.Label labelSSSetup;
-        private System.Windows.Forms.TextBox textBoxSSYStart;
+
+
+
+
         private System.Windows.Forms.Label labelSSY;
-        private System.Windows.Forms.TextBox textBoxSSXStart;
         private System.Windows.Forms.Label labelSSX;
         private System.Windows.Forms.Label labelSSXStart;
         private System.Windows.Forms.Label labelSSSlash;
@@ -2151,8 +2200,7 @@
         private System.Windows.Forms.ComboBox comboBoxLSYMLimit;
         private System.Windows.Forms.ComboBox comboBoxLSXMLimit;
         private System.Windows.Forms.Label labelLSMLimit;
-        private System.Windows.Forms.TextBox textBoxSSYDec;
-        private System.Windows.Forms.TextBox textBoxSSXDec;
+
         private System.Windows.Forms.Label labelSSDec;
         private System.Windows.Forms.ComboBox cBox_Axis1;
         private System.Windows.Forms.ComboBox cBox_Axis0;
@@ -2167,12 +2215,12 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button Btn_servo_X;
-        private System.Windows.Forms.Button Btn_current_X;
-        private System.Windows.Forms.Button Btn_alarm_Y;
-        private System.Windows.Forms.Button Btn_alarm_X;
-        private System.Windows.Forms.Button Btn_servo_Y;
-        private System.Windows.Forms.Button Btn_current_Y;
-        private System.Windows.Forms.Button Btn_save_config;
+        private System.Windows.Forms.Button btn_Servo_X;
+        private System.Windows.Forms.Button btn_Current_X;
+        private System.Windows.Forms.Button btn_Alarm_Y;
+        private System.Windows.Forms.Button btn_Alarm_X;
+        private System.Windows.Forms.Button btn_Servo_Y;
+        private System.Windows.Forms.Button btn_Current_Y;
+        private System.Windows.Forms.Button btn_save_config;
     }
 }

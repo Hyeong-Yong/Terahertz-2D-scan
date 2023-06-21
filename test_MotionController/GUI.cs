@@ -67,24 +67,24 @@ namespace test_MotionController
             /*
              * Init : X-axis speed configuration
              */
-            textBoxSSXStart.Text = ConfigurationManager.AppSettings["textBoxSSXStart"];
-            textBoxSSXAcc.Text = ConfigurationManager.AppSettings["textBoxSSXAcc"];
-            textBoxSSXMax.Text = ConfigurationManager.AppSettings["textBoxSSXMax"];
-            textBoxSSXDec.Text = ConfigurationManager.AppSettings["textBoxSSXDec"];
+            textbox_Start_X.Text = ConfigurationManager.AppSettings["textBoxSSXStart"];
+            textbox_Acc_X.Text = ConfigurationManager.AppSettings["textBoxSSXAcc"];
+            textbox_Max_X.Text = ConfigurationManager.AppSettings["textBoxSSXMax"];
+            textbox_Dec_X.Text = ConfigurationManager.AppSettings["textBoxSSXDec"];
 
             /*
              * Init : Y-axis speed configuration
              */
-            textBoxSSYStart.Text = ConfigurationManager.AppSettings["textBoxSSYStart"];
-            textBoxSSYAcc.Text = ConfigurationManager.AppSettings["textBoxSSYAcc"];
-            textBoxSSYMax.Text = ConfigurationManager.AppSettings["textBoxSSYMax"];
-            textBoxSSYDec.Text = ConfigurationManager.AppSettings["textBoxSSYDec"];
+            textbox_Start_Y.Text = ConfigurationManager.AppSettings["textBoxSSYStart"];
+            textbox_Acc_Y.Text = ConfigurationManager.AppSettings["textBoxSSYAcc"];
+            textbox_Max_Y.Text = ConfigurationManager.AppSettings["textBoxSSYMax"];
+            textbox_Dec_Y.Text = ConfigurationManager.AppSettings["textBoxSSYDec"];
 
             /*
              * Init : X,Y distance value
              */
-            textBoxMCXOut.Text = ConfigurationManager.AppSettings["textBoxMCXOut"];
-            textBoxMCYOut.Text = ConfigurationManager.AppSettings["textBoxMCYOut"];
+            textbox_Distance_X.Text = ConfigurationManager.AppSettings["textBoxMCXOut"];
+            textbox_Distance_Y.Text = ConfigurationManager.AppSettings["textBoxMCYOut"];
 
         }
 
@@ -172,22 +172,22 @@ namespace test_MotionController
 
         private void buttonMCXIncMinus_Click(object sender, EventArgs e)
         {
-            PaixMotion.RelMove(0, -Convert.ToDouble(textBoxMCXOut.Text));
+            PaixMotion.RelMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
         private void buttonMCXIncPlus_Click(object sender, EventArgs e)
         {
-            PaixMotion.RelMove(0, Convert.ToDouble(textBoxMCXOut.Text));
+            PaixMotion.RelMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
         private void buttonMCXAbsMinus_Click(object sender, EventArgs e)
         {
-            PaixMotion.AbsMove(0, -Convert.ToDouble(textBoxMCXOut.Text));
+            PaixMotion.AbsMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
         private void buttonMCXAbsPlus_Click(object sender, EventArgs e)
         {
-            PaixMotion.AbsMove(0, Convert.ToDouble(textBoxMCXOut.Text));
+            PaixMotion.AbsMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
         private void buttonMCXJogLeft_MouseDown(object sender, MouseEventArgs e)
@@ -236,22 +236,22 @@ namespace test_MotionController
 
         private void buttonMCYIncMinus_Click(object sender, EventArgs e)
         {
-            PaixMotion.RelMove(1, -Convert.ToInt32(textBoxMCYOut.Text));
+            PaixMotion.RelMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
         private void buttonMCYIncPlus_Click(object sender, EventArgs e)
         {
-            PaixMotion.RelMove(1, Convert.ToInt32(textBoxMCYOut.Text));
+            PaixMotion.RelMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
         private void buttonMCYAbsMinus_Click(object sender, EventArgs e)
         {
-            PaixMotion.AbsMove(1, -Convert.ToInt32(textBoxMCYOut.Text));
+            PaixMotion.AbsMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
         private void buttonMCYAbsPlus_Click(object sender, EventArgs e)
         {
-            PaixMotion.AbsMove(1, Convert.ToInt32(textBoxMCYOut.Text));
+            PaixMotion.AbsMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
         private void buttonMCYJogLeft_MouseDown(object sender, MouseEventArgs e)
@@ -289,11 +289,11 @@ namespace test_MotionController
         {
             if (checkBoxMCIncSync.Checked)
             {
-                PaixMotion.SyncTwoMove(Convert.ToDouble(textBoxMCXOut.Text), Convert.ToDouble(textBoxMCYOut.Text), 0);
+                PaixMotion.SyncTwoMove(Convert.ToDouble(textbox_Distance_X.Text), Convert.ToDouble(textbox_Distance_Y.Text), 0);
             }
             else
             {
-                double[] dest = { Convert.ToDouble(textBoxMCXOut.Text), Convert.ToDouble(textBoxMCYOut.Text) };
+                double[] dest = { Convert.ToDouble(textbox_Distance_X.Text), Convert.ToDouble(textbox_Distance_Y.Text) };
                 PaixMotion.RelMultiTwoMove(dest);
                 //                NMC2.nmc_imul_move(1, 2, new short[2] { 1, 2 }, dest);
             }
@@ -303,11 +303,11 @@ namespace test_MotionController
         {
             if (checkBoxMCAbsSync.Checked)
             {
-                PaixMotion.SyncTwoMove(Convert.ToDouble(textBoxMCXOut.Text), Convert.ToDouble(textBoxMCYOut.Text), 1);
+                PaixMotion.SyncTwoMove(Convert.ToDouble(textbox_Distance_X.Text), Convert.ToDouble(textbox_Distance_Y.Text), 1);
             }
             else
             {
-                double[] dest = { Convert.ToDouble(textBoxMCXOut.Text), Convert.ToDouble(textBoxMCYOut.Text) };
+                double[] dest = { Convert.ToDouble(textbox_Distance_X.Text), Convert.ToDouble(textbox_Distance_Y.Text) };
                 PaixMotion.AbsMultiTwoMove(dest);
             }
         }
@@ -334,20 +334,20 @@ namespace test_MotionController
 
         private void buttonSSXSetup_Click(object sender, EventArgs e)
         {
-            double dstart = Convert.ToDouble(textBoxSSXStart.Text);
-            double dacc = Convert.ToDouble(textBoxSSXAcc.Text);
-            double dmax = Convert.ToDouble(textBoxSSXMax.Text);
-            double ddec = Convert.ToDouble(textBoxSSXDec.Text);
+            double dstart = Convert.ToDouble(textbox_Start_X.Text);
+            double dacc = Convert.ToDouble(textbox_Acc_X.Text);
+            double dmax = Convert.ToDouble(textbox_Max_X.Text);
+            double ddec = Convert.ToDouble(textbox_Dec_X.Text);
 
             PaixMotion.SetSpeedPPS(0, dstart, dacc, ddec, dmax);
         }
 
         private void buttonSSYSetup_Click(object sender, EventArgs e)
         {
-            double dstart = Convert.ToDouble(textBoxSSYStart.Text);
-            double dacc = Convert.ToDouble(textBoxSSYAcc.Text);
-            double dmax = Convert.ToDouble(textBoxSSYMax.Text);
-            double ddec = Convert.ToDouble(textBoxSSYDec.Text);
+            double dstart = Convert.ToDouble(textbox_Start_Y.Text);
+            double dacc = Convert.ToDouble(textbox_Acc_Y.Text);
+            double dmax = Convert.ToDouble(textbox_Max_Y.Text);
+            double ddec = Convert.ToDouble(textbox_Dec_Y.Text);
 
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
@@ -616,12 +616,12 @@ namespace test_MotionController
             if (nCurrentOn == 0)
             {
                 PaixMotion.SetCurrentOn(0, 1);
-                this.Btn_current_X.BackColor = Color.Green;
+                this.btn_Current_X.BackColor = Color.Green;
             }
             else
             {
                 PaixMotion.SetCurrentOn(0, 0);
-                this.Btn_current_X.BackColor = Color.Red;
+                this.btn_Current_X.BackColor = Color.Red;
             }
         }
 
@@ -632,12 +632,12 @@ namespace test_MotionController
             if (nServoOn == 0)
             {
                 PaixMotion.SetServoOn(0, 1);
-                this.Btn_servo_X.BackColor = Color.Green;
+                this.btn_Servo_X.BackColor = Color.Green;
             }
             else
             {
                 PaixMotion.SetServoOn(0, 0);
-                this.Btn_servo_X.BackColor = Color.Red;
+                this.btn_Servo_X.BackColor = Color.Red;
             }
 
         }
@@ -651,62 +651,61 @@ namespace test_MotionController
             short nServoOn_Y = PaixMotion.updateAxisInfo(1).nServoOn; // ServoOn 신호 값
 
             if (nCurrentOn_X == 0){
-                this.Btn_current_X.BackColor = Color.Red;
+                this.btn_Current_X.BackColor = Color.Red;
             }else{
-                this.Btn_current_X.BackColor = Color.Green;
+                this.btn_Current_X.BackColor = Color.Green;
             }
 
             if (nCurrentOn_Y == 0){
-                this.Btn_current_X.BackColor = Color.Red;
+                this.btn_Current_X.BackColor = Color.Red;
             }else{
-                this.Btn_current_X.BackColor = Color.Green;
+                this.btn_Current_X.BackColor = Color.Green;
             }
 
             if (nServoOn_X == 0){
-                this.Btn_servo_X.BackColor = Color.Red;
+                this.btn_Servo_X.BackColor = Color.Red;
             }else{
-                this.Btn_servo_X.BackColor = Color.Green;
+                this.btn_Servo_X.BackColor = Color.Green;
             }
 
             if (nServoOn_Y == 0){
-                this.Btn_servo_X.BackColor = Color.Red;
+                this.btn_Servo_X.BackColor = Color.Red;
             }else{
-                this.Btn_servo_X.BackColor = Color.Green;
+                this.btn_Servo_X.BackColor = Color.Green;
             }
 
         }
 
-        private void Btn_save_config_Click(object sender, EventArgs e)
+        private void btn_save_config_Click(object sender, EventArgs e)
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            config.AppSettings.Settings.Remove("textBoxSSXStart");
-            config.AppSettings.Settings.Remove("textBoxSSXAcc");
-            config.AppSettings.Settings.Remove("textBoxSSXDec");
-            config.AppSettings.Settings.Remove("textBoxSSXMax");
+            config.AppSettings.Settings.Remove("textBox_Start_X");
+            config.AppSettings.Settings.Remove("textBox_Acc_X");
+            config.AppSettings.Settings.Remove("textBox_Dec_X");
+            config.AppSettings.Settings.Remove("textBox_Max_X");
 
-            config.AppSettings.Settings.Remove("textBoxSSYStart");
-            config.AppSettings.Settings.Remove("textBoxSSYAcc");
-            config.AppSettings.Settings.Remove("textBoxSSYDec");
-            config.AppSettings.Settings.Remove("textBoxSSYMax");
+            config.AppSettings.Settings.Remove("textBox_Start_Y");
+            config.AppSettings.Settings.Remove("textBox_Acc_Y");
+            config.AppSettings.Settings.Remove("textBox_Dec_X");
+            config.AppSettings.Settings.Remove("textBox_Max_X");
 
-            config.AppSettings.Settings.Remove("textBoxMCXOut");
-            config.AppSettings.Settings.Remove("textBoxMCYOut");
+            config.AppSettings.Settings.Remove("textBox_Distance_X");
+            config.AppSettings.Settings.Remove("textBox_Distance_Y");
+
+            config.AppSettings.Settings.Add("textBox_Start_X", Textbox_Start_X.Text);
+            config.AppSettings.Settings.Add("textBox_Acc_X", Textbox_Acc_X.Text);
+            config.AppSettings.Settings.Add("textBox_Dec_X", Textbox_Dec_X.Text);
+            config.AppSettings.Settings.Add("textBox_Max_X", Textbox_Max_X.Text);
+
+            config.AppSettings.Settings.Add("textBox_Start_Y", Textbox_Start_Y.Text);
+            config.AppSettings.Settings.Add("textBox_Acc_Y", Textbox_Acc_Y.Text);
+            config.AppSettings.Settings.Add("textBox_Dec_X", Textbox_Dec_X.Text);
+            config.AppSettings.Settings.Add("textBox_Max_X", Textbox_Max_X.Text);
 
 
-            config.AppSettings.Settings.Add("textBoxSSXStart", textBoxSSXStart.Text);
-            config.AppSettings.Settings.Add("textBoxSSXAcc", textBoxSSXAcc.Text);
-            config.AppSettings.Settings.Add("textBoxSSXDec", textBoxSSXDec.Text);
-            config.AppSettings.Settings.Add("textBoxSSXMax", textBoxSSXMax.Text);
-
-            config.AppSettings.Settings.Add("textBoxSSYStart", textBoxSSYStart.Text);
-            config.AppSettings.Settings.Add("textBoxSSYAcc", textBoxSSYAcc.Text);
-            config.AppSettings.Settings.Add("textBoxSSYDec", textBoxSSYDec.Text);
-            config.AppSettings.Settings.Add("textBoxSSYMax", textBoxSSYMax.Text);
-
-
-            config.AppSettings.Settings.Add("textBoxMCXOut", textBoxMCXOut.Text);
-            config.AppSettings.Settings.Add("textBoxMCYOut", textBoxMCYOut.Text);
+            config.AppSettings.Settings.Add("textBox_Distance_X", Textbox_Distance_X.Text);
+            config.AppSettings.Settings.Add("textBox_Distance_Y", Textbox_Distance_Y.Text);
 
 
             config.Save(ConfigurationSaveMode.Modified);
