@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.panelConnection = new System.Windows.Forms.Panel();
-            this.buttonOpen = new System.Windows.Forms.Button();
+            this.btn_Open = new System.Windows.Forms.Button();
             this.textBoxDevNo = new System.Windows.Forms.TextBox();
             this.labelConnTitle = new System.Windows.Forms.Label();
             this.panelMC = new System.Windows.Forms.Panel();
-            this.buttonMCYHome = new System.Windows.Forms.Button();
-            this.buttonMCXHome = new System.Windows.Forms.Button();
+            this.btn_Home_Y = new System.Windows.Forms.Button();
+            this.btn_Home_X = new System.Windows.Forms.Button();
             this.labelMCHome = new System.Windows.Forms.Label();
             this.buttonMCAbsMultiMove = new System.Windows.Forms.Button();
             this.checkBoxMCAbsSync = new System.Windows.Forms.CheckBox();
             this.buttonMCIncMultiMove = new System.Windows.Forms.Button();
             this.checkBoxMCIncSync = new System.Windows.Forms.CheckBox();
-            this.buttonMCYStop = new System.Windows.Forms.Button();
-            this.buttonMCXStop = new System.Windows.Forms.Button();
-            this.buttonMCYJogRight = new System.Windows.Forms.Button();
-            this.buttonMCYJogLeft = new System.Windows.Forms.Button();
-            this.buttonMCXJogRight = new System.Windows.Forms.Button();
-            this.buttonMCXJogLeft = new System.Windows.Forms.Button();
+            this.btn_Stop_Y = new System.Windows.Forms.Button();
+            this.btn_Stop_X = new System.Windows.Forms.Button();
+            this.btn_Jog_Right_Y = new System.Windows.Forms.Button();
+            this.btn_Jog_Left_Y = new System.Windows.Forms.Button();
+            this.btn_Jog_Right_X = new System.Windows.Forms.Button();
+            this.btn_Jog_Left_X = new System.Windows.Forms.Button();
             this.checkBoxMCSlowStop = new System.Windows.Forms.CheckBox();
             this.checkBoxMCJogCont = new System.Windows.Forms.CheckBox();
-            this.buttonMCYAbsPlus = new System.Windows.Forms.Button();
-            this.buttonMCYAbsMinus = new System.Windows.Forms.Button();
-            this.buttonMCXAbsPlus = new System.Windows.Forms.Button();
-            this.buttonMCXAbsMinus = new System.Windows.Forms.Button();
-            this.buttonMCYIncPlus = new System.Windows.Forms.Button();
-            this.buttonMCYIncMinus = new System.Windows.Forms.Button();
-            this.buttonMCXIncPlus = new System.Windows.Forms.Button();
-            this.buttonMCXIncMinus = new System.Windows.Forms.Button();
+            this.btn_Abs_Plus_Y = new System.Windows.Forms.Button();
+            this.btn_Abs_Minus_Y = new System.Windows.Forms.Button();
+            this.btn_Abs_Plus_X = new System.Windows.Forms.Button();
+            this.btn_Abs_Minus_X = new System.Windows.Forms.Button();
+            this.btn_Inc_Plus_Y = new System.Windows.Forms.Button();
+            this.btn_Inc_Minus_Y = new System.Windows.Forms.Button();
+            this.btn_Inc_Plus_X = new System.Windows.Forms.Button();
+            this.btn_Inc_Minus_X = new System.Windows.Forms.Button();
             this.textbox_Distance_Y = new System.Windows.Forms.TextBox();
             this.labelMCY = new System.Windows.Forms.Label();
             this.textbox_Distance_X = new System.Windows.Forms.TextBox();
@@ -75,8 +75,8 @@
             this.textbox_Max_Y = new System.Windows.Forms.TextBox();
             this.textbox_Max_X = new System.Windows.Forms.TextBox();
             this.labelSSMax = new System.Windows.Forms.Label();
-            this.buttonSSYSetup = new System.Windows.Forms.Button();
-            this.buttonSSXSetup = new System.Windows.Forms.Button();
+            this.btn_Setup_Y = new System.Windows.Forms.Button();
+            this.btn_Setup_X = new System.Windows.Forms.Button();
             this.labelSSSetup = new System.Windows.Forms.Label();
             this.textbox_Start_Y = new System.Windows.Forms.TextBox();
             this.labelSSY = new System.Windows.Forms.Label();
@@ -86,10 +86,10 @@
             this.labelSSSlash = new System.Windows.Forms.Label();
             this.labelSpeedSetting = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelPEYEncVal = new System.Windows.Forms.Label();
-            this.labelPEXEncVal = new System.Windows.Forms.Label();
-            this.labelPEYCmdVal = new System.Windows.Forms.Label();
-            this.labelPEXCmdVal = new System.Windows.Forms.Label();
+            this.label_Enc_Y = new System.Windows.Forms.Label();
+            this.label_Enc_X = new System.Windows.Forms.Label();
+            this.label_Cmd_Y = new System.Windows.Forms.Label();
+            this.label_Cmd_X = new System.Windows.Forms.Label();
             this.labelPEEnc = new System.Windows.Forms.Label();
             this.labelPEY = new System.Windows.Forms.Label();
             this.labelPEX = new System.Windows.Forms.Label();
@@ -169,7 +169,7 @@
             this.btnGetList = new System.Windows.Forms.Button();
             this.btnGetLogic = new System.Windows.Forms.Button();
             this.btnSetLogic = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btn_save_config = new System.Windows.Forms.Button();
             this.btn_Alarm_Y = new System.Windows.Forms.Button();
@@ -185,14 +185,14 @@
             this.panel1.SuspendLayout();
             this.panelSignal.SuspendLayout();
             this.panelLS.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConnection
             // 
             this.panelConnection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelConnection.Controls.Add(this.buttonOpen);
+            this.panelConnection.Controls.Add(this.btn_Open);
             this.panelConnection.Controls.Add(this.textBoxDevNo);
             this.panelConnection.Controls.Add(this.labelConnTitle);
             this.panelConnection.Location = new System.Drawing.Point(6, 29);
@@ -200,15 +200,15 @@
             this.panelConnection.Size = new System.Drawing.Size(236, 59);
             this.panelConnection.TabIndex = 0;
             // 
-            // buttonOpen
+            // btn_Open
             // 
-            this.buttonOpen.Location = new System.Drawing.Point(43, 34);
-            this.buttonOpen.Name = "buttonOpen";
-            this.buttonOpen.Size = new System.Drawing.Size(188, 22);
-            this.buttonOpen.TabIndex = 1;
-            this.buttonOpen.Text = "Open";
-            this.buttonOpen.UseVisualStyleBackColor = true;
-            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
+            this.btn_Open.Location = new System.Drawing.Point(43, 34);
+            this.btn_Open.Name = "btn_Open";
+            this.btn_Open.Size = new System.Drawing.Size(188, 22);
+            this.btn_Open.TabIndex = 1;
+            this.btn_Open.Text = "Open";
+            this.btn_Open.UseVisualStyleBackColor = true;
+            this.btn_Open.Click += new System.EventHandler(this.btn_Open_Click);
             // 
             // textBoxDevNo
             // 
@@ -235,29 +235,29 @@
             // panelMC
             // 
             this.panelMC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelMC.Controls.Add(this.buttonMCYHome);
-            this.panelMC.Controls.Add(this.buttonMCXHome);
+            this.panelMC.Controls.Add(this.btn_Home_Y);
+            this.panelMC.Controls.Add(this.btn_Home_X);
             this.panelMC.Controls.Add(this.labelMCHome);
             this.panelMC.Controls.Add(this.buttonMCAbsMultiMove);
             this.panelMC.Controls.Add(this.checkBoxMCAbsSync);
             this.panelMC.Controls.Add(this.buttonMCIncMultiMove);
             this.panelMC.Controls.Add(this.checkBoxMCIncSync);
-            this.panelMC.Controls.Add(this.buttonMCYStop);
-            this.panelMC.Controls.Add(this.buttonMCXStop);
-            this.panelMC.Controls.Add(this.buttonMCYJogRight);
-            this.panelMC.Controls.Add(this.buttonMCYJogLeft);
-            this.panelMC.Controls.Add(this.buttonMCXJogRight);
-            this.panelMC.Controls.Add(this.buttonMCXJogLeft);
+            this.panelMC.Controls.Add(this.btn_Stop_Y);
+            this.panelMC.Controls.Add(this.btn_Stop_X);
+            this.panelMC.Controls.Add(this.btn_Jog_Right_Y);
+            this.panelMC.Controls.Add(this.btn_Jog_Left_Y);
+            this.panelMC.Controls.Add(this.btn_Jog_Right_X);
+            this.panelMC.Controls.Add(this.btn_Jog_Left_X);
             this.panelMC.Controls.Add(this.checkBoxMCSlowStop);
             this.panelMC.Controls.Add(this.checkBoxMCJogCont);
-            this.panelMC.Controls.Add(this.buttonMCYAbsPlus);
-            this.panelMC.Controls.Add(this.buttonMCYAbsMinus);
-            this.panelMC.Controls.Add(this.buttonMCXAbsPlus);
-            this.panelMC.Controls.Add(this.buttonMCXAbsMinus);
-            this.panelMC.Controls.Add(this.buttonMCYIncPlus);
-            this.panelMC.Controls.Add(this.buttonMCYIncMinus);
-            this.panelMC.Controls.Add(this.buttonMCXIncPlus);
-            this.panelMC.Controls.Add(this.buttonMCXIncMinus);
+            this.panelMC.Controls.Add(this.btn_Abs_Plus_Y);
+            this.panelMC.Controls.Add(this.btn_Abs_Minus_Y);
+            this.panelMC.Controls.Add(this.btn_Abs_Plus_X);
+            this.panelMC.Controls.Add(this.btn_Abs_Minus_X);
+            this.panelMC.Controls.Add(this.btn_Inc_Plus_Y);
+            this.panelMC.Controls.Add(this.btn_Inc_Minus_Y);
+            this.panelMC.Controls.Add(this.btn_Inc_Plus_X);
+            this.panelMC.Controls.Add(this.btn_Inc_Minus_X);
             this.panelMC.Controls.Add(this.textbox_Distance_Y);
             this.panelMC.Controls.Add(this.labelMCY);
             this.panelMC.Controls.Add(this.textbox_Distance_X);
@@ -272,25 +272,25 @@
             this.panelMC.Size = new System.Drawing.Size(236, 240);
             this.panelMC.TabIndex = 32;
             // 
-            // buttonMCYHome
+            // btn_Home_Y
             // 
-            this.buttonMCYHome.Location = new System.Drawing.Point(157, 213);
-            this.buttonMCYHome.Name = "buttonMCYHome";
-            this.buttonMCYHome.Size = new System.Drawing.Size(75, 22);
-            this.buttonMCYHome.TabIndex = 31;
-            this.buttonMCYHome.Text = "Move";
-            this.buttonMCYHome.UseVisualStyleBackColor = true;
-            this.buttonMCYHome.Click += new System.EventHandler(this.buttonMCYHome_Click);
+            this.btn_Home_Y.Location = new System.Drawing.Point(157, 213);
+            this.btn_Home_Y.Name = "btn_Home_Y";
+            this.btn_Home_Y.Size = new System.Drawing.Size(75, 22);
+            this.btn_Home_Y.TabIndex = 31;
+            this.btn_Home_Y.Text = "Move";
+            this.btn_Home_Y.UseVisualStyleBackColor = true;
+            this.btn_Home_Y.Click += new System.EventHandler(this.btn_Home_Y_Click);
             // 
-            // buttonMCXHome
+            // btn_Home_X
             // 
-            this.buttonMCXHome.Location = new System.Drawing.Point(83, 213);
-            this.buttonMCXHome.Name = "buttonMCXHome";
-            this.buttonMCXHome.Size = new System.Drawing.Size(75, 22);
-            this.buttonMCXHome.TabIndex = 30;
-            this.buttonMCXHome.Text = "Move";
-            this.buttonMCXHome.UseVisualStyleBackColor = true;
-            this.buttonMCXHome.Click += new System.EventHandler(this.buttonMCXHome_Click);
+            this.btn_Home_X.Location = new System.Drawing.Point(83, 213);
+            this.btn_Home_X.Name = "btn_Home_X";
+            this.btn_Home_X.Size = new System.Drawing.Size(75, 22);
+            this.btn_Home_X.TabIndex = 30;
+            this.btn_Home_X.Text = "Move";
+            this.btn_Home_X.UseVisualStyleBackColor = true;
+            this.btn_Home_X.Click += new System.EventHandler(this.btn_Home_X_Click);
             // 
             // labelMCHome
             // 
@@ -347,69 +347,69 @@
             this.checkBoxMCIncSync.UseVisualStyleBackColor = false;
             this.checkBoxMCIncSync.CheckedChanged += new System.EventHandler(this.checkBoxMCIncSync_CheckedChanged);
             // 
-            // buttonMCYStop
+            // btn_Stop_Y
             // 
-            this.buttonMCYStop.Location = new System.Drawing.Point(157, 143);
-            this.buttonMCYStop.Name = "buttonMCYStop";
-            this.buttonMCYStop.Size = new System.Drawing.Size(75, 22);
-            this.buttonMCYStop.TabIndex = 24;
-            this.buttonMCYStop.Text = "Stop";
-            this.buttonMCYStop.UseVisualStyleBackColor = true;
-            this.buttonMCYStop.Click += new System.EventHandler(this.buttonMCYStop_Click);
+            this.btn_Stop_Y.Location = new System.Drawing.Point(157, 143);
+            this.btn_Stop_Y.Name = "btn_Stop_Y";
+            this.btn_Stop_Y.Size = new System.Drawing.Size(75, 22);
+            this.btn_Stop_Y.TabIndex = 24;
+            this.btn_Stop_Y.Text = "Stop";
+            this.btn_Stop_Y.UseVisualStyleBackColor = true;
+            this.btn_Stop_Y.Click += new System.EventHandler(this.btn_Stop_Y_Click);
             // 
-            // buttonMCXStop
+            // btn_Stop_X
             // 
-            this.buttonMCXStop.Location = new System.Drawing.Point(83, 143);
-            this.buttonMCXStop.Name = "buttonMCXStop";
-            this.buttonMCXStop.Size = new System.Drawing.Size(75, 22);
-            this.buttonMCXStop.TabIndex = 23;
-            this.buttonMCXStop.Text = "Stop";
-            this.buttonMCXStop.UseVisualStyleBackColor = true;
-            this.buttonMCXStop.Click += new System.EventHandler(this.buttonMCXStop_Click);
+            this.btn_Stop_X.Location = new System.Drawing.Point(83, 143);
+            this.btn_Stop_X.Name = "btn_Stop_X";
+            this.btn_Stop_X.Size = new System.Drawing.Size(75, 22);
+            this.btn_Stop_X.TabIndex = 23;
+            this.btn_Stop_X.Text = "Stop";
+            this.btn_Stop_X.UseVisualStyleBackColor = true;
+            this.btn_Stop_X.Click += new System.EventHandler(this.btn_Stop_X_Click);
             // 
-            // buttonMCYJogRight
+            // btn_Jog_Right_Y
             // 
-            this.buttonMCYJogRight.Location = new System.Drawing.Point(195, 121);
-            this.buttonMCYJogRight.Name = "buttonMCYJogRight";
-            this.buttonMCYJogRight.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYJogRight.TabIndex = 22;
-            this.buttonMCYJogRight.Text = ">";
-            this.buttonMCYJogRight.UseVisualStyleBackColor = true;
-            this.buttonMCYJogRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMCYJogRight_MouseDown);
-            this.buttonMCYJogRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMCYJogRight_MouseUp);
+            this.btn_Jog_Right_Y.Location = new System.Drawing.Point(195, 121);
+            this.btn_Jog_Right_Y.Name = "btn_Jog_Right_Y";
+            this.btn_Jog_Right_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Jog_Right_Y.TabIndex = 22;
+            this.btn_Jog_Right_Y.Text = ">";
+            this.btn_Jog_Right_Y.UseVisualStyleBackColor = true;
+            this.btn_Jog_Right_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_Y_MouseDown);
+            this.btn_Jog_Right_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_Y_MouseUp);
             // 
-            // buttonMCYJogLeft
+            // btn_Jog_Left_Y
             // 
-            this.buttonMCYJogLeft.Location = new System.Drawing.Point(157, 121);
-            this.buttonMCYJogLeft.Name = "buttonMCYJogLeft";
-            this.buttonMCYJogLeft.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYJogLeft.TabIndex = 21;
-            this.buttonMCYJogLeft.Text = "<";
-            this.buttonMCYJogLeft.UseVisualStyleBackColor = true;
-            this.buttonMCYJogLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMCYJogLeft_MouseDown);
-            this.buttonMCYJogLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMCYJogLeft_MouseUp);
+            this.btn_Jog_Left_Y.Location = new System.Drawing.Point(157, 121);
+            this.btn_Jog_Left_Y.Name = "btn_Jog_Left_Y";
+            this.btn_Jog_Left_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Jog_Left_Y.TabIndex = 21;
+            this.btn_Jog_Left_Y.Text = "<";
+            this.btn_Jog_Left_Y.UseVisualStyleBackColor = true;
+            this.btn_Jog_Left_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_Y_MouseDown);
+            this.btn_Jog_Left_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_Y_MouseUp);
             // 
-            // buttonMCXJogRight
+            // btn_Jog_Right_X
             // 
-            this.buttonMCXJogRight.Location = new System.Drawing.Point(120, 121);
-            this.buttonMCXJogRight.Name = "buttonMCXJogRight";
-            this.buttonMCXJogRight.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXJogRight.TabIndex = 20;
-            this.buttonMCXJogRight.Text = ">";
-            this.buttonMCXJogRight.UseVisualStyleBackColor = true;
-            this.buttonMCXJogRight.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMCXJogRight_MouseDown);
-            this.buttonMCXJogRight.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMCXJogRight_MouseUp);
+            this.btn_Jog_Right_X.Location = new System.Drawing.Point(120, 121);
+            this.btn_Jog_Right_X.Name = "btn_Jog_Right_X";
+            this.btn_Jog_Right_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Jog_Right_X.TabIndex = 20;
+            this.btn_Jog_Right_X.Text = ">";
+            this.btn_Jog_Right_X.UseVisualStyleBackColor = true;
+            this.btn_Jog_Right_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_X_MouseDown);
+            this.btn_Jog_Right_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_X_MouseUp);
             // 
-            // buttonMCXJogLeft
+            // btn_Jog_Left_X
             // 
-            this.buttonMCXJogLeft.Location = new System.Drawing.Point(83, 121);
-            this.buttonMCXJogLeft.Name = "buttonMCXJogLeft";
-            this.buttonMCXJogLeft.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXJogLeft.TabIndex = 19;
-            this.buttonMCXJogLeft.Text = "<";
-            this.buttonMCXJogLeft.UseVisualStyleBackColor = true;
-            this.buttonMCXJogLeft.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMCXJogLeft_MouseDown);
-            this.buttonMCXJogLeft.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMCXJogLeft_MouseUp);
+            this.btn_Jog_Left_X.Location = new System.Drawing.Point(83, 121);
+            this.btn_Jog_Left_X.Name = "btn_Jog_Left_X";
+            this.btn_Jog_Left_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Jog_Left_X.TabIndex = 19;
+            this.btn_Jog_Left_X.Text = "<";
+            this.btn_Jog_Left_X.UseVisualStyleBackColor = true;
+            this.btn_Jog_Left_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_X_MouseDown);
+            this.btn_Jog_Left_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_X_MouseUp);
             // 
             // checkBoxMCSlowStop
             // 
@@ -433,85 +433,85 @@
             this.checkBoxMCJogCont.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxMCJogCont.UseVisualStyleBackColor = false;
             // 
-            // buttonMCYAbsPlus
+            // btn_Abs_Plus_Y
             // 
-            this.buttonMCYAbsPlus.Location = new System.Drawing.Point(195, 98);
-            this.buttonMCYAbsPlus.Name = "buttonMCYAbsPlus";
-            this.buttonMCYAbsPlus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYAbsPlus.TabIndex = 17;
-            this.buttonMCYAbsPlus.Text = "+";
-            this.buttonMCYAbsPlus.UseVisualStyleBackColor = true;
-            this.buttonMCYAbsPlus.Click += new System.EventHandler(this.buttonMCYAbsPlus_Click);
+            this.btn_Abs_Plus_Y.Location = new System.Drawing.Point(195, 98);
+            this.btn_Abs_Plus_Y.Name = "btn_Abs_Plus_Y";
+            this.btn_Abs_Plus_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Abs_Plus_Y.TabIndex = 17;
+            this.btn_Abs_Plus_Y.Text = "+";
+            this.btn_Abs_Plus_Y.UseVisualStyleBackColor = true;
+            this.btn_Abs_Plus_Y.Click += new System.EventHandler(this.btn_Abs_Plus_Y_Click);
             // 
-            // buttonMCYAbsMinus
+            // btn_Abs_Minus_Y
             // 
-            this.buttonMCYAbsMinus.Location = new System.Drawing.Point(157, 98);
-            this.buttonMCYAbsMinus.Name = "buttonMCYAbsMinus";
-            this.buttonMCYAbsMinus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYAbsMinus.TabIndex = 16;
-            this.buttonMCYAbsMinus.Text = "-";
-            this.buttonMCYAbsMinus.UseVisualStyleBackColor = true;
-            this.buttonMCYAbsMinus.Click += new System.EventHandler(this.buttonMCYAbsMinus_Click);
+            this.btn_Abs_Minus_Y.Location = new System.Drawing.Point(157, 98);
+            this.btn_Abs_Minus_Y.Name = "btn_Abs_Minus_Y";
+            this.btn_Abs_Minus_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Abs_Minus_Y.TabIndex = 16;
+            this.btn_Abs_Minus_Y.Text = "-";
+            this.btn_Abs_Minus_Y.UseVisualStyleBackColor = true;
+            this.btn_Abs_Minus_Y.Click += new System.EventHandler(this.btn_Abs_Minus_Y_Click);
             // 
-            // buttonMCXAbsPlus
+            // btn_Abs_Plus_X
             // 
-            this.buttonMCXAbsPlus.Location = new System.Drawing.Point(120, 98);
-            this.buttonMCXAbsPlus.Name = "buttonMCXAbsPlus";
-            this.buttonMCXAbsPlus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXAbsPlus.TabIndex = 15;
-            this.buttonMCXAbsPlus.Text = "+";
-            this.buttonMCXAbsPlus.UseVisualStyleBackColor = true;
-            this.buttonMCXAbsPlus.Click += new System.EventHandler(this.buttonMCXAbsPlus_Click);
+            this.btn_Abs_Plus_X.Location = new System.Drawing.Point(120, 98);
+            this.btn_Abs_Plus_X.Name = "btn_Abs_Plus_X";
+            this.btn_Abs_Plus_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Abs_Plus_X.TabIndex = 15;
+            this.btn_Abs_Plus_X.Text = "+";
+            this.btn_Abs_Plus_X.UseVisualStyleBackColor = true;
+            this.btn_Abs_Plus_X.Click += new System.EventHandler(this.btn_Abs_Plus_X_Click);
             // 
-            // buttonMCXAbsMinus
+            // btn_Abs_Minus_X
             // 
-            this.buttonMCXAbsMinus.Location = new System.Drawing.Point(83, 98);
-            this.buttonMCXAbsMinus.Name = "buttonMCXAbsMinus";
-            this.buttonMCXAbsMinus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXAbsMinus.TabIndex = 14;
-            this.buttonMCXAbsMinus.Text = "-";
-            this.buttonMCXAbsMinus.UseVisualStyleBackColor = true;
-            this.buttonMCXAbsMinus.Click += new System.EventHandler(this.buttonMCXAbsMinus_Click);
+            this.btn_Abs_Minus_X.Location = new System.Drawing.Point(83, 98);
+            this.btn_Abs_Minus_X.Name = "btn_Abs_Minus_X";
+            this.btn_Abs_Minus_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Abs_Minus_X.TabIndex = 14;
+            this.btn_Abs_Minus_X.Text = "-";
+            this.btn_Abs_Minus_X.UseVisualStyleBackColor = true;
+            this.btn_Abs_Minus_X.Click += new System.EventHandler(this.btn_Abs_Minus_X_Click);
             // 
-            // buttonMCYIncPlus
+            // btn_Inc_Plus_Y
             // 
-            this.buttonMCYIncPlus.Location = new System.Drawing.Point(195, 77);
-            this.buttonMCYIncPlus.Name = "buttonMCYIncPlus";
-            this.buttonMCYIncPlus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYIncPlus.TabIndex = 13;
-            this.buttonMCYIncPlus.Text = "+";
-            this.buttonMCYIncPlus.UseVisualStyleBackColor = true;
-            this.buttonMCYIncPlus.Click += new System.EventHandler(this.buttonMCYIncPlus_Click);
+            this.btn_Inc_Plus_Y.Location = new System.Drawing.Point(195, 77);
+            this.btn_Inc_Plus_Y.Name = "btn_Inc_Plus_Y";
+            this.btn_Inc_Plus_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Inc_Plus_Y.TabIndex = 13;
+            this.btn_Inc_Plus_Y.Text = "+";
+            this.btn_Inc_Plus_Y.UseVisualStyleBackColor = true;
+            this.btn_Inc_Plus_Y.Click += new System.EventHandler(this.btn_Inc_Plus_Y_Click);
             // 
-            // buttonMCYIncMinus
+            // btn_Inc_Minus_Y
             // 
-            this.buttonMCYIncMinus.Location = new System.Drawing.Point(157, 77);
-            this.buttonMCYIncMinus.Name = "buttonMCYIncMinus";
-            this.buttonMCYIncMinus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCYIncMinus.TabIndex = 12;
-            this.buttonMCYIncMinus.Text = "-";
-            this.buttonMCYIncMinus.UseVisualStyleBackColor = true;
-            this.buttonMCYIncMinus.Click += new System.EventHandler(this.buttonMCYIncMinus_Click);
+            this.btn_Inc_Minus_Y.Location = new System.Drawing.Point(157, 77);
+            this.btn_Inc_Minus_Y.Name = "btn_Inc_Minus_Y";
+            this.btn_Inc_Minus_Y.Size = new System.Drawing.Size(38, 22);
+            this.btn_Inc_Minus_Y.TabIndex = 12;
+            this.btn_Inc_Minus_Y.Text = "-";
+            this.btn_Inc_Minus_Y.UseVisualStyleBackColor = true;
+            this.btn_Inc_Minus_Y.Click += new System.EventHandler(this.btn_Inc_Minus_Y_Click);
             // 
-            // buttonMCXIncPlus
+            // btn_Inc_Plus_X
             // 
-            this.buttonMCXIncPlus.Location = new System.Drawing.Point(120, 77);
-            this.buttonMCXIncPlus.Name = "buttonMCXIncPlus";
-            this.buttonMCXIncPlus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXIncPlus.TabIndex = 11;
-            this.buttonMCXIncPlus.Text = "+";
-            this.buttonMCXIncPlus.UseVisualStyleBackColor = true;
-            this.buttonMCXIncPlus.Click += new System.EventHandler(this.buttonMCXIncPlus_Click);
+            this.btn_Inc_Plus_X.Location = new System.Drawing.Point(120, 77);
+            this.btn_Inc_Plus_X.Name = "btn_Inc_Plus_X";
+            this.btn_Inc_Plus_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Inc_Plus_X.TabIndex = 11;
+            this.btn_Inc_Plus_X.Text = "+";
+            this.btn_Inc_Plus_X.UseVisualStyleBackColor = true;
+            this.btn_Inc_Plus_X.Click += new System.EventHandler(this.btn_Inc_Plus_X_Click);
             // 
-            // buttonMCXIncMinus
+            // btn_Inc_Minus_X
             // 
-            this.buttonMCXIncMinus.Location = new System.Drawing.Point(83, 77);
-            this.buttonMCXIncMinus.Name = "buttonMCXIncMinus";
-            this.buttonMCXIncMinus.Size = new System.Drawing.Size(38, 22);
-            this.buttonMCXIncMinus.TabIndex = 10;
-            this.buttonMCXIncMinus.Text = "-";
-            this.buttonMCXIncMinus.UseVisualStyleBackColor = true;
-            this.buttonMCXIncMinus.Click += new System.EventHandler(this.buttonMCXIncMinus_Click);
+            this.btn_Inc_Minus_X.Location = new System.Drawing.Point(83, 77);
+            this.btn_Inc_Minus_X.Name = "btn_Inc_Minus_X";
+            this.btn_Inc_Minus_X.Size = new System.Drawing.Size(38, 22);
+            this.btn_Inc_Minus_X.TabIndex = 10;
+            this.btn_Inc_Minus_X.Text = "-";
+            this.btn_Inc_Minus_X.UseVisualStyleBackColor = true;
+            this.btn_Inc_Minus_X.Click += new System.EventHandler(this.btn_Inc_Minus_X_Click);
             // 
             // textbox_Distance_Y
             // 
@@ -623,8 +623,8 @@
             this.panelSS.Controls.Add(this.textbox_Max_Y);
             this.panelSS.Controls.Add(this.textbox_Max_X);
             this.panelSS.Controls.Add(this.labelSSMax);
-            this.panelSS.Controls.Add(this.buttonSSYSetup);
-            this.panelSS.Controls.Add(this.buttonSSXSetup);
+            this.panelSS.Controls.Add(this.btn_Setup_Y);
+            this.panelSS.Controls.Add(this.btn_Setup_X);
             this.panelSS.Controls.Add(this.labelSSSetup);
             this.panelSS.Controls.Add(this.textbox_Start_Y);
             this.panelSS.Controls.Add(this.labelSSY);
@@ -731,25 +731,25 @@
             this.labelSSMax.Text = "Max";
             this.labelSSMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonSSYSetup
+            // btn_Setup_Y
             // 
-            this.buttonSSYSetup.Location = new System.Drawing.Point(157, 141);
-            this.buttonSSYSetup.Name = "buttonSSYSetup";
-            this.buttonSSYSetup.Size = new System.Drawing.Size(75, 22);
-            this.buttonSSYSetup.TabIndex = 31;
-            this.buttonSSYSetup.Text = "Setup";
-            this.buttonSSYSetup.UseVisualStyleBackColor = true;
-            this.buttonSSYSetup.Click += new System.EventHandler(this.buttonSSYSetup_Click);
+            this.btn_Setup_Y.Location = new System.Drawing.Point(157, 141);
+            this.btn_Setup_Y.Name = "btn_Setup_Y";
+            this.btn_Setup_Y.Size = new System.Drawing.Size(75, 22);
+            this.btn_Setup_Y.TabIndex = 31;
+            this.btn_Setup_Y.Text = "Setup";
+            this.btn_Setup_Y.UseVisualStyleBackColor = true;
+            this.btn_Setup_Y.Click += new System.EventHandler(this.btn_Setup_Y_Click);
             // 
-            // buttonSSXSetup
+            // btn_Setup_X
             // 
-            this.buttonSSXSetup.Location = new System.Drawing.Point(83, 141);
-            this.buttonSSXSetup.Name = "buttonSSXSetup";
-            this.buttonSSXSetup.Size = new System.Drawing.Size(75, 22);
-            this.buttonSSXSetup.TabIndex = 30;
-            this.buttonSSXSetup.Text = "Setup";
-            this.buttonSSXSetup.UseVisualStyleBackColor = true;
-            this.buttonSSXSetup.Click += new System.EventHandler(this.buttonSSXSetup_Click);
+            this.btn_Setup_X.Location = new System.Drawing.Point(83, 141);
+            this.btn_Setup_X.Name = "btn_Setup_X";
+            this.btn_Setup_X.Size = new System.Drawing.Size(75, 22);
+            this.btn_Setup_X.TabIndex = 30;
+            this.btn_Setup_X.Text = "Setup";
+            this.btn_Setup_X.UseVisualStyleBackColor = true;
+            this.btn_Setup_X.Click += new System.EventHandler(this.btn_Setup_X_Click);
             // 
             // labelSSSetup
             // 
@@ -841,10 +841,10 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.labelPEYEncVal);
-            this.panel1.Controls.Add(this.labelPEXEncVal);
-            this.panel1.Controls.Add(this.labelPEYCmdVal);
-            this.panel1.Controls.Add(this.labelPEXCmdVal);
+            this.panel1.Controls.Add(this.label_Enc_Y);
+            this.panel1.Controls.Add(this.label_Enc_X);
+            this.panel1.Controls.Add(this.label_Cmd_Y);
+            this.panel1.Controls.Add(this.label_Cmd_X);
             this.panel1.Controls.Add(this.labelPEEnc);
             this.panel1.Controls.Add(this.labelPEY);
             this.panel1.Controls.Add(this.labelPEX);
@@ -856,53 +856,53 @@
             this.panel1.Size = new System.Drawing.Size(236, 103);
             this.panel1.TabIndex = 44;
             // 
-            // labelPEYEncVal
+            // label_Enc_Y
             // 
-            this.labelPEYEncVal.BackColor = System.Drawing.Color.White;
-            this.labelPEYEncVal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEYEncVal.Location = new System.Drawing.Point(157, 76);
-            this.labelPEYEncVal.Name = "labelPEYEncVal";
-            this.labelPEYEncVal.Size = new System.Drawing.Size(75, 22);
-            this.labelPEYEncVal.TabIndex = 44;
-            this.labelPEYEncVal.Text = "0";
-            this.labelPEYEncVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPEYEncVal.Click += new System.EventHandler(this.labelPEYEncVal_Click);
+            this.label_Enc_Y.BackColor = System.Drawing.Color.White;
+            this.label_Enc_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Enc_Y.Location = new System.Drawing.Point(157, 76);
+            this.label_Enc_Y.Name = "label_Enc_Y";
+            this.label_Enc_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_Enc_Y.TabIndex = 44;
+            this.label_Enc_Y.Text = "0";
+            this.label_Enc_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Enc_Y.Click += new System.EventHandler(this.labelPEYEncVal_Click);
             // 
-            // labelPEXEncVal
+            // label_Enc_X
             // 
-            this.labelPEXEncVal.BackColor = System.Drawing.Color.White;
-            this.labelPEXEncVal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEXEncVal.Location = new System.Drawing.Point(82, 76);
-            this.labelPEXEncVal.Name = "labelPEXEncVal";
-            this.labelPEXEncVal.Size = new System.Drawing.Size(75, 22);
-            this.labelPEXEncVal.TabIndex = 43;
-            this.labelPEXEncVal.Text = "0";
-            this.labelPEXEncVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPEXEncVal.Click += new System.EventHandler(this.labelPEXEncVal_Click);
+            this.label_Enc_X.BackColor = System.Drawing.Color.White;
+            this.label_Enc_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Enc_X.Location = new System.Drawing.Point(82, 76);
+            this.label_Enc_X.Name = "label_Enc_X";
+            this.label_Enc_X.Size = new System.Drawing.Size(75, 22);
+            this.label_Enc_X.TabIndex = 43;
+            this.label_Enc_X.Text = "0";
+            this.label_Enc_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Enc_X.Click += new System.EventHandler(this.labelPEXEncVal_Click);
             // 
-            // labelPEYCmdVal
+            // label_Cmd_Y
             // 
-            this.labelPEYCmdVal.BackColor = System.Drawing.Color.White;
-            this.labelPEYCmdVal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEYCmdVal.Location = new System.Drawing.Point(157, 55);
-            this.labelPEYCmdVal.Name = "labelPEYCmdVal";
-            this.labelPEYCmdVal.Size = new System.Drawing.Size(75, 22);
-            this.labelPEYCmdVal.TabIndex = 42;
-            this.labelPEYCmdVal.Text = "0";
-            this.labelPEYCmdVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPEYCmdVal.Click += new System.EventHandler(this.labelPEYCmdVal_Click);
+            this.label_Cmd_Y.BackColor = System.Drawing.Color.White;
+            this.label_Cmd_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Cmd_Y.Location = new System.Drawing.Point(157, 55);
+            this.label_Cmd_Y.Name = "label_Cmd_Y";
+            this.label_Cmd_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_Cmd_Y.TabIndex = 42;
+            this.label_Cmd_Y.Text = "0";
+            this.label_Cmd_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Cmd_Y.Click += new System.EventHandler(this.label_Cmd_Y_Click);
             // 
-            // labelPEXCmdVal
+            // label_Cmd_X
             // 
-            this.labelPEXCmdVal.BackColor = System.Drawing.Color.White;
-            this.labelPEXCmdVal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEXCmdVal.Location = new System.Drawing.Point(82, 55);
-            this.labelPEXCmdVal.Name = "labelPEXCmdVal";
-            this.labelPEXCmdVal.Size = new System.Drawing.Size(75, 22);
-            this.labelPEXCmdVal.TabIndex = 41;
-            this.labelPEXCmdVal.Text = "0";
-            this.labelPEXCmdVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelPEXCmdVal.Click += new System.EventHandler(this.labelPEXCmdVal_Click);
+            this.label_Cmd_X.BackColor = System.Drawing.Color.White;
+            this.label_Cmd_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Cmd_X.Location = new System.Drawing.Point(82, 55);
+            this.label_Cmd_X.Name = "label_Cmd_X";
+            this.label_Cmd_X.Size = new System.Drawing.Size(75, 22);
+            this.label_Cmd_X.TabIndex = 41;
+            this.label_Cmd_X.Text = "0";
+            this.label_Cmd_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Cmd_X.Click += new System.EventHandler(this.label_Cmd_X_Click);
             // 
             // labelPEEnc
             // 
@@ -1874,15 +1874,15 @@
             this.btnSetLogic.UseVisualStyleBackColor = true;
             this.btnSetLogic.Click += new System.EventHandler(this.btnSetLogic_Click);
             // 
-            // tabControl1
+            // tab
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(62, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1075, 705);
-            this.tabControl1.TabIndex = 67;
+            this.tab.Controls.Add(this.tabPage1);
+            this.tab.Controls.Add(this.tabPage2);
+            this.tab.Location = new System.Drawing.Point(62, 12);
+            this.tab.Name = "tab";
+            this.tab.SelectedIndex = 0;
+            this.tab.Size = new System.Drawing.Size(1075, 705);
+            this.tab.TabIndex = 67;
             // 
             // tabPage1
             // 
@@ -1912,7 +1912,7 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1067, 679);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Motor";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btn_save_config
@@ -1927,61 +1927,62 @@
             // 
             // btn_Alarm_Y
             // 
-            this.btn_Alarm_Y.Location = new System.Drawing.Point(737, 607);
+            this.btn_Alarm_Y.Location = new System.Drawing.Point(843, 158);
             this.btn_Alarm_Y.Name = "btn_Alarm_Y";
             this.btn_Alarm_Y.Size = new System.Drawing.Size(75, 23);
             this.btn_Alarm_Y.TabIndex = 69;
-            this.btn_Alarm_Y.Text = "Alarm";
+            this.btn_Alarm_Y.Text = "Alarm_Y";
             this.btn_Alarm_Y.UseVisualStyleBackColor = true;
             // 
             // btn_Alarm_X
             // 
-            this.btn_Alarm_X.Location = new System.Drawing.Point(656, 607);
+            this.btn_Alarm_X.Location = new System.Drawing.Point(762, 158);
             this.btn_Alarm_X.Name = "btn_Alarm_X";
             this.btn_Alarm_X.Size = new System.Drawing.Size(75, 23);
             this.btn_Alarm_X.TabIndex = 69;
-            this.btn_Alarm_X.Text = "Alarm";
+            this.btn_Alarm_X.Text = "Alarm_X";
             this.btn_Alarm_X.UseVisualStyleBackColor = true;
             // 
             // btn_Servo_Y
             // 
-            this.btn_Servo_Y.Location = new System.Drawing.Point(737, 578);
+            this.btn_Servo_Y.Location = new System.Drawing.Point(843, 129);
             this.btn_Servo_Y.Name = "btn_Servo_Y";
             this.btn_Servo_Y.Size = new System.Drawing.Size(75, 23);
             this.btn_Servo_Y.TabIndex = 68;
-            this.btn_Servo_Y.Text = "Servo";
+            this.btn_Servo_Y.Text = "Servo_Y";
             this.btn_Servo_Y.UseVisualStyleBackColor = true;
             // 
             // btn_Servo_X
             // 
-            this.btn_Servo_X.Location = new System.Drawing.Point(656, 578);
+            this.btn_Servo_X.Location = new System.Drawing.Point(762, 129);
             this.btn_Servo_X.Name = "btn_Servo_X";
             this.btn_Servo_X.Size = new System.Drawing.Size(75, 23);
             this.btn_Servo_X.TabIndex = 68;
-            this.btn_Servo_X.Text = "Servo";
+            this.btn_Servo_X.Text = "Servo_X";
             this.btn_Servo_X.UseVisualStyleBackColor = true;
-            this.btn_Servo_X.Click += new System.EventHandler(this.Btn_servo_X_Click);
+            this.btn_Servo_X.Click += new System.EventHandler(this.btn_servo_X_Click);
             // 
             // btn_Current_Y
             // 
-            this.btn_Current_Y.Location = new System.Drawing.Point(737, 549);
+            this.btn_Current_Y.Location = new System.Drawing.Point(843, 100);
             this.btn_Current_Y.Name = "btn_Current_Y";
             this.btn_Current_Y.Size = new System.Drawing.Size(75, 23);
             this.btn_Current_Y.TabIndex = 67;
-            this.btn_Current_Y.Text = "Current";
+            this.btn_Current_Y.Text = "Current_Y";
             this.btn_Current_Y.UseVisualStyleBackColor = true;
+            this.btn_Current_Y.Click += new System.EventHandler(this.btn_Current_Y_Click);
             // 
             // btn_Current_X
             // 
-            this.btn_Current_X.BackColor = System.Drawing.Color.Lime;
+            this.btn_Current_X.BackColor = System.Drawing.Color.Transparent;
             this.btn_Current_X.ForeColor = System.Drawing.Color.Black;
-            this.btn_Current_X.Location = new System.Drawing.Point(656, 549);
+            this.btn_Current_X.Location = new System.Drawing.Point(762, 100);
             this.btn_Current_X.Name = "btn_Current_X";
             this.btn_Current_X.Size = new System.Drawing.Size(75, 23);
             this.btn_Current_X.TabIndex = 67;
-            this.btn_Current_X.Text = "Current";
+            this.btn_Current_X.Text = "Current_X";
             this.btn_Current_X.UseVisualStyleBackColor = false;
-            this.btn_Current_X.Click += new System.EventHandler(this.Btn_current_X_Click);
+            this.btn_Current_X.Click += new System.EventHandler(this.btn_current_X_Click);
             // 
             // tabPage2
             // 
@@ -1990,7 +1991,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1067, 679);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "2D Map";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // GUI
@@ -1998,12 +1999,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1406, 743);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tab);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "GUI";
-            this.Text = "MotionControler";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MotionControler_FormClosed);
+            this.Text = "MotionController";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MotionController_FormClosed);
             this.Load += new System.EventHandler(this.MotionController_Load);
             this.panelConnection.ResumeLayout(false);
             this.panelConnection.PerformLayout();
@@ -2015,7 +2016,7 @@
             this.panelSignal.ResumeLayout(false);
             this.panelLS.ResumeLayout(false);
             this.panelLS.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -2025,32 +2026,32 @@
 
         private System.Windows.Forms.Panel panelConnection;
         private System.Windows.Forms.Label labelConnTitle;
-        private System.Windows.Forms.Button buttonOpen;
+        private System.Windows.Forms.Button btn_Open;
         private System.Windows.Forms.TextBox textBoxDevNo;
         private System.Windows.Forms.Panel panelMC;
-        private System.Windows.Forms.Button buttonMCYHome;
-        private System.Windows.Forms.Button buttonMCXHome;
+        private System.Windows.Forms.Button btn_Home_Y;
+        private System.Windows.Forms.Button btn_Home_X;
         private System.Windows.Forms.Label labelMCHome;
         private System.Windows.Forms.Button buttonMCAbsMultiMove;
         private System.Windows.Forms.CheckBox checkBoxMCAbsSync;
         private System.Windows.Forms.Button buttonMCIncMultiMove;
         private System.Windows.Forms.CheckBox checkBoxMCIncSync;
-        private System.Windows.Forms.Button buttonMCYStop;
-        private System.Windows.Forms.Button buttonMCXStop;
-        private System.Windows.Forms.Button buttonMCYJogRight;
-        private System.Windows.Forms.Button buttonMCYJogLeft;
-        private System.Windows.Forms.Button buttonMCXJogRight;
-        private System.Windows.Forms.Button buttonMCXJogLeft;
+        private System.Windows.Forms.Button btn_Stop_Y;
+        private System.Windows.Forms.Button btn_Stop_X;
+        private System.Windows.Forms.Button btn_Jog_Right_Y;
+        private System.Windows.Forms.Button btn_Jog_Left_Y;
+        private System.Windows.Forms.Button btn_Jog_Right_X;
+        private System.Windows.Forms.Button btn_Jog_Left_X;
         private System.Windows.Forms.CheckBox checkBoxMCSlowStop;
         private System.Windows.Forms.CheckBox checkBoxMCJogCont;
-        private System.Windows.Forms.Button buttonMCYAbsPlus;
-        private System.Windows.Forms.Button buttonMCYAbsMinus;
-        private System.Windows.Forms.Button buttonMCXAbsPlus;
-        private System.Windows.Forms.Button buttonMCXAbsMinus;
-        private System.Windows.Forms.Button buttonMCYIncPlus;
-        private System.Windows.Forms.Button buttonMCYIncMinus;
-        private System.Windows.Forms.Button buttonMCXIncPlus;
-        private System.Windows.Forms.Button buttonMCXIncMinus;
+        private System.Windows.Forms.Button btn_Abs_Plus_Y;
+        private System.Windows.Forms.Button btn_Abs_Minus_Y;
+        private System.Windows.Forms.Button btn_Abs_Plus_X;
+        private System.Windows.Forms.Button btn_Abs_Minus_X;
+        private System.Windows.Forms.Button btn_Inc_Plus_Y;
+        private System.Windows.Forms.Button btn_Inc_Minus_Y;
+        private System.Windows.Forms.Button btn_Inc_Plus_X;
+        private System.Windows.Forms.Button btn_Inc_Minus_X;
         private System.Windows.Forms.Label labelMCY;
         private System.Windows.Forms.Label labelMCX;
         private System.Windows.Forms.Label labelMCAbs;
@@ -2114,8 +2115,8 @@
 
 
         private System.Windows.Forms.Label labelSSMax;
-        private System.Windows.Forms.Button buttonSSYSetup;
-        private System.Windows.Forms.Button buttonSSXSetup;
+        private System.Windows.Forms.Button btn_Setup_Y;
+        private System.Windows.Forms.Button btn_Setup_X;
         private System.Windows.Forms.Label labelSSSetup;
 
 
@@ -2133,10 +2134,10 @@
         private System.Windows.Forms.Label labelPECmd;
         private System.Windows.Forms.Label labelPESlash;
         private System.Windows.Forms.Label labelPE;
-        private System.Windows.Forms.Label labelPEYEncVal;
-        private System.Windows.Forms.Label labelPEXEncVal;
-        private System.Windows.Forms.Label labelPEYCmdVal;
-        private System.Windows.Forms.Label labelPEXCmdVal;
+        private System.Windows.Forms.Label label_Enc_Y;
+        private System.Windows.Forms.Label label_Enc_X;
+        private System.Windows.Forms.Label label_Cmd_Y;
+        private System.Windows.Forms.Label label_Cmd_X;
         private System.Windows.Forms.Panel panelSignal;
         private System.Windows.Forms.Label labelSMinusLimit;
         private System.Windows.Forms.Label labelSBusy;
@@ -2212,7 +2213,7 @@
         private System.Windows.Forms.Button btnGetList;
         private System.Windows.Forms.Button btnGetLogic;
         private System.Windows.Forms.Button btnSetLogic;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tab;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btn_Servo_X;

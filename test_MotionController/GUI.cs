@@ -67,32 +67,32 @@ namespace test_MotionController
             /*
              * Init : X-axis speed configuration
              */
-            textbox_Start_X.Text = ConfigurationManager.AppSettings["textBoxSSXStart"];
-            textbox_Acc_X.Text = ConfigurationManager.AppSettings["textBoxSSXAcc"];
-            textbox_Max_X.Text = ConfigurationManager.AppSettings["textBoxSSXMax"];
-            textbox_Dec_X.Text = ConfigurationManager.AppSettings["textBoxSSXDec"];
+            textbox_Start_X.Text = ConfigurationManager.AppSettings["textbox_Start_X"];
+            textbox_Acc_X.Text = ConfigurationManager.AppSettings["textbox_Acc_X"];
+            textbox_Max_X.Text = ConfigurationManager.AppSettings["textbox_Max_X"];
+            textbox_Dec_X.Text = ConfigurationManager.AppSettings["textbox_Dec_X"];
 
             /*
              * Init : Y-axis speed configuration
              */
-            textbox_Start_Y.Text = ConfigurationManager.AppSettings["textBoxSSYStart"];
-            textbox_Acc_Y.Text = ConfigurationManager.AppSettings["textBoxSSYAcc"];
-            textbox_Max_Y.Text = ConfigurationManager.AppSettings["textBoxSSYMax"];
-            textbox_Dec_Y.Text = ConfigurationManager.AppSettings["textBoxSSYDec"];
+            textbox_Start_Y.Text = ConfigurationManager.AppSettings["textbox_Start_Y"];
+            textbox_Acc_Y.Text = ConfigurationManager.AppSettings["textbox_Acc_Y"];
+            textbox_Max_Y.Text = ConfigurationManager.AppSettings["textbox_Max_X"];
+            textbox_Dec_Y.Text = ConfigurationManager.AppSettings["textbox_Dec_X"];
 
             /*
              * Init : X,Y distance value
              */
-            textbox_Distance_X.Text = ConfigurationManager.AppSettings["textBoxMCXOut"];
-            textbox_Distance_Y.Text = ConfigurationManager.AppSettings["textBoxMCYOut"];
+            textbox_Distance_X.Text = ConfigurationManager.AppSettings["textbox_Distance_X"];
+            textbox_Distance_Y.Text = ConfigurationManager.AppSettings["textbox_Distance_Y"];
 
         }
 
-        private void buttonOpen_Click(object sender, EventArgs e)
+        private void btn_Open_Click(object sender, EventArgs e)
         {
             short devId = Convert.ToInt16(textBoxDevNo.Text);
 
-            if (buttonOpen.Text == "Open" && PaixMotion.Open(devId))
+            if (btn_Open.Text == "Open" && PaixMotion.Open(devId))
             {
                 switch (TdWatchSensor.ThreadState)
                 {
@@ -109,19 +109,19 @@ namespace test_MotionController
                 }
 
                 TdWatchSensor.Start();
-                buttonOpen.Text = "Close";
+                btn_Open.Text = "Close";
 
                 Init_Btn_Status(); // 버튼 초기화
 
             }
-            else if (buttonOpen.Text == "Close" && PaixMotion.Close())
+            else if (btn_Open.Text == "Close" && PaixMotion.Close())
             {
                 TdWatchSensor.Abort();
                 TdWatchSensor.Join();
 
                 while (TdWatchSensor.ThreadState != ThreadState.Stopped) { }
                 
-                buttonOpen.Text = "Open";
+                btn_Open.Text = "Open";
             }
         }
 
@@ -145,11 +145,11 @@ namespace test_MotionController
             if (PaixMotion.GetNmcStatus(ref NmcData) == false)
                 return;
                 
-            labelPEXCmdVal.Text = NmcData.dCmd[0].ToString();
-            labelPEYCmdVal.Text = NmcData.dCmd[1].ToString();
+            label_Cmd_X.Text = NmcData.dCmd[0].ToString();
+            label_Cmd_Y.Text = NmcData.dCmd[1].ToString();
 
-            labelPEXEncVal.Text = NmcData.dEnc[0].ToString();
-            labelPEYEncVal.Text = NmcData.dEnc[1].ToString();
+            label_Enc_X.Text = NmcData.dEnc[0].ToString();
+            label_Enc_Y.Text = NmcData.dEnc[1].ToString();
 
             panelEmergency.BackColor = NmcData.nEmer[0] == 1 ? Color.Red : Color.LightYellow;
             panelSXBusy.BackColor = NmcData.nBusy[0] == 1? Color.Red : Color.LightYellow;
@@ -170,32 +170,35 @@ namespace test_MotionController
             panelSYEncZ.BackColor = NmcData.nEncZ[1] == 1? Color.Red : Color.LightYellow;
         }
 
-        private void buttonMCXIncMinus_Click(object sender, EventArgs e)
+
+        #region motion button 
+
+        private void btn_Inc_Minus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void buttonMCXIncPlus_Click(object sender, EventArgs e)
+        private void btn_Inc_Plus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void buttonMCXAbsMinus_Click(object sender, EventArgs e)
+        private void btn_Abs_Minus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void buttonMCXAbsPlus_Click(object sender, EventArgs e)
+        private void btn_Abs_Plus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void buttonMCXJogLeft_MouseDown(object sender, MouseEventArgs e)
+        private void btn_Jog_Left_X_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(0, 1);
         }
 
-        private void buttonMCXJogLeft_MouseUp(object sender, MouseEventArgs e)
+        private void btn_Jog_Left_X_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -203,12 +206,12 @@ namespace test_MotionController
             }
         }
 
-        private void buttonMCXJogRight_MouseDown(object sender, MouseEventArgs e)
+        private void btn_Jog_Right_X_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(0, 0);
         }
 
-        private void buttonMCXJogRight_MouseUp(object sender, MouseEventArgs e)
+        private void btn_Jog_Right_X_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -216,7 +219,60 @@ namespace test_MotionController
             }
         }
 
-        private void buttonMCXStop_Click(object sender, EventArgs e)
+        private void btn_Inc_Minus_Y_Click(object sender, EventArgs e)
+        {
+            PaixMotion.RelMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
+        }
+
+        private void btn_Inc_Plus_Y_Click(object sender, EventArgs e)
+        {
+            PaixMotion.RelMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
+        }
+
+        private void btn_Abs_Minus_Y_Click(object sender, EventArgs e)
+        {
+            PaixMotion.AbsMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
+        }
+
+        private void btn_Abs_Plus_Y_Click(object sender, EventArgs e)
+        {
+            PaixMotion.AbsMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
+        }
+
+        private void btn_Jog_Left_Y_MouseDown(object sender, MouseEventArgs e)
+        {
+            PaixMotion.JogMove(1, 1);
+        }
+
+        private void btn_Jog_Left_Y_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (!checkBoxMCJogCont.Checked)
+            {
+                stop(1);
+            }
+        }
+
+        private void btn_Jog_Right_Y_MouseDown(object sender, MouseEventArgs e)
+        {
+            PaixMotion.JogMove(1, 0);
+        }
+
+        private void btn_Jog_Right_Y_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (!checkBoxMCJogCont.Checked)
+            {
+                stop(1);
+            }
+        }
+
+        private void btn_Stop_Y_Click(object sender, EventArgs e)
+        {
+            stop(1);
+        }
+
+        #endregion
+
+        private void btn_Stop_X_Click(object sender, EventArgs e)
         {
             stop(0);
         }
@@ -234,56 +290,6 @@ namespace test_MotionController
             }
         }
 
-        private void buttonMCYIncMinus_Click(object sender, EventArgs e)
-        {
-            PaixMotion.RelMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
-        }
-
-        private void buttonMCYIncPlus_Click(object sender, EventArgs e)
-        {
-            PaixMotion.RelMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
-        }
-
-        private void buttonMCYAbsMinus_Click(object sender, EventArgs e)
-        {
-            PaixMotion.AbsMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
-        }
-
-        private void buttonMCYAbsPlus_Click(object sender, EventArgs e)
-        {
-            PaixMotion.AbsMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
-        }
-
-        private void buttonMCYJogLeft_MouseDown(object sender, MouseEventArgs e)
-        {
-            PaixMotion.JogMove(1, 1);
-        }
-
-        private void buttonMCYJogLeft_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (!checkBoxMCJogCont.Checked)
-            {
-                stop(1);
-            }
-        }
-
-        private void buttonMCYJogRight_MouseDown(object sender, MouseEventArgs e)
-        {
-            PaixMotion.JogMove(1, 0);
-        }
-
-        private void buttonMCYJogRight_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (!checkBoxMCJogCont.Checked)
-            {
-                stop(1);
-            }
-        }
-
-        private void buttonMCYStop_Click(object sender, EventArgs e)
-        {
-            stop(1);
-        }
 
         private void buttonMCIncMultiMove_Click(object sender, EventArgs e)
         {
@@ -322,17 +328,17 @@ namespace test_MotionController
             buttonMCAbsMultiMove.Text = checkBoxMCAbsSync.Checked ? "동시/동기 Move" : "다축 Move";
         }
 
-        private void buttonMCXHome_Click(object sender, EventArgs e)
+        private void btn_Home_X_Click(object sender, EventArgs e)
         {
             PaixMotion.HomeMove(0, comboBoxLSXHomeMode.SelectedIndex);
         }
 
-        private void buttonMCYHome_Click(object sender, EventArgs e)
+        private void btn_Home_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.HomeMove(1, comboBoxLSYHomeMode.SelectedIndex);
         }
 
-        private void buttonSSXSetup_Click(object sender, EventArgs e)
+        private void btn_Setup_X_Click(object sender, EventArgs e)
         {
             double dstart = Convert.ToDouble(textbox_Start_X.Text);
             double dacc = Convert.ToDouble(textbox_Acc_X.Text);
@@ -342,7 +348,7 @@ namespace test_MotionController
             PaixMotion.SetSpeedPPS(0, dstart, dacc, ddec, dmax);
         }
 
-        private void buttonSSYSetup_Click(object sender, EventArgs e)
+        private void btn_Setup_Y_Click(object sender, EventArgs e)
         {
             double dstart = Convert.ToDouble(textbox_Start_Y.Text);
             double dacc = Convert.ToDouble(textbox_Acc_Y.Text);
@@ -352,7 +358,7 @@ namespace test_MotionController
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
 
-        private void MotionControler_FormClosed(object sender, FormClosedEventArgs e)
+        private void MotionController_FormClosed(object sender, FormClosedEventArgs e)
         {
             PaixMotion.Close();
             if (TdWatchSensor.IsAlive)
@@ -361,7 +367,7 @@ namespace test_MotionController
             }
         }
 
-        private void labelPEXCmdVal_Click(object sender, EventArgs e)
+        private void label_Cmd_X_Click(object sender, EventArgs e)
         {
             PaixMotion.SetCmd(0, 0);
 
@@ -371,7 +377,7 @@ namespace test_MotionController
         {
         }
 
-        private void labelPEYCmdVal_Click(object sender, EventArgs e)
+        private void label_Cmd_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.SetCmd(1, 0);
 
@@ -425,7 +431,6 @@ namespace test_MotionController
         {
             PaixMotion.SetAlarmLogic(1, comboBoxLSYAlarm.SelectedIndex == 0 ? (short)0 : (short)1);
         }
-
 
         private void comboBoxLSXEnc_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -609,7 +614,7 @@ namespace test_MotionController
 
 
 
-        private void Btn_current_X_Click(object sender, EventArgs e)
+        private void btn_current_X_Click(object sender, EventArgs e)
         {
             short nCurrentOn = PaixMotion.updateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
 
@@ -625,7 +630,7 @@ namespace test_MotionController
             }
         }
 
-        private void Btn_servo_X_Click(object sender, EventArgs e)
+        private void btn_servo_X_Click(object sender, EventArgs e)
         {
             short nServoOn = PaixMotion.updateAxisInfo(0).nServoOn; // ServoOn 신호 값
 
@@ -639,6 +644,11 @@ namespace test_MotionController
                 PaixMotion.SetServoOn(0, 0);
                 this.btn_Servo_X.BackColor = Color.Red;
             }
+
+        }
+
+        private void btn_Current_Y_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -680,32 +690,32 @@ namespace test_MotionController
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
-            config.AppSettings.Settings.Remove("textBox_Start_X");
-            config.AppSettings.Settings.Remove("textBox_Acc_X");
-            config.AppSettings.Settings.Remove("textBox_Dec_X");
-            config.AppSettings.Settings.Remove("textBox_Max_X");
+            config.AppSettings.Settings.Remove("texbtox_Start_X");
+            config.AppSettings.Settings.Remove("textbox_Acc_X");
+            config.AppSettings.Settings.Remove("textbox_Dec_X");
+            config.AppSettings.Settings.Remove("textbox_Max_X");
 
-            config.AppSettings.Settings.Remove("textBox_Start_Y");
-            config.AppSettings.Settings.Remove("textBox_Acc_Y");
-            config.AppSettings.Settings.Remove("textBox_Dec_X");
-            config.AppSettings.Settings.Remove("textBox_Max_X");
+            config.AppSettings.Settings.Remove("textbox_Start_Y");
+            config.AppSettings.Settings.Remove("textbox_Acc_Y");
+            config.AppSettings.Settings.Remove("textbox_Dec_X");
+            config.AppSettings.Settings.Remove("textbox_Max_X");
 
-            config.AppSettings.Settings.Remove("textBox_Distance_X");
-            config.AppSettings.Settings.Remove("textBox_Distance_Y");
+            config.AppSettings.Settings.Remove("textbox_Distance_X");
+            config.AppSettings.Settings.Remove("textbox_Distance_Y");
 
-            config.AppSettings.Settings.Add("textBox_Start_X", Textbox_Start_X.Text);
-            config.AppSettings.Settings.Add("textBox_Acc_X", Textbox_Acc_X.Text);
-            config.AppSettings.Settings.Add("textBox_Dec_X", Textbox_Dec_X.Text);
-            config.AppSettings.Settings.Add("textBox_Max_X", Textbox_Max_X.Text);
+            config.AppSettings.Settings.Add("textbox_Start_X", Textbox_Start_X.Text);
+            config.AppSettings.Settings.Add("textbox_Acc_X", Textbox_Acc_X.Text);
+            config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
+            config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
 
-            config.AppSettings.Settings.Add("textBox_Start_Y", Textbox_Start_Y.Text);
-            config.AppSettings.Settings.Add("textBox_Acc_Y", Textbox_Acc_Y.Text);
-            config.AppSettings.Settings.Add("textBox_Dec_X", Textbox_Dec_X.Text);
-            config.AppSettings.Settings.Add("textBox_Max_X", Textbox_Max_X.Text);
+            config.AppSettings.Settings.Add("textbox_Start_Y", Textbox_Start_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Acc_Y", Textbox_Acc_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
+            config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
 
 
-            config.AppSettings.Settings.Add("textBox_Distance_X", Textbox_Distance_X.Text);
-            config.AppSettings.Settings.Add("textBox_Distance_Y", Textbox_Distance_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Distance_X", Textbox_Distance_X.Text);
+            config.AppSettings.Settings.Add("textbox_Distance_Y", Textbox_Distance_Y.Text);
 
 
             config.Save(ConfigurationSaveMode.Modified);
