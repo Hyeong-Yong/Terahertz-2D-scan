@@ -168,9 +168,9 @@ namespace THz_2D_scan
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
 
+        private void Textbox_scan_start_x_TextChanged(object sender, EventArgs e)
+        {
 
-
-
-
+        }
     }
 }

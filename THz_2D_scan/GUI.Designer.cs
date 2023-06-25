@@ -175,6 +175,19 @@
             this.btn_Current_Y = new System.Windows.Forms.Button();
             this.btn_Current_X = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Group_ScanRange = new System.Windows.Forms.GroupBox();
+            this.Textbox_Scan_Interval_Y = new System.Windows.Forms.TextBox();
+            this.Textbox_Scan_End_Y = new System.Windows.Forms.TextBox();
+            this.Textbox_Scan_Start_Y = new System.Windows.Forms.TextBox();
+            this.Textbox_Scan_Interval_X = new System.Windows.Forms.TextBox();
+            this.Textbox_Scan_End_X = new System.Windows.Forms.TextBox();
+            this.Textbox_Scan_Start_X = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Lbl_Scan_Y = new System.Windows.Forms.Label();
+            this.Lbl_Scan_X = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
             this.panelSS.SuspendLayout();
@@ -183,6 +196,8 @@
             this.panelLS.SuspendLayout();
             this.tab.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.Group_ScanRange.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelConnection
@@ -1934,6 +1949,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Group_ScanRange);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -1941,6 +1957,137 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "2D Map";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Group_ScanRange
+            // 
+            this.Group_ScanRange.Controls.Add(this.label6);
+            this.Group_ScanRange.Controls.Add(this.label1);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Interval_Y);
+            this.Group_ScanRange.Controls.Add(this.Lbl_Scan_Y);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_End_Y);
+            this.Group_ScanRange.Controls.Add(this.Lbl_Scan_X);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Start_Y);
+            this.Group_ScanRange.Controls.Add(this.label4);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Interval_X);
+            this.Group_ScanRange.Controls.Add(this.label5);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_End_X);
+            this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Start_X);
+            this.Group_ScanRange.Location = new System.Drawing.Point(80, 209);
+            this.Group_ScanRange.Name = "Group_ScanRange";
+            this.Group_ScanRange.Size = new System.Drawing.Size(302, 290);
+            this.Group_ScanRange.TabIndex = 0;
+            this.Group_ScanRange.TabStop = false;
+            this.Group_ScanRange.Text = "Scan range";
+            // 
+            // Textbox_Scan_Interval_Y
+            // 
+            this.Textbox_Scan_Interval_Y.Location = new System.Drawing.Point(155, 141);
+            this.Textbox_Scan_Interval_Y.Name = "Textbox_Scan_Interval_Y";
+            this.Textbox_Scan_Interval_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_Interval_Y.TabIndex = 0;
+            // 
+            // Textbox_Scan_End_Y
+            // 
+            this.Textbox_Scan_End_Y.Location = new System.Drawing.Point(155, 119);
+            this.Textbox_Scan_End_Y.Name = "Textbox_Scan_End_Y";
+            this.Textbox_Scan_End_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_End_Y.TabIndex = 0;
+            // 
+            // Textbox_Scan_Start_Y
+            // 
+            this.Textbox_Scan_Start_Y.Location = new System.Drawing.Point(155, 98);
+            this.Textbox_Scan_Start_Y.Name = "Textbox_Scan_Start_Y";
+            this.Textbox_Scan_Start_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_Start_Y.TabIndex = 0;
+            // 
+            // Textbox_Scan_Interval_X
+            // 
+            this.Textbox_Scan_Interval_X.Location = new System.Drawing.Point(81, 141);
+            this.Textbox_Scan_Interval_X.Name = "Textbox_Scan_Interval_X";
+            this.Textbox_Scan_Interval_X.Size = new System.Drawing.Size(74, 21);
+            this.Textbox_Scan_Interval_X.TabIndex = 0;
+            // 
+            // Textbox_Scan_End_X
+            // 
+            this.Textbox_Scan_End_X.Location = new System.Drawing.Point(80, 120);
+            this.Textbox_Scan_End_X.Name = "Textbox_Scan_End_X";
+            this.Textbox_Scan_End_X.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_End_X.TabIndex = 0;
+            // 
+            // Textbox_Scan_Start_X
+            // 
+            this.Textbox_Scan_Start_X.Location = new System.Drawing.Point(81, 98);
+            this.Textbox_Scan_Start_X.Name = "Textbox_Scan_Start_X";
+            this.Textbox_Scan_Start_X.Size = new System.Drawing.Size(74, 21);
+            this.Textbox_Scan_Start_X.TabIndex = 0;
+            this.Textbox_Scan_Start_X.TextChanged += new System.EventHandler(this.Textbox_scan_start_x_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(0, 119);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 22);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "End";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Lbl_Scan_Y
+            // 
+            this.Lbl_Scan_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Lbl_Scan_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lbl_Scan_Y.Location = new System.Drawing.Point(155, 77);
+            this.Lbl_Scan_Y.Name = "Lbl_Scan_Y";
+            this.Lbl_Scan_Y.Size = new System.Drawing.Size(75, 22);
+            this.Lbl_Scan_Y.TabIndex = 42;
+            this.Lbl_Scan_Y.Text = "Y";
+            this.Lbl_Scan_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Lbl_Scan_X
+            // 
+            this.Lbl_Scan_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Lbl_Scan_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Lbl_Scan_X.Location = new System.Drawing.Point(80, 77);
+            this.Lbl_Scan_X.Name = "Lbl_Scan_X";
+            this.Lbl_Scan_X.Size = new System.Drawing.Size(75, 22);
+            this.Lbl_Scan_X.TabIndex = 41;
+            this.Lbl_Scan_X.Text = "X";
+            this.Lbl_Scan_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(0, 98);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(81, 22);
+            this.label4.TabIndex = 40;
+            this.label4.Text = "Start";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Silver;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(0, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 22);
+            this.label5.TabIndex = 39;
+            this.label5.Text = "/";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(0, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 22);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Interval";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GUI
             // 
@@ -1966,6 +2113,9 @@
             this.panelLS.PerformLayout();
             this.tab.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.Group_ScanRange.ResumeLayout(false);
+            this.Group_ScanRange.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2167,5 +2317,18 @@
         private System.Windows.Forms.Button btn_Servo_Y;
         private System.Windows.Forms.Button btn_Current_Y;
         private System.Windows.Forms.Button btn_save_config;
+        private System.Windows.Forms.GroupBox Group_ScanRange;
+        private System.Windows.Forms.TextBox Textbox_Scan_Interval_Y;
+        private System.Windows.Forms.TextBox Textbox_Scan_End_Y;
+        private System.Windows.Forms.TextBox Textbox_Scan_Start_Y;
+        private System.Windows.Forms.TextBox Textbox_Scan_Interval_X;
+        private System.Windows.Forms.TextBox Textbox_Scan_End_X;
+        private System.Windows.Forms.TextBox Textbox_Scan_Start_X;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Lbl_Scan_Y;
+        private System.Windows.Forms.Label Lbl_Scan_X;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

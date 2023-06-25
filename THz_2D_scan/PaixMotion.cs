@@ -581,7 +581,7 @@ namespace THz_2D_scan
         /// </summary>
         /// <param name="nAxis"></param>
         /// <param name="nHomeMode">0: +Limit, 1: -Limit, 2: +Near(around -Limit), 3: -Near(around +Limit), 4: -Z, 5: +Z </param>
-        /// <param name="nHomeEndMode">0: None, 3: Offset 이동 후에 Cmd/Enc 값 0으로 초기화, 12:Offset 이동 전에 Cmd/Enc 값 0으로 초기화 </param>
+        /// <param name="nHomeEndMode">0: None, 3: Offset 이동 후에 Cmd/Enc 값 0으로 초기화, 12:Offset 이동 전에 Cmd/Enc 값 0으로 초기화, 15: 이동 전/후 Cmd/Enc 0으로 초기화</param>
         /// <param name="dOffset">원점이동이 종료된 후 Offset이동할 위치</param>
         /// <returns></returns>        
         public bool HomeMove(short nAxis, int nHomeMode, short nHomeEndMode, double dOffset)
