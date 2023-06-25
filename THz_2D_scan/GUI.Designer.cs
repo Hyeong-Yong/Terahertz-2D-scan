@@ -204,7 +204,7 @@
             this.btn_Open.TabIndex = 1;
             this.btn_Open.Text = "Open";
             this.btn_Open.UseVisualStyleBackColor = true;
-            this.btn_Open.Click += new System.EventHandler(this.btn_Open_Click);
+            this.btn_Open.Click += new System.EventHandler(this.Btn_Open_Click);
             // 
             // textBoxDevNo
             // 
@@ -272,7 +272,7 @@
             this.btn_Home_Y.TabIndex = 31;
             this.btn_Home_Y.Text = "Move";
             this.btn_Home_Y.UseVisualStyleBackColor = true;
-            this.btn_Home_Y.Click += new System.EventHandler(this.btn_Home_Y_Click);
+            this.btn_Home_Y.Click += new System.EventHandler(this.Btn_Home_Y_Click);
             // 
             // btn_Home_X
             // 
@@ -282,7 +282,7 @@
             this.btn_Home_X.TabIndex = 30;
             this.btn_Home_X.Text = "Move";
             this.btn_Home_X.UseVisualStyleBackColor = true;
-            this.btn_Home_X.Click += new System.EventHandler(this.btn_Home_X_Click);
+            this.btn_Home_X.Click += new System.EventHandler(this.Btn_Home_X_Click);
             // 
             // labelMCHome
             // 
@@ -303,7 +303,7 @@
             this.btn_Stop_Y.TabIndex = 24;
             this.btn_Stop_Y.Text = "Stop";
             this.btn_Stop_Y.UseVisualStyleBackColor = true;
-            this.btn_Stop_Y.Click += new System.EventHandler(this.btn_Stop_Y_Click);
+            this.btn_Stop_Y.Click += new System.EventHandler(this.Btn_Stop_Y_Click);
             // 
             // btn_Stop_X
             // 
@@ -313,7 +313,7 @@
             this.btn_Stop_X.TabIndex = 23;
             this.btn_Stop_X.Text = "Stop";
             this.btn_Stop_X.UseVisualStyleBackColor = true;
-            this.btn_Stop_X.Click += new System.EventHandler(this.btn_Stop_X_Click);
+            this.btn_Stop_X.Click += new System.EventHandler(this.Btn_Stop_X_Click);
             // 
             // btn_Jog_Right_Y
             // 
@@ -323,8 +323,8 @@
             this.btn_Jog_Right_Y.TabIndex = 22;
             this.btn_Jog_Right_Y.Text = ">";
             this.btn_Jog_Right_Y.UseVisualStyleBackColor = true;
-            this.btn_Jog_Right_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_Y_MouseDown);
-            this.btn_Jog_Right_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_Y_MouseUp);
+            this.btn_Jog_Right_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_Y_MouseDown);
+            this.btn_Jog_Right_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_Y_MouseUp);
             // 
             // btn_Jog_Left_Y
             // 
@@ -334,8 +334,8 @@
             this.btn_Jog_Left_Y.TabIndex = 21;
             this.btn_Jog_Left_Y.Text = "<";
             this.btn_Jog_Left_Y.UseVisualStyleBackColor = true;
-            this.btn_Jog_Left_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_Y_MouseDown);
-            this.btn_Jog_Left_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_Y_MouseUp);
+            this.btn_Jog_Left_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_Y_MouseDown);
+            this.btn_Jog_Left_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_Y_MouseUp);
             // 
             // btn_Jog_Right_X
             // 
@@ -345,8 +345,8 @@
             this.btn_Jog_Right_X.TabIndex = 20;
             this.btn_Jog_Right_X.Text = ">";
             this.btn_Jog_Right_X.UseVisualStyleBackColor = true;
-            this.btn_Jog_Right_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_X_MouseDown);
-            this.btn_Jog_Right_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Right_X_MouseUp);
+            this.btn_Jog_Right_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_X_MouseDown);
+            this.btn_Jog_Right_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_X_MouseUp);
             // 
             // btn_Jog_Left_X
             // 
@@ -356,8 +356,8 @@
             this.btn_Jog_Left_X.TabIndex = 19;
             this.btn_Jog_Left_X.Text = "<";
             this.btn_Jog_Left_X.UseVisualStyleBackColor = true;
-            this.btn_Jog_Left_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_X_MouseDown);
-            this.btn_Jog_Left_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn_Jog_Left_X_MouseUp);
+            this.btn_Jog_Left_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_X_MouseDown);
+            this.btn_Jog_Left_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_X_MouseUp);
             // 
             // checkBoxMCSlowStop
             // 
@@ -389,7 +389,7 @@
             this.btn_Abs_Plus_Y.TabIndex = 17;
             this.btn_Abs_Plus_Y.Text = "+";
             this.btn_Abs_Plus_Y.UseVisualStyleBackColor = true;
-            this.btn_Abs_Plus_Y.Click += new System.EventHandler(this.btn_Abs_Plus_Y_Click);
+            this.btn_Abs_Plus_Y.Click += new System.EventHandler(this.Btn_Abs_Plus_Y_Click);
             // 
             // btn_Abs_Minus_Y
             // 
@@ -399,7 +399,7 @@
             this.btn_Abs_Minus_Y.TabIndex = 16;
             this.btn_Abs_Minus_Y.Text = "-";
             this.btn_Abs_Minus_Y.UseVisualStyleBackColor = true;
-            this.btn_Abs_Minus_Y.Click += new System.EventHandler(this.btn_Abs_Minus_Y_Click);
+            this.btn_Abs_Minus_Y.Click += new System.EventHandler(this.Btn_Abs_Minus_Y_Click);
             // 
             // btn_Abs_Plus_X
             // 
@@ -409,7 +409,7 @@
             this.btn_Abs_Plus_X.TabIndex = 15;
             this.btn_Abs_Plus_X.Text = "+";
             this.btn_Abs_Plus_X.UseVisualStyleBackColor = true;
-            this.btn_Abs_Plus_X.Click += new System.EventHandler(this.btn_Abs_Plus_X_Click);
+            this.btn_Abs_Plus_X.Click += new System.EventHandler(this.Btn_Abs_Plus_X_Click);
             // 
             // btn_Abs_Minus_X
             // 
@@ -419,7 +419,7 @@
             this.btn_Abs_Minus_X.TabIndex = 14;
             this.btn_Abs_Minus_X.Text = "-";
             this.btn_Abs_Minus_X.UseVisualStyleBackColor = true;
-            this.btn_Abs_Minus_X.Click += new System.EventHandler(this.btn_Abs_Minus_X_Click);
+            this.btn_Abs_Minus_X.Click += new System.EventHandler(this.Btn_Abs_Minus_X_Click);
             // 
             // btn_Inc_Plus_Y
             // 
@@ -429,7 +429,7 @@
             this.btn_Inc_Plus_Y.TabIndex = 13;
             this.btn_Inc_Plus_Y.Text = "+";
             this.btn_Inc_Plus_Y.UseVisualStyleBackColor = true;
-            this.btn_Inc_Plus_Y.Click += new System.EventHandler(this.btn_Inc_Plus_Y_Click);
+            this.btn_Inc_Plus_Y.Click += new System.EventHandler(this.Btn_Inc_Plus_Y_Click);
             // 
             // btn_Inc_Minus_Y
             // 
@@ -439,7 +439,7 @@
             this.btn_Inc_Minus_Y.TabIndex = 12;
             this.btn_Inc_Minus_Y.Text = "-";
             this.btn_Inc_Minus_Y.UseVisualStyleBackColor = true;
-            this.btn_Inc_Minus_Y.Click += new System.EventHandler(this.btn_Inc_Minus_Y_Click);
+            this.btn_Inc_Minus_Y.Click += new System.EventHandler(this.Btn_Inc_Minus_Y_Click);
             // 
             // btn_Inc_Plus_X
             // 
@@ -449,7 +449,7 @@
             this.btn_Inc_Plus_X.TabIndex = 11;
             this.btn_Inc_Plus_X.Text = "+";
             this.btn_Inc_Plus_X.UseVisualStyleBackColor = true;
-            this.btn_Inc_Plus_X.Click += new System.EventHandler(this.btn_Inc_Plus_X_Click);
+            this.btn_Inc_Plus_X.Click += new System.EventHandler(this.Btn_Inc_Plus_X_Click);
             // 
             // btn_Inc_Minus_X
             // 
@@ -459,7 +459,7 @@
             this.btn_Inc_Minus_X.TabIndex = 10;
             this.btn_Inc_Minus_X.Text = "-";
             this.btn_Inc_Minus_X.UseVisualStyleBackColor = true;
-            this.btn_Inc_Minus_X.Click += new System.EventHandler(this.btn_Inc_Minus_X_Click);
+            this.btn_Inc_Minus_X.Click += new System.EventHandler(this.Btn_Inc_Minus_X_Click);
             // 
             // textbox_Distance_Y
             // 
@@ -687,7 +687,7 @@
             this.btn_Setup_Y.TabIndex = 31;
             this.btn_Setup_Y.Text = "Setup";
             this.btn_Setup_Y.UseVisualStyleBackColor = true;
-            this.btn_Setup_Y.Click += new System.EventHandler(this.btn_Setup_Y_Click);
+            this.btn_Setup_Y.Click += new System.EventHandler(this.Btn_Setup_Y_Click);
             // 
             // btn_Setup_X
             // 
@@ -697,7 +697,7 @@
             this.btn_Setup_X.TabIndex = 30;
             this.btn_Setup_X.Text = "Setup";
             this.btn_Setup_X.UseVisualStyleBackColor = true;
-            this.btn_Setup_X.Click += new System.EventHandler(this.btn_Setup_X_Click);
+            this.btn_Setup_X.Click += new System.EventHandler(this.Btn_Setup_X_Click);
             // 
             // labelSSSetup
             // 
@@ -814,7 +814,7 @@
             this.label_Enc_Y.TabIndex = 44;
             this.label_Enc_Y.Text = "0";
             this.label_Enc_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_Y.Click += new System.EventHandler(this.label_Enc_Y_Click);
+            this.label_Enc_Y.Click += new System.EventHandler(this.Label_Enc_Y_Click);
             // 
             // label_Enc_X
             // 
@@ -826,7 +826,7 @@
             this.label_Enc_X.TabIndex = 43;
             this.label_Enc_X.Text = "0";
             this.label_Enc_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_X.Click += new System.EventHandler(this.label_Enc_X_Click);
+            this.label_Enc_X.Click += new System.EventHandler(this.Label_Enc_X_Click);
             // 
             // label_Cmd_Y
             // 
@@ -838,7 +838,7 @@
             this.label_Cmd_Y.TabIndex = 42;
             this.label_Cmd_Y.Text = "0";
             this.label_Cmd_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Cmd_Y.Click += new System.EventHandler(this.label_Cmd_Y_Click);
+            this.label_Cmd_Y.Click += new System.EventHandler(this.Label_Cmd_Y_Click);
             // 
             // label_Cmd_X
             // 
@@ -850,7 +850,7 @@
             this.label_Cmd_X.TabIndex = 41;
             this.label_Cmd_X.Text = "0";
             this.label_Cmd_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Cmd_X.Click += new System.EventHandler(this.label_Cmd_X_Click);
+            this.label_Cmd_X.Click += new System.EventHandler(this.Label_Cmd_X_Click);
             // 
             // label_Enc
             // 
@@ -1284,7 +1284,7 @@
             this.combobox_Pulse_Mode_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Pulse_Mode_Y.TabIndex = 79;
             this.combobox_Pulse_Mode_Y.Text = "2P,Low,CW/CCW";
-            this.combobox_Pulse_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Pulse_Mode_Y_SelectedIndexChanged);
+            this.combobox_Pulse_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Pulse_Mode_Y_SelectedIndexChanged);
             // 
             // combobox_Pulse_Mode_X
             // 
@@ -1304,7 +1304,7 @@
             this.combobox_Pulse_Mode_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Pulse_Mode_X.TabIndex = 78;
             this.combobox_Pulse_Mode_X.Text = "2P,Low,CW/CCW";
-            this.combobox_Pulse_Mode_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Pulse_Mode_X_SelectedIndexChanged);
+            this.combobox_Pulse_Mode_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Pulse_Mode_X_SelectedIndexChanged);
             // 
             // combobox_Limit_Minus_Y
             // 
@@ -1317,7 +1317,7 @@
             this.combobox_Limit_Minus_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Limit_Minus_Y.TabIndex = 75;
             this.combobox_Limit_Minus_Y.Text = "NC";
-            this.combobox_Limit_Minus_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Minus_Y_SelectedIndexChanged);
+            this.combobox_Limit_Minus_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Limit_Minus_Y_SelectedIndexChanged);
             // 
             // combobox_Limit_Minus_X
             // 
@@ -1331,7 +1331,7 @@
             this.combobox_Limit_Minus_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Limit_Minus_X.TabIndex = 74;
             this.combobox_Limit_Minus_X.Text = "NC";
-            this.combobox_Limit_Minus_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Minus_X_SelectedIndexChanged);
+            this.combobox_Limit_Minus_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Limit_Minus_X_SelectedIndexChanged);
             // 
             // label_Setting_Limit_Minus
             // 
@@ -1356,7 +1356,7 @@
             this.combobox_Emergency.Size = new System.Drawing.Size(151, 20);
             this.combobox_Emergency.TabIndex = 72;
             this.combobox_Emergency.Text = "NO";
-            this.combobox_Emergency.SelectedIndexChanged += new System.EventHandler(this.combobox_Emergency_SelectedIndexChanged);
+            this.combobox_Emergency.SelectedIndexChanged += new System.EventHandler(this.Combobox_Emergency_SelectedIndexChanged);
             // 
             // combobox_Home_Mode_Y
             // 
@@ -1410,7 +1410,7 @@
             this.combobox_Alarm_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Alarm_Y.TabIndex = 65;
             this.combobox_Alarm_Y.Text = "NC";
-            this.combobox_Alarm_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Alarm_Y_SelectedIndexChanged);
+            this.combobox_Alarm_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Alarm_Y_SelectedIndexChanged);
             // 
             // combobox_Alarm_X
             // 
@@ -1424,7 +1424,7 @@
             this.combobox_Alarm_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Alarm_X.TabIndex = 64;
             this.combobox_Alarm_X.Text = "NC";
-            this.combobox_Alarm_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Alarm_X_SelectedIndexChanged);
+            this.combobox_Alarm_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Alarm_X_SelectedIndexChanged);
             // 
             // combobox_Limit_Plus_Y
             // 
@@ -1437,7 +1437,7 @@
             this.combobox_Limit_Plus_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Limit_Plus_Y.TabIndex = 63;
             this.combobox_Limit_Plus_Y.Text = "NC";
-            this.combobox_Limit_Plus_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Plus_Y_SelectedIndexChanged);
+            this.combobox_Limit_Plus_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Limit_Plus_Y_SelectedIndexChanged);
             // 
             // combobox_Limit_Plus_X
             // 
@@ -1451,7 +1451,7 @@
             this.combobox_Limit_Plus_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Limit_Plus_X.TabIndex = 62;
             this.combobox_Limit_Plus_X.Text = "NC";
-            this.combobox_Limit_Plus_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Plus_X_SelectedIndexChanged);
+            this.combobox_Limit_Plus_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Limit_Plus_X_SelectedIndexChanged);
             // 
             // combobox_Near_Y
             // 
@@ -1464,7 +1464,7 @@
             this.combobox_Near_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Near_Y.TabIndex = 61;
             this.combobox_Near_Y.Text = "NC";
-            this.combobox_Near_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Near_Y_SelectedIndexChanged);
+            this.combobox_Near_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Near_Y_SelectedIndexChanged);
             // 
             // combobox_Near_X
             // 
@@ -1478,7 +1478,7 @@
             this.combobox_Near_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Near_X.TabIndex = 60;
             this.combobox_Near_X.Text = "NC";
-            this.combobox_Near_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Near_X_SelectedIndexChanged);
+            this.combobox_Near_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Near_X_SelectedIndexChanged);
             // 
             // combobox_Enc_Dir_Y
             // 
@@ -1491,7 +1491,7 @@
             this.combobox_Enc_Dir_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Enc_Dir_Y.TabIndex = 59;
             this.combobox_Enc_Dir_Y.Text = "EA/EB";
-            this.combobox_Enc_Dir_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Dir_Y_SelectedIndexChanged);
+            this.combobox_Enc_Dir_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Enc_Dir_Y_SelectedIndexChanged);
             // 
             // combobox_Enc_Dir_X
             // 
@@ -1505,7 +1505,7 @@
             this.combobox_Enc_Dir_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Enc_Dir_X.TabIndex = 58;
             this.combobox_Enc_Dir_X.Text = "EA/EB";
-            this.combobox_Enc_Dir_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Dir_X_SelectedIndexChanged);
+            this.combobox_Enc_Dir_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Enc_Dir_X_SelectedIndexChanged);
             // 
             // combobox_EncZ_Y
             // 
@@ -1518,7 +1518,7 @@
             this.combobox_EncZ_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_EncZ_Y.TabIndex = 57;
             this.combobox_EncZ_Y.Text = "NC";
-            this.combobox_EncZ_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_EncZ_Y_SelectedIndexChanged);
+            this.combobox_EncZ_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_EncZ_Y_SelectedIndexChanged);
             // 
             // combobox_EncZ_X
             // 
@@ -1532,7 +1532,7 @@
             this.combobox_EncZ_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_EncZ_X.TabIndex = 56;
             this.combobox_EncZ_X.Text = "NC";
-            this.combobox_EncZ_X.SelectedIndexChanged += new System.EventHandler(this.combobox_EncZ_X_SelectedIndexChanged);
+            this.combobox_EncZ_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_EncZ_X_SelectedIndexChanged);
             // 
             // combobox_Enc_Mode_Y
             // 
@@ -1546,7 +1546,7 @@
             this.combobox_Enc_Mode_Y.Size = new System.Drawing.Size(76, 20);
             this.combobox_Enc_Mode_Y.TabIndex = 45;
             this.combobox_Enc_Mode_Y.Text = "4채배";
-            this.combobox_Enc_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Mode_Y_SelectedIndexChanged);
+            this.combobox_Enc_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.Combobox_Enc_Mode_Y_SelectedIndexChanged);
             // 
             // combobox_Enc_Mode_X
             // 
@@ -1561,7 +1561,7 @@
             this.combobox_Enc_Mode_X.Size = new System.Drawing.Size(76, 20);
             this.combobox_Enc_Mode_X.TabIndex = 44;
             this.combobox_Enc_Mode_X.Text = "4채배";
-            this.combobox_Enc_Mode_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Mode_X_SelectedIndexChanged);
+            this.combobox_Enc_Mode_X.SelectedIndexChanged += new System.EventHandler(this.Combobox_Enc_Mode_X_SelectedIndexChanged);
             // 
             // label_Setting_Pulse_Mode
             // 
@@ -1594,7 +1594,7 @@
             this.textBox_UnitPerPulse_Y.TabIndex = 45;
             this.textBox_UnitPerPulse_Y.Text = "1";
             this.textBox_UnitPerPulse_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_UnitPerPulse_Y.TextChanged += new System.EventHandler(this.textBox_UnitPerPulse_Y_TextChanged);
+            this.textBox_UnitPerPulse_Y.TextChanged += new System.EventHandler(this.TextBox_UnitPerPulse_Y_TextChanged);
             // 
             // label_Setting_Alarm
             // 
@@ -1616,7 +1616,7 @@
             this.textbox_UnitPerPulse_X.TabIndex = 44;
             this.textbox_UnitPerPulse_X.Text = "1";
             this.textbox_UnitPerPulse_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textbox_UnitPerPulse_X.TextChanged += new System.EventHandler(this.textbox_UnitPerPulse_X_TextChanged);
+            this.textbox_UnitPerPulse_X.TextChanged += new System.EventHandler(this.Textbox_UnitPerPulse_X_TextChanged);
             // 
             // label_Setting_Limit_Plus
             // 
@@ -1748,7 +1748,7 @@
             this.button1.TabIndex = 59;
             this.button1.Text = "Save To Rom";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -1758,7 +1758,7 @@
             this.button2.TabIndex = 60;
             this.button2.Text = "Erase Rom";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
@@ -1768,7 +1768,7 @@
             this.button3.TabIndex = 61;
             this.button3.Text = "Load From Rom";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // button4
             // 
@@ -1778,7 +1778,7 @@
             this.button4.TabIndex = 62;
             this.button4.Text = "Cont Test";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // listIP
             // 
@@ -1800,7 +1800,7 @@
             this.btnGetList.TabIndex = 64;
             this.btnGetList.Text = "Enum List";
             this.btnGetList.UseVisualStyleBackColor = true;
-            this.btnGetList.Click += new System.EventHandler(this.btnGetList_Click);
+            this.btnGetList.Click += new System.EventHandler(this.BtnGetList_Click);
             // 
             // btnGetLogic
             // 
@@ -1810,7 +1810,7 @@
             this.btnGetLogic.TabIndex = 65;
             this.btnGetLogic.Text = "Get Logic";
             this.btnGetLogic.UseVisualStyleBackColor = true;
-            this.btnGetLogic.Click += new System.EventHandler(this.btnGetLogic_Click);
+            this.btnGetLogic.Click += new System.EventHandler(this.BtnGetLogic_Click);
             // 
             // btnSetLogic
             // 
@@ -1820,7 +1820,7 @@
             this.btnSetLogic.TabIndex = 66;
             this.btnSetLogic.Text = "Set Logic";
             this.btnSetLogic.UseVisualStyleBackColor = true;
-            this.btnSetLogic.Click += new System.EventHandler(this.btnSetLogic_Click);
+            this.btnSetLogic.Click += new System.EventHandler(this.BtnSetLogic_Click);
             // 
             // tab
             // 
@@ -1871,7 +1871,7 @@
             this.btn_save_config.TabIndex = 70;
             this.btn_save_config.Text = "Save";
             this.btn_save_config.UseVisualStyleBackColor = true;
-            this.btn_save_config.Click += new System.EventHandler(this.btn_save_config_Click);
+            this.btn_save_config.Click += new System.EventHandler(this.Btn_save_config_Click);
             // 
             // btn_Alarm_Y
             // 
@@ -1908,7 +1908,7 @@
             this.btn_Servo_X.TabIndex = 68;
             this.btn_Servo_X.Text = "Servo_X";
             this.btn_Servo_X.UseVisualStyleBackColor = true;
-            this.btn_Servo_X.Click += new System.EventHandler(this.btn_servo_X_Click);
+            this.btn_Servo_X.Click += new System.EventHandler(this.Btn_servo_X_Click);
             // 
             // btn_Current_Y
             // 
@@ -1918,7 +1918,7 @@
             this.btn_Current_Y.TabIndex = 67;
             this.btn_Current_Y.Text = "Current_Y";
             this.btn_Current_Y.UseVisualStyleBackColor = true;
-            this.btn_Current_Y.Click += new System.EventHandler(this.btn_Current_Y_Click);
+            this.btn_Current_Y.Click += new System.EventHandler(this.Btn_Current_Y_Click);
             // 
             // btn_Current_X
             // 
@@ -1930,7 +1930,7 @@
             this.btn_Current_X.TabIndex = 67;
             this.btn_Current_X.Text = "Current_X";
             this.btn_Current_X.UseVisualStyleBackColor = false;
-            this.btn_Current_X.Click += new System.EventHandler(this.btn_current_X_Click);
+            this.btn_Current_X.Click += new System.EventHandler(this.Btn_current_X_Click);
             // 
             // tabPage2
             // 

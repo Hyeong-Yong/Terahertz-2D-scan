@@ -9,32 +9,32 @@ namespace THz_2D_scan
     public partial class GUI
     {
 
-        private void btn_Inc_Minus_X_Click(object sender, EventArgs e)
+        private void Btn_Inc_Minus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void btn_Inc_Plus_X_Click(object sender, EventArgs e)
+        private void Btn_Inc_Plus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void btn_Abs_Minus_X_Click(object sender, EventArgs e)
+        private void Btn_Abs_Minus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(0, -Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void btn_Abs_Plus_X_Click(object sender, EventArgs e)
+        private void Btn_Abs_Plus_X_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(0, Convert.ToDouble(textbox_Distance_X.Text));
         }
 
-        private void btn_Jog_Left_X_MouseDown(object sender, MouseEventArgs e)
+        private void Btn_Jog_Left_X_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(0, 1);
         }
 
-        private void btn_Jog_Left_X_MouseUp(object sender, MouseEventArgs e)
+        private void Btn_Jog_Left_X_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -42,12 +42,12 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_Jog_Right_X_MouseDown(object sender, MouseEventArgs e)
+        private void Btn_Jog_Right_X_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(0, 0);
         }
 
-        private void btn_Jog_Right_X_MouseUp(object sender, MouseEventArgs e)
+        private void Btn_Jog_Right_X_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -55,32 +55,32 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_Inc_Minus_Y_Click(object sender, EventArgs e)
+        private void Btn_Inc_Minus_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
-        private void btn_Inc_Plus_Y_Click(object sender, EventArgs e)
+        private void Btn_Inc_Plus_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.RelMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
-        private void btn_Abs_Minus_Y_Click(object sender, EventArgs e)
+        private void Btn_Abs_Minus_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(1, -Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
-        private void btn_Abs_Plus_Y_Click(object sender, EventArgs e)
+        private void Btn_Abs_Plus_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.AbsMove(1, Convert.ToInt32(textbox_Distance_Y.Text));
         }
 
-        private void btn_Jog_Left_Y_MouseDown(object sender, MouseEventArgs e)
+        private void Btn_Jog_Left_Y_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(1, 1);
         }
 
-        private void btn_Jog_Left_Y_MouseUp(object sender, MouseEventArgs e)
+        private void Btn_Jog_Left_Y_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -88,12 +88,12 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_Jog_Right_Y_MouseDown(object sender, MouseEventArgs e)
+        private void Btn_Jog_Right_Y_MouseDown(object sender, MouseEventArgs e)
         {
             PaixMotion.JogMove(1, 0);
         }
 
-        private void btn_Jog_Right_Y_MouseUp(object sender, MouseEventArgs e)
+        private void Btn_Jog_Right_Y_MouseUp(object sender, MouseEventArgs e)
         {
             if (!checkBoxMCJogCont.Checked)
             {
@@ -101,35 +101,35 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_Stop_Y_Click(object sender, EventArgs e)
+        private void Btn_Stop_Y_Click(object sender, EventArgs e)
         {
             stop(1);
         }
 
 
 
-        private void btn_Home_X_Click(object sender, EventArgs e)
+        private void Btn_Home_X_Click(object sender, EventArgs e)
         {
-            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex);
+            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex, 3, 0);
         }
 
-        private void btn_Home_Y_Click(object sender, EventArgs e)
+        private void Btn_Home_Y_Click(object sender, EventArgs e)
         {
-            PaixMotion.HomeMove(1, combobox_Home_Mode_Y.SelectedIndex);
+            PaixMotion.HomeMove(1, combobox_Home_Mode_Y.SelectedIndex, 3, 0);
         }
 
-        private void label_Cmd_X_Click(object sender, EventArgs e)
+        private void Label_Cmd_X_Click(object sender, EventArgs e)
         {
             PaixMotion.SetCmd(0, 0);
 
         }
 
-        private void label_Cmd_Y_Click(object sender, EventArgs e)
+        private void Label_Cmd_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.SetCmd(1, 0);
 
         }
-        private void btn_Stop_X_Click(object sender, EventArgs e)
+        private void Btn_Stop_X_Click(object sender, EventArgs e)
         {
             stop(0);
         }
@@ -147,13 +147,13 @@ namespace THz_2D_scan
             }
         }
 
-        private void label_Enc_X_Click(object sender, EventArgs e)
+        private void Label_Enc_X_Click(object sender, EventArgs e)
         {
             PaixMotion.SetEnc(0, 0);
 
         }
 
-        private void label_Enc_Y_Click(object sender, EventArgs e)
+        private void Label_Enc_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.SetEnc(1, 0);
 

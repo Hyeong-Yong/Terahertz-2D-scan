@@ -39,28 +39,24 @@ namespace THz_2D_scan
                                 ,null
                                 };
 
-
-
         PaixMotion PaixMotion = PaixMotion.getInstance;
         Thread TdWatchSensor;
 
-
         NMCAXESMOTIONOUT MotOut;
         NMCAXESEXPR NmcData;
-        // NMCAXESEXPR NmcData = new Paix_MotionController.NMC2.NMCAXESEXPR();
 
 
         public GUI()
         {
             InitializeComponent();
 
-            TdWatchSensor = new Thread(new ThreadStart(watchSensor));
+            TdWatchSensor = new Thread(new ThreadStart(WatchSensor));
             listIP.Columns.Add("IP", 100);
             listIP.Columns.Add("Model", 150);
         }
 
 
-        private void btn_Open_Click(object sender, EventArgs e)
+        private void Btn_Open_Click(object sender, EventArgs e)
         {
             short devId = Convert.ToInt16(textBoxDevNo.Text);
 
@@ -69,7 +65,7 @@ namespace THz_2D_scan
                 switch (TdWatchSensor.ThreadState)
                 {
                     case ThreadState.Stopped:
-                        TdWatchSensor = new Thread(new ThreadStart(watchSensor));
+                        TdWatchSensor = new Thread(new ThreadStart(WatchSensor));
                         break;
                     case ThreadState.Unstarted:
                         break;
@@ -106,20 +102,20 @@ namespace THz_2D_scan
             }
         }
 
-        public void watchSensor()
+        public void WatchSensor()
         {
             //PaixMotion.NMC2.NMC_AXES_EXPR NmcData;
             while (true)
             {
                 System.Threading.Thread.Sleep(1);
-                this.Invoke(new delegateUpdateCmdEnc(updateCmdEnc));
+                this.Invoke(new delegateUpdateCmdEnc(UpdateCmdEnc));
 
             }
         }
 
         private delegate void delegateUpdateCmdEnc();
 
-        private void updateCmdEnc()
+        private void UpdateCmdEnc()
         {
             PaixMotion.GetStateInfo();
 
@@ -152,7 +148,7 @@ namespace THz_2D_scan
         }
 
 
-        private void btn_Setup_X_Click(object sender, EventArgs e)
+        private void Btn_Setup_X_Click(object sender, EventArgs e)
         {
             double dstart = Convert.ToDouble(textbox_Start_X.Text);
             double dacc = Convert.ToDouble(textbox_Acc_X.Text);
@@ -162,13 +158,13 @@ namespace THz_2D_scan
             PaixMotion.SetSpeedPPS(0, dstart, dacc, ddec, dmax);
         }
 
-        private void btn_Setup_Y_Click(object sender, EventArgs e)
+        private void Btn_Setup_Y_Click(object sender, EventArgs e)
         {
             double dstart = Convert.ToDouble(textbox_Start_Y.Text);
             double dacc = Convert.ToDouble(textbox_Acc_Y.Text);
             double dmax = Convert.ToDouble(textbox_Max_Y.Text);
             double ddec = Convert.ToDouble(textbox_Dec_Y.Text);
-
+            
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
 

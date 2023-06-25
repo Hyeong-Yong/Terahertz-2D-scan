@@ -11,77 +11,77 @@ namespace THz_2D_scan
     public partial class GUI
     {
 
-        private void combobox_Emergency_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Emergency_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEmerLogic(combobox_Emergency.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Near_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Near_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetNearLogic(0, combobox_Near_X.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Near_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Near_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetNearLogic(1, combobox_Near_Y.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Limit_Minus_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Limit_Minus_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetMinusLimitLogic(0, combobox_Limit_Minus_X.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Limit_Minus_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Limit_Minus_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetMinusLimitLogic(1, combobox_Limit_Minus_Y.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Limit_Plus_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Limit_Plus_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetPlusLimitLogic(0, combobox_Limit_Plus_X.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Limit_Plus_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Limit_Plus_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetPlusLimitLogic(1, combobox_Limit_Plus_Y.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Alarm_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Alarm_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetAlarmLogic(0, combobox_Alarm_X.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Alarm_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Alarm_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetAlarmLogic(1, combobox_Alarm_Y.SelectedIndex == 0 ? (short)0 : (short)1);
         }
 
-        private void combobox_Enc_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Enc_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEncCountMode(0, (short)combobox_Enc_Mode_X.SelectedIndex);
         }
 
-        private void combobox_Enc_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Enc_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEncCountMode(1, (short)combobox_Enc_Mode_Y.SelectedIndex);
         }
 
-        private void combobox_EncZ_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_EncZ_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetZLogic(0, (short)combobox_EncZ_X.SelectedIndex);
         }
 
-        private void combobox_EncZ_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_EncZ_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetZLogic(1, (short)combobox_EncZ_Y.SelectedIndex);
         }
 
-        private void combobox_Enc_Dir_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Enc_Dir_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEncInputMode(0, (short)combobox_Enc_Dir_X.SelectedIndex);
         }
 
-        private void combobox_Enc_Dir_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Enc_Dir_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEncInputMode(1, (short)combobox_Enc_Dir_Y.SelectedIndex);
         }
@@ -91,22 +91,22 @@ namespace THz_2D_scan
 
 
 
-        private void textbox_UnitPerPulse_X_TextChanged(object sender, EventArgs e)
+        private void Textbox_UnitPerPulse_X_TextChanged(object sender, EventArgs e)
         {
             PaixMotion.SetUnitPulse(0, Convert.ToDouble(textbox_UnitPerPulse_X.Text));
         }
 
-        private void textBox_UnitPerPulse_Y_TextChanged(object sender, EventArgs e)
+        private void TextBox_UnitPerPulse_Y_TextChanged(object sender, EventArgs e)
         {
             PaixMotion.SetUnitPulse(1, Convert.ToDouble(textBox_UnitPerPulse_Y.Text));
         }
 
-        private void combobox_Pulse_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Pulse_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetPulseLogic(0, combobox_Pulse_Mode_X.SelectedIndex);
         }
 
-        private void combobox_Pulse_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
+        private void Combobox_Pulse_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetPulseLogic(1, combobox_Pulse_Mode_Y.SelectedIndex);
         }
@@ -114,17 +114,17 @@ namespace THz_2D_scan
 
 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             PaixMotion.SaveToRom();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void Button2_Click(object sender, EventArgs e)
         {
             PaixMotion.EraseRom();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Button3_Click(object sender, EventArgs e)
         {
 
             Paix_MotionController.NMC2.NMCPARALOGIC NmcParaLogic = new Paix_MotionController.NMC2.NMCPARALOGIC();
@@ -137,12 +137,12 @@ namespace THz_2D_scan
             UpdateYParaLogic(ref NmcParaLogic);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void Button4_Click(object sender, EventArgs e)
         {
             PaixMotion.ContTest();
         }
 
-        private void btnGetList_Click(object sender, EventArgs e)
+        private void BtnGetList_Click(object sender, EventArgs e)
         {
             Paix_MotionController.NMC2.NMCEQUIPLIST NmcList;
             short[] nIp = new short[4];
@@ -163,7 +163,7 @@ namespace THz_2D_scan
             }
         }
 
-        private void btnGetLogic_Click(object sender, EventArgs e)
+        private void BtnGetLogic_Click(object sender, EventArgs e)
         {
             Paix_MotionController.NMC2.NMCPARALOGIC NmcParaLogic = new Paix_MotionController.NMC2.NMCPARALOGIC();
 
@@ -173,7 +173,7 @@ namespace THz_2D_scan
             UpdateYParaLogic(ref NmcParaLogic);
         }
 
-        private void btnSetLogic_Click(object sender, EventArgs e)
+        private void BtnSetLogic_Click(object sender, EventArgs e)
         {
             Paix_MotionController.NMC2.NMCPARALOGIC NmcParaLogic = new Paix_MotionController.NMC2.NMCPARALOGIC();
 
@@ -231,7 +231,7 @@ namespace THz_2D_scan
             pNmcParaLogic.nPulseMode = (short)combobox_Pulse_Mode_Y.SelectedIndex;
         }
 
-        private void btn_current_X_Click(object sender, EventArgs e)
+        private void Btn_current_X_Click(object sender, EventArgs e)
         {
             short nCurrentOn = PaixMotion.updateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
 
@@ -247,7 +247,7 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_servo_X_Click(object sender, EventArgs e)
+        private void Btn_servo_X_Click(object sender, EventArgs e)
         {
             short nCurrentOn = PaixMotion.updateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
 
@@ -264,7 +264,7 @@ namespace THz_2D_scan
 
         }
 
-        private void btn_Current_Y_Click(object sender, EventArgs e)
+        private void Btn_Current_Y_Click(object sender, EventArgs e)
         {
             short nServoOn = PaixMotion.updateAxisInfo(1).nServoOn; // ServoOn 신호 값
 
@@ -321,7 +321,7 @@ namespace THz_2D_scan
             }
         }
 
-        private void btn_save_config_Click(object sender, EventArgs e)
+        private void Btn_save_config_Click(object sender, EventArgs e)
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
