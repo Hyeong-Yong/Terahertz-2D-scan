@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THz-2D-scan", "test_MotionController\THz-2D-scan.csproj", "{B7040884-5BBC-43A3-9C9A-96076492B6C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "THz_2D_scan", "THz_2D_scan\THz_2D_scan.csproj", "{B7040884-5BBC-43A3-9C9A-96076492B6C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

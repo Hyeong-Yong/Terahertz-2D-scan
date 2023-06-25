@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace test_MotionController
+namespace THz_2D_scan
 {
     static class Program
     {

@@ -10,10 +10,29 @@ using System.Windows.Forms;
 using Paix_MotionController;
 using static Paix_MotionController.NMC2;
 
-namespace test_MotionController
+namespace THz_2D_scan
 {
-    class PaixMotion
+    partial class PaixMotion
     {
+        /*
+         * SingleTon implementation
+         */
+        private static PaixMotion instance = null;
+        private PaixMotion(){}
+        public static PaixMotion getInstance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new PaixMotion();
+                }
+                return instance;
+            }
+        }
+
+
+
         bool m_bIsOpen;
         short m_nDev_no;
 
@@ -54,7 +73,7 @@ namespace test_MotionController
 
         public bool SetCurrentOn(short nAxisNo, short nOut)
         {
-            short nRet = NMC2.nmc_SetCurrentOn(m_nDev_no, nAxisNo, nOut);
+            short nRet = NMC2.nmc_SetCurrentOn(nAxisNo, nAxisNo, nOut);
 
             switch (nRet)
             {
@@ -70,7 +89,7 @@ namespace test_MotionController
 
         public bool SetServoOn(short nAxisNo, short nOut)
         {
-            short nRet = NMC2.nmc_SetServoOn(m_nDev_no, nAxisNo, nOut);
+            short nRet = NMC2.nmc_SetServoOn(nAxisNo, nAxisNo, nOut);
 
             switch (nRet)
             {
@@ -83,6 +102,27 @@ namespace test_MotionController
 
             return false;
         }
+
+        /*
+         * Write and read "Current, Servo, DCC, AlarmReset" 
+         */
+        public bool GetAxesMotionOut(out NMCAXESMOTIONOUT MotOut)
+        {
+            short nRet = nmc_GetAxesMotionOut(m_nDev_no, out MotOut);
+
+            switch (nRet)
+            {
+                case NMC2.NMC_NOTCONNECT:
+                    m_bIsOpen = false;
+                    return false;
+                case 0:
+                    return true;
+            }
+
+            return false;
+
+        }
+
 
         public bool GetAxesExpress(short nNmcNo, out NMCAXESEXPR pNmcData) {
             short nRet= nmc_GetAxesExpress(nNmcNo, out pNmcData);
@@ -316,7 +356,7 @@ namespace test_MotionController
 
         }
 
-        public bool GetBusy(short nAxis,out short nValue)
+        public bool GetBusy(short nAxis, out short nValue)
         {
             short nRet = NMC2.nmc_GetBusyStatus(m_nDev_no, nAxis, out nValue);
             switch (nRet)
@@ -526,6 +566,7 @@ namespace test_MotionController
             short nRet = NMC2.nmc_GetStateInfo(m_nDev_no, out tState, 0);
 
             NMC2.nmc_StateInfoToAxisInfo(nAxis, ref tState, out tAxis);
+
 
             return tAxis;
         }

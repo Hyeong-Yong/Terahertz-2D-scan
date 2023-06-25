@@ -1,4 +1,4 @@
-﻿namespace test_MotionController
+﻿namespace THz_2D_scan
 {
     partial class GUI
     {
@@ -36,10 +36,6 @@
             this.btn_Home_Y = new System.Windows.Forms.Button();
             this.btn_Home_X = new System.Windows.Forms.Button();
             this.labelMCHome = new System.Windows.Forms.Label();
-            this.buttonMCAbsMultiMove = new System.Windows.Forms.Button();
-            this.checkBoxMCAbsSync = new System.Windows.Forms.CheckBox();
-            this.buttonMCIncMultiMove = new System.Windows.Forms.Button();
-            this.checkBoxMCIncSync = new System.Windows.Forms.CheckBox();
             this.btn_Stop_Y = new System.Windows.Forms.Button();
             this.btn_Stop_X = new System.Windows.Forms.Button();
             this.btn_Jog_Right_Y = new System.Windows.Forms.Button();
@@ -57,9 +53,9 @@
             this.btn_Inc_Plus_X = new System.Windows.Forms.Button();
             this.btn_Inc_Minus_X = new System.Windows.Forms.Button();
             this.textbox_Distance_Y = new System.Windows.Forms.TextBox();
-            this.labelMCY = new System.Windows.Forms.Label();
+            this.label_Control_Y = new System.Windows.Forms.Label();
             this.textbox_Distance_X = new System.Windows.Forms.TextBox();
-            this.labelMCX = new System.Windows.Forms.Label();
+            this.label_Control_X = new System.Windows.Forms.Label();
             this.labelMCAbs = new System.Windows.Forms.Label();
             this.labelMCInc = new System.Windows.Forms.Label();
             this.labelMCOut = new System.Windows.Forms.Label();
@@ -79,9 +75,9 @@
             this.btn_Setup_X = new System.Windows.Forms.Button();
             this.labelSSSetup = new System.Windows.Forms.Label();
             this.textbox_Start_Y = new System.Windows.Forms.TextBox();
-            this.labelSSY = new System.Windows.Forms.Label();
+            this.label_Velocity_Y = new System.Windows.Forms.Label();
             this.textbox_Start_X = new System.Windows.Forms.TextBox();
-            this.labelSSX = new System.Windows.Forms.Label();
+            this.label_Velocity_X = new System.Windows.Forms.Label();
             this.labelSSXStart = new System.Windows.Forms.Label();
             this.labelSSSlash = new System.Windows.Forms.Label();
             this.labelSpeedSetting = new System.Windows.Forms.Label();
@@ -90,75 +86,75 @@
             this.label_Enc_X = new System.Windows.Forms.Label();
             this.label_Cmd_Y = new System.Windows.Forms.Label();
             this.label_Cmd_X = new System.Windows.Forms.Label();
-            this.labelPEEnc = new System.Windows.Forms.Label();
-            this.labelPEY = new System.Windows.Forms.Label();
-            this.labelPEX = new System.Windows.Forms.Label();
-            this.labelPECmd = new System.Windows.Forms.Label();
+            this.label_Enc = new System.Windows.Forms.Label();
+            this.label_CmdEnc_Y = new System.Windows.Forms.Label();
+            this.label_CmdEnc_X = new System.Windows.Forms.Label();
+            this.label_Cmd = new System.Windows.Forms.Label();
             this.labelPESlash = new System.Windows.Forms.Label();
             this.labelPE = new System.Windows.Forms.Label();
             this.panelSignal = new System.Windows.Forms.Panel();
-            this.panelSYPlusLimit = new System.Windows.Forms.Panel();
-            this.panelSYHomeDone = new System.Windows.Forms.Panel();
-            this.panelSYMinusLimit = new System.Windows.Forms.Panel();
-            this.panelSXPlusLimit = new System.Windows.Forms.Panel();
-            this.panelSYAlarm = new System.Windows.Forms.Panel();
-            this.panelSYNear = new System.Windows.Forms.Panel();
-            this.panelSXHomeDone = new System.Windows.Forms.Panel();
-            this.panelSXMinusLimit = new System.Windows.Forms.Panel();
-            this.panelSXAlarm = new System.Windows.Forms.Panel();
-            this.labelSHomeDone = new System.Windows.Forms.Label();
-            this.panelSXNear = new System.Windows.Forms.Panel();
-            this.labelSAlarm = new System.Windows.Forms.Label();
-            this.panelSYEncZ = new System.Windows.Forms.Panel();
-            this.panelSYBusy = new System.Windows.Forms.Panel();
-            this.panelSXEncZ = new System.Windows.Forms.Panel();
-            this.panelSXBusy = new System.Windows.Forms.Panel();
-            this.panelEmergency = new System.Windows.Forms.Panel();
-            this.labelSMinusLimit = new System.Windows.Forms.Label();
-            this.labelSBusy = new System.Windows.Forms.Label();
-            this.labelSNear = new System.Windows.Forms.Label();
-            this.labelSEncZ = new System.Windows.Forms.Label();
-            this.labelSPlusLimit = new System.Windows.Forms.Label();
-            this.labelSY = new System.Windows.Forms.Label();
-            this.labelSX = new System.Windows.Forms.Label();
-            this.labelSEmergency = new System.Windows.Forms.Label();
+            this.panel_Limit_Plus_Y = new System.Windows.Forms.Panel();
+            this.panel_Home_Done_Y = new System.Windows.Forms.Panel();
+            this.panel_Limit_Minus_Y = new System.Windows.Forms.Panel();
+            this.panel_Limit_Plus_X = new System.Windows.Forms.Panel();
+            this.panel_Alarm_Y = new System.Windows.Forms.Panel();
+            this.panel_Near_Y = new System.Windows.Forms.Panel();
+            this.panel_Home_Done_X = new System.Windows.Forms.Panel();
+            this.panel_Limit_Minus_X = new System.Windows.Forms.Panel();
+            this.panel_Alarm_X = new System.Windows.Forms.Panel();
+            this.label_Home_Done = new System.Windows.Forms.Label();
+            this.panel_Near_X = new System.Windows.Forms.Panel();
+            this.label_Alarm = new System.Windows.Forms.Label();
+            this.panel_EncZ_Y = new System.Windows.Forms.Panel();
+            this.panel_Busy_Y = new System.Windows.Forms.Panel();
+            this.panel_EncZ_X = new System.Windows.Forms.Panel();
+            this.panel_Busy_X = new System.Windows.Forms.Panel();
+            this.panel_Emergency = new System.Windows.Forms.Panel();
+            this.label_Limit_Minus = new System.Windows.Forms.Label();
+            this.label_state_Busy = new System.Windows.Forms.Label();
+            this.label_state_Near = new System.Windows.Forms.Label();
+            this.label_state_EncZ = new System.Windows.Forms.Label();
+            this.label_Limit_Plus = new System.Windows.Forms.Label();
+            this.label_State_Y = new System.Windows.Forms.Label();
+            this.label_State_X = new System.Windows.Forms.Label();
+            this.label_state_Emergency = new System.Windows.Forms.Label();
             this.labelSSlash = new System.Windows.Forms.Label();
             this.labelSTitle = new System.Windows.Forms.Label();
             this.panelLS = new System.Windows.Forms.Panel();
-            this.cBox_Axis1 = new System.Windows.Forms.ComboBox();
-            this.cBox_Axis0 = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYMLimit = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXMLimit = new System.Windows.Forms.ComboBox();
-            this.labelLSMLimit = new System.Windows.Forms.Label();
-            this.comboBoxLSEmergency = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYHomeMode = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXHomeMode = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYAlarm = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXAlarm = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYPLimit = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXPLimit = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYNear = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXNear = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYEncInput = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXEncInput = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYEncZ = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXEncZ = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSYEnc = new System.Windows.Forms.ComboBox();
-            this.comboBoxLSXEnc = new System.Windows.Forms.ComboBox();
-            this.labelLSClock = new System.Windows.Forms.Label();
-            this.labelLSHomeMode = new System.Windows.Forms.Label();
-            this.textBoxLSYRatio = new System.Windows.Forms.TextBox();
-            this.labelLSAlarm = new System.Windows.Forms.Label();
-            this.textBoxLSXRatio = new System.Windows.Forms.TextBox();
-            this.labelLSPLimit = new System.Windows.Forms.Label();
-            this.labelLSNear = new System.Windows.Forms.Label();
-            this.labelLSEncZ = new System.Windows.Forms.Label();
-            this.labelLSResolution = new System.Windows.Forms.Label();
-            this.labelLSEnc = new System.Windows.Forms.Label();
-            this.labelEncInput = new System.Windows.Forms.Label();
-            this.labelLSY = new System.Windows.Forms.Label();
-            this.labelLSX = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.combobox_Pulse_Mode_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Pulse_Mode_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Limit_Minus_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Limit_Minus_X = new System.Windows.Forms.ComboBox();
+            this.label_Setting_Limit_Minus = new System.Windows.Forms.Label();
+            this.combobox_Emergency = new System.Windows.Forms.ComboBox();
+            this.combobox_Home_Mode_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Home_Mode_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Alarm_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Alarm_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Limit_Plus_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Limit_Plus_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Near_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Near_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Enc_Dir_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Enc_Dir_X = new System.Windows.Forms.ComboBox();
+            this.combobox_EncZ_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_EncZ_X = new System.Windows.Forms.ComboBox();
+            this.combobox_Enc_Mode_Y = new System.Windows.Forms.ComboBox();
+            this.combobox_Enc_Mode_X = new System.Windows.Forms.ComboBox();
+            this.label_Setting_Pulse_Mode = new System.Windows.Forms.Label();
+            this.label_Setting_Home_Mode = new System.Windows.Forms.Label();
+            this.textBox_UnitPerPulse_Y = new System.Windows.Forms.TextBox();
+            this.label_Setting_Alarm = new System.Windows.Forms.Label();
+            this.textbox_UnitPerPulse_X = new System.Windows.Forms.TextBox();
+            this.label_Setting_Limit_Plus = new System.Windows.Forms.Label();
+            this.label_Setting_Near = new System.Windows.Forms.Label();
+            this.label_Setting_EncZ = new System.Windows.Forms.Label();
+            this.label_Setting_UnitPerPulse = new System.Windows.Forms.Label();
+            this.label_Setting_Enc_Mode = new System.Windows.Forms.Label();
+            this.label_Setting_Enc_Dir = new System.Windows.Forms.Label();
+            this.label_Logic_Y = new System.Windows.Forms.Label();
+            this.label_Logic_X = new System.Windows.Forms.Label();
+            this.label_Setting_Emergency = new System.Windows.Forms.Label();
             this.labelLSSlash = new System.Windows.Forms.Label();
             this.labelLSTitle = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -238,10 +234,6 @@
             this.panelMC.Controls.Add(this.btn_Home_Y);
             this.panelMC.Controls.Add(this.btn_Home_X);
             this.panelMC.Controls.Add(this.labelMCHome);
-            this.panelMC.Controls.Add(this.buttonMCAbsMultiMove);
-            this.panelMC.Controls.Add(this.checkBoxMCAbsSync);
-            this.panelMC.Controls.Add(this.buttonMCIncMultiMove);
-            this.panelMC.Controls.Add(this.checkBoxMCIncSync);
             this.panelMC.Controls.Add(this.btn_Stop_Y);
             this.panelMC.Controls.Add(this.btn_Stop_X);
             this.panelMC.Controls.Add(this.btn_Jog_Right_Y);
@@ -259,9 +251,9 @@
             this.panelMC.Controls.Add(this.btn_Inc_Plus_X);
             this.panelMC.Controls.Add(this.btn_Inc_Minus_X);
             this.panelMC.Controls.Add(this.textbox_Distance_Y);
-            this.panelMC.Controls.Add(this.labelMCY);
+            this.panelMC.Controls.Add(this.label_Control_Y);
             this.panelMC.Controls.Add(this.textbox_Distance_X);
-            this.panelMC.Controls.Add(this.labelMCX);
+            this.panelMC.Controls.Add(this.label_Control_X);
             this.panelMC.Controls.Add(this.labelMCAbs);
             this.panelMC.Controls.Add(this.labelMCInc);
             this.panelMC.Controls.Add(this.labelMCOut);
@@ -302,50 +294,6 @@
             this.labelMCHome.TabIndex = 29;
             this.labelMCHome.Text = "Home";
             this.labelMCHome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // buttonMCAbsMultiMove
-            // 
-            this.buttonMCAbsMultiMove.Location = new System.Drawing.Point(83, 190);
-            this.buttonMCAbsMultiMove.Name = "buttonMCAbsMultiMove";
-            this.buttonMCAbsMultiMove.Size = new System.Drawing.Size(150, 22);
-            this.buttonMCAbsMultiMove.TabIndex = 28;
-            this.buttonMCAbsMultiMove.Text = "다축 Move";
-            this.buttonMCAbsMultiMove.UseVisualStyleBackColor = true;
-            this.buttonMCAbsMultiMove.Click += new System.EventHandler(this.buttonMCAbsMultiMove_Click);
-            // 
-            // checkBoxMCAbsSync
-            // 
-            this.checkBoxMCAbsSync.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxMCAbsSync.Location = new System.Drawing.Point(2, 190);
-            this.checkBoxMCAbsSync.Name = "checkBoxMCAbsSync";
-            this.checkBoxMCAbsSync.Size = new System.Drawing.Size(80, 22);
-            this.checkBoxMCAbsSync.TabIndex = 27;
-            this.checkBoxMCAbsSync.Text = "Abs";
-            this.checkBoxMCAbsSync.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxMCAbsSync.UseVisualStyleBackColor = false;
-            this.checkBoxMCAbsSync.CheckedChanged += new System.EventHandler(this.checkBoxMCAbsSync_CheckedChanged);
-            // 
-            // buttonMCIncMultiMove
-            // 
-            this.buttonMCIncMultiMove.Location = new System.Drawing.Point(83, 166);
-            this.buttonMCIncMultiMove.Name = "buttonMCIncMultiMove";
-            this.buttonMCIncMultiMove.Size = new System.Drawing.Size(150, 22);
-            this.buttonMCIncMultiMove.TabIndex = 26;
-            this.buttonMCIncMultiMove.Text = "다축 Move";
-            this.buttonMCIncMultiMove.UseVisualStyleBackColor = true;
-            this.buttonMCIncMultiMove.Click += new System.EventHandler(this.buttonMCIncMultiMove_Click);
-            // 
-            // checkBoxMCIncSync
-            // 
-            this.checkBoxMCIncSync.BackColor = System.Drawing.Color.Silver;
-            this.checkBoxMCIncSync.Location = new System.Drawing.Point(2, 166);
-            this.checkBoxMCIncSync.Name = "checkBoxMCIncSync";
-            this.checkBoxMCIncSync.Size = new System.Drawing.Size(80, 22);
-            this.checkBoxMCIncSync.TabIndex = 25;
-            this.checkBoxMCIncSync.Text = "Inc";
-            this.checkBoxMCIncSync.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.checkBoxMCIncSync.UseVisualStyleBackColor = false;
-            this.checkBoxMCIncSync.CheckedChanged += new System.EventHandler(this.checkBoxMCIncSync_CheckedChanged);
             // 
             // btn_Stop_Y
             // 
@@ -523,16 +471,16 @@
             this.textbox_Distance_Y.Text = "0";
             this.textbox_Distance_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelMCY
+            // label_Control_Y
             // 
-            this.labelMCY.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelMCY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMCY.Location = new System.Drawing.Point(157, 34);
-            this.labelMCY.Name = "labelMCY";
-            this.labelMCY.Size = new System.Drawing.Size(75, 22);
-            this.labelMCY.TabIndex = 8;
-            this.labelMCY.Text = "Y";
-            this.labelMCY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Control_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Control_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Control_Y.Location = new System.Drawing.Point(157, 34);
+            this.label_Control_Y.Name = "label_Control_Y";
+            this.label_Control_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_Control_Y.TabIndex = 8;
+            this.label_Control_Y.Text = "Y";
+            this.label_Control_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textbox_Distance_X
             // 
@@ -544,16 +492,16 @@
             this.textbox_Distance_X.Text = "0";
             this.textbox_Distance_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelMCX
+            // label_Control_X
             // 
-            this.labelMCX.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelMCX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMCX.Location = new System.Drawing.Point(82, 34);
-            this.labelMCX.Name = "labelMCX";
-            this.labelMCX.Size = new System.Drawing.Size(75, 22);
-            this.labelMCX.TabIndex = 6;
-            this.labelMCX.Text = "X";
-            this.labelMCX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Control_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Control_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Control_X.Location = new System.Drawing.Point(82, 34);
+            this.label_Control_X.Name = "label_Control_X";
+            this.label_Control_X.Size = new System.Drawing.Size(75, 22);
+            this.label_Control_X.TabIndex = 6;
+            this.label_Control_X.Text = "X";
+            this.label_Control_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelMCAbs
             // 
@@ -627,9 +575,9 @@
             this.panelSS.Controls.Add(this.btn_Setup_X);
             this.panelSS.Controls.Add(this.labelSSSetup);
             this.panelSS.Controls.Add(this.textbox_Start_Y);
-            this.panelSS.Controls.Add(this.labelSSY);
+            this.panelSS.Controls.Add(this.label_Velocity_Y);
             this.panelSS.Controls.Add(this.textbox_Start_X);
-            this.panelSS.Controls.Add(this.labelSSX);
+            this.panelSS.Controls.Add(this.label_Velocity_X);
             this.panelSS.Controls.Add(this.labelSSXStart);
             this.panelSS.Controls.Add(this.labelSSSlash);
             this.panelSS.Controls.Add(this.labelSpeedSetting);
@@ -772,16 +720,16 @@
             this.textbox_Start_Y.Text = "100";
             this.textbox_Start_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelSSY
+            // label_Velocity_Y
             // 
-            this.labelSSY.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelSSY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSSY.Location = new System.Drawing.Point(157, 34);
-            this.labelSSY.Name = "labelSSY";
-            this.labelSSY.Size = new System.Drawing.Size(75, 22);
-            this.labelSSY.TabIndex = 8;
-            this.labelSSY.Text = "Y";
-            this.labelSSY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Velocity_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Velocity_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Velocity_Y.Location = new System.Drawing.Point(157, 34);
+            this.label_Velocity_Y.Name = "label_Velocity_Y";
+            this.label_Velocity_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_Velocity_Y.TabIndex = 8;
+            this.label_Velocity_Y.Text = "Y";
+            this.label_Velocity_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textbox_Start_X
             // 
@@ -793,16 +741,16 @@
             this.textbox_Start_X.Text = "100";
             this.textbox_Start_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // labelSSX
+            // label_Velocity_X
             // 
-            this.labelSSX.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelSSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSSX.Location = new System.Drawing.Point(82, 34);
-            this.labelSSX.Name = "labelSSX";
-            this.labelSSX.Size = new System.Drawing.Size(75, 22);
-            this.labelSSX.TabIndex = 6;
-            this.labelSSX.Text = "X";
-            this.labelSSX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Velocity_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Velocity_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Velocity_X.Location = new System.Drawing.Point(82, 34);
+            this.label_Velocity_X.Name = "label_Velocity_X";
+            this.label_Velocity_X.Size = new System.Drawing.Size(75, 22);
+            this.label_Velocity_X.TabIndex = 6;
+            this.label_Velocity_X.Text = "X";
+            this.label_Velocity_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelSSXStart
             // 
@@ -845,10 +793,10 @@
             this.panel1.Controls.Add(this.label_Enc_X);
             this.panel1.Controls.Add(this.label_Cmd_Y);
             this.panel1.Controls.Add(this.label_Cmd_X);
-            this.panel1.Controls.Add(this.labelPEEnc);
-            this.panel1.Controls.Add(this.labelPEY);
-            this.panel1.Controls.Add(this.labelPEX);
-            this.panel1.Controls.Add(this.labelPECmd);
+            this.panel1.Controls.Add(this.label_Enc);
+            this.panel1.Controls.Add(this.label_CmdEnc_Y);
+            this.panel1.Controls.Add(this.label_CmdEnc_X);
+            this.panel1.Controls.Add(this.label_Cmd);
             this.panel1.Controls.Add(this.labelPESlash);
             this.panel1.Controls.Add(this.labelPE);
             this.panel1.Location = new System.Drawing.Point(6, 91);
@@ -866,7 +814,7 @@
             this.label_Enc_Y.TabIndex = 44;
             this.label_Enc_Y.Text = "0";
             this.label_Enc_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_Y.Click += new System.EventHandler(this.labelPEYEncVal_Click);
+            this.label_Enc_Y.Click += new System.EventHandler(this.label_Enc_Y_Click);
             // 
             // label_Enc_X
             // 
@@ -878,7 +826,7 @@
             this.label_Enc_X.TabIndex = 43;
             this.label_Enc_X.Text = "0";
             this.label_Enc_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_X.Click += new System.EventHandler(this.labelPEXEncVal_Click);
+            this.label_Enc_X.Click += new System.EventHandler(this.label_Enc_X_Click);
             // 
             // label_Cmd_Y
             // 
@@ -904,49 +852,49 @@
             this.label_Cmd_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_Cmd_X.Click += new System.EventHandler(this.label_Cmd_X_Click);
             // 
-            // labelPEEnc
+            // label_Enc
             // 
-            this.labelPEEnc.BackColor = System.Drawing.Color.Silver;
-            this.labelPEEnc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEEnc.Location = new System.Drawing.Point(2, 76);
-            this.labelPEEnc.Name = "labelPEEnc";
-            this.labelPEEnc.Size = new System.Drawing.Size(81, 22);
-            this.labelPEEnc.TabIndex = 38;
-            this.labelPEEnc.Text = "Enc";
-            this.labelPEEnc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Enc.BackColor = System.Drawing.Color.Silver;
+            this.label_Enc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Enc.Location = new System.Drawing.Point(2, 76);
+            this.label_Enc.Name = "label_Enc";
+            this.label_Enc.Size = new System.Drawing.Size(81, 22);
+            this.label_Enc.TabIndex = 38;
+            this.label_Enc.Text = "Enc";
+            this.label_Enc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPEY
+            // label_CmdEnc_Y
             // 
-            this.labelPEY.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelPEY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEY.Location = new System.Drawing.Point(157, 34);
-            this.labelPEY.Name = "labelPEY";
-            this.labelPEY.Size = new System.Drawing.Size(75, 22);
-            this.labelPEY.TabIndex = 8;
-            this.labelPEY.Text = "Y";
-            this.labelPEY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CmdEnc_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_CmdEnc_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_CmdEnc_Y.Location = new System.Drawing.Point(157, 34);
+            this.label_CmdEnc_Y.Name = "label_CmdEnc_Y";
+            this.label_CmdEnc_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_CmdEnc_Y.TabIndex = 8;
+            this.label_CmdEnc_Y.Text = "Y";
+            this.label_CmdEnc_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPEX
+            // label_CmdEnc_X
             // 
-            this.labelPEX.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelPEX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPEX.Location = new System.Drawing.Point(82, 34);
-            this.labelPEX.Name = "labelPEX";
-            this.labelPEX.Size = new System.Drawing.Size(75, 22);
-            this.labelPEX.TabIndex = 6;
-            this.labelPEX.Text = "X";
-            this.labelPEX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_CmdEnc_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_CmdEnc_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_CmdEnc_X.Location = new System.Drawing.Point(82, 34);
+            this.label_CmdEnc_X.Name = "label_CmdEnc_X";
+            this.label_CmdEnc_X.Size = new System.Drawing.Size(75, 22);
+            this.label_CmdEnc_X.TabIndex = 6;
+            this.label_CmdEnc_X.Text = "X";
+            this.label_CmdEnc_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelPECmd
+            // label_Cmd
             // 
-            this.labelPECmd.BackColor = System.Drawing.Color.Silver;
-            this.labelPECmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelPECmd.Location = new System.Drawing.Point(2, 55);
-            this.labelPECmd.Name = "labelPECmd";
-            this.labelPECmd.Size = new System.Drawing.Size(81, 22);
-            this.labelPECmd.TabIndex = 3;
-            this.labelPECmd.Text = "Cmd";
-            this.labelPECmd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Cmd.BackColor = System.Drawing.Color.Silver;
+            this.label_Cmd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Cmd.Location = new System.Drawing.Point(2, 55);
+            this.label_Cmd.Name = "label_Cmd";
+            this.label_Cmd.Size = new System.Drawing.Size(81, 22);
+            this.label_Cmd.TabIndex = 3;
+            this.label_Cmd.Text = "Cmd";
+            this.label_Cmd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelPESlash
             // 
@@ -974,31 +922,31 @@
             // panelSignal
             // 
             this.panelSignal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSignal.Controls.Add(this.panelSYPlusLimit);
-            this.panelSignal.Controls.Add(this.panelSYHomeDone);
-            this.panelSignal.Controls.Add(this.panelSYMinusLimit);
-            this.panelSignal.Controls.Add(this.panelSXPlusLimit);
-            this.panelSignal.Controls.Add(this.panelSYAlarm);
-            this.panelSignal.Controls.Add(this.panelSYNear);
-            this.panelSignal.Controls.Add(this.panelSXHomeDone);
-            this.panelSignal.Controls.Add(this.panelSXMinusLimit);
-            this.panelSignal.Controls.Add(this.panelSXAlarm);
-            this.panelSignal.Controls.Add(this.labelSHomeDone);
-            this.panelSignal.Controls.Add(this.panelSXNear);
-            this.panelSignal.Controls.Add(this.labelSAlarm);
-            this.panelSignal.Controls.Add(this.panelSYEncZ);
-            this.panelSignal.Controls.Add(this.panelSYBusy);
-            this.panelSignal.Controls.Add(this.panelSXEncZ);
-            this.panelSignal.Controls.Add(this.panelSXBusy);
-            this.panelSignal.Controls.Add(this.panelEmergency);
-            this.panelSignal.Controls.Add(this.labelSMinusLimit);
-            this.panelSignal.Controls.Add(this.labelSBusy);
-            this.panelSignal.Controls.Add(this.labelSNear);
-            this.panelSignal.Controls.Add(this.labelSEncZ);
-            this.panelSignal.Controls.Add(this.labelSPlusLimit);
-            this.panelSignal.Controls.Add(this.labelSY);
-            this.panelSignal.Controls.Add(this.labelSX);
-            this.panelSignal.Controls.Add(this.labelSEmergency);
+            this.panelSignal.Controls.Add(this.panel_Limit_Plus_Y);
+            this.panelSignal.Controls.Add(this.panel_Home_Done_Y);
+            this.panelSignal.Controls.Add(this.panel_Limit_Minus_Y);
+            this.panelSignal.Controls.Add(this.panel_Limit_Plus_X);
+            this.panelSignal.Controls.Add(this.panel_Alarm_Y);
+            this.panelSignal.Controls.Add(this.panel_Near_Y);
+            this.panelSignal.Controls.Add(this.panel_Home_Done_X);
+            this.panelSignal.Controls.Add(this.panel_Limit_Minus_X);
+            this.panelSignal.Controls.Add(this.panel_Alarm_X);
+            this.panelSignal.Controls.Add(this.label_Home_Done);
+            this.panelSignal.Controls.Add(this.panel_Near_X);
+            this.panelSignal.Controls.Add(this.label_Alarm);
+            this.panelSignal.Controls.Add(this.panel_EncZ_Y);
+            this.panelSignal.Controls.Add(this.panel_Busy_Y);
+            this.panelSignal.Controls.Add(this.panel_EncZ_X);
+            this.panelSignal.Controls.Add(this.panel_Busy_X);
+            this.panelSignal.Controls.Add(this.panel_Emergency);
+            this.panelSignal.Controls.Add(this.label_Limit_Minus);
+            this.panelSignal.Controls.Add(this.label_state_Busy);
+            this.panelSignal.Controls.Add(this.label_state_Near);
+            this.panelSignal.Controls.Add(this.label_state_EncZ);
+            this.panelSignal.Controls.Add(this.label_Limit_Plus);
+            this.panelSignal.Controls.Add(this.label_State_Y);
+            this.panelSignal.Controls.Add(this.label_State_X);
+            this.panelSignal.Controls.Add(this.label_state_Emergency);
             this.panelSignal.Controls.Add(this.labelSSlash);
             this.panelSignal.Controls.Add(this.labelSTitle);
             this.panelSignal.Location = new System.Drawing.Point(248, 219);
@@ -1006,250 +954,250 @@
             this.panelSignal.Size = new System.Drawing.Size(236, 230);
             this.panelSignal.TabIndex = 44;
             // 
-            // panelSYPlusLimit
+            // panel_Limit_Plus_Y
             // 
-            this.panelSYPlusLimit.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYPlusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYPlusLimit.Location = new System.Drawing.Point(157, 160);
-            this.panelSYPlusLimit.Name = "panelSYPlusLimit";
-            this.panelSYPlusLimit.Size = new System.Drawing.Size(75, 22);
-            this.panelSYPlusLimit.TabIndex = 46;
+            this.panel_Limit_Plus_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Limit_Plus_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Limit_Plus_Y.Location = new System.Drawing.Point(157, 160);
+            this.panel_Limit_Plus_Y.Name = "panel_Limit_Plus_Y";
+            this.panel_Limit_Plus_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Limit_Plus_Y.TabIndex = 46;
             // 
-            // panelSYHomeDone
+            // panel_Home_Done_Y
             // 
-            this.panelSYHomeDone.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYHomeDone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYHomeDone.Location = new System.Drawing.Point(157, 202);
-            this.panelSYHomeDone.Name = "panelSYHomeDone";
-            this.panelSYHomeDone.Size = new System.Drawing.Size(75, 22);
-            this.panelSYHomeDone.TabIndex = 54;
+            this.panel_Home_Done_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Home_Done_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Home_Done_Y.Location = new System.Drawing.Point(157, 202);
+            this.panel_Home_Done_Y.Name = "panel_Home_Done_Y";
+            this.panel_Home_Done_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Home_Done_Y.TabIndex = 54;
             // 
-            // panelSYMinusLimit
+            // panel_Limit_Minus_Y
             // 
-            this.panelSYMinusLimit.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYMinusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYMinusLimit.Location = new System.Drawing.Point(157, 139);
-            this.panelSYMinusLimit.Name = "panelSYMinusLimit";
-            this.panelSYMinusLimit.Size = new System.Drawing.Size(75, 22);
-            this.panelSYMinusLimit.TabIndex = 46;
+            this.panel_Limit_Minus_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Limit_Minus_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Limit_Minus_Y.Location = new System.Drawing.Point(157, 139);
+            this.panel_Limit_Minus_Y.Name = "panel_Limit_Minus_Y";
+            this.panel_Limit_Minus_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Limit_Minus_Y.TabIndex = 46;
             // 
-            // panelSXPlusLimit
+            // panel_Limit_Plus_X
             // 
-            this.panelSXPlusLimit.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXPlusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXPlusLimit.Location = new System.Drawing.Point(82, 160);
-            this.panelSXPlusLimit.Name = "panelSXPlusLimit";
-            this.panelSXPlusLimit.Size = new System.Drawing.Size(75, 22);
-            this.panelSXPlusLimit.TabIndex = 45;
+            this.panel_Limit_Plus_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Limit_Plus_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Limit_Plus_X.Location = new System.Drawing.Point(82, 160);
+            this.panel_Limit_Plus_X.Name = "panel_Limit_Plus_X";
+            this.panel_Limit_Plus_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Limit_Plus_X.TabIndex = 45;
             // 
-            // panelSYAlarm
+            // panel_Alarm_Y
             // 
-            this.panelSYAlarm.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYAlarm.Location = new System.Drawing.Point(157, 181);
-            this.panelSYAlarm.Name = "panelSYAlarm";
-            this.panelSYAlarm.Size = new System.Drawing.Size(75, 22);
-            this.panelSYAlarm.TabIndex = 57;
+            this.panel_Alarm_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Alarm_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Alarm_Y.Location = new System.Drawing.Point(157, 181);
+            this.panel_Alarm_Y.Name = "panel_Alarm_Y";
+            this.panel_Alarm_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Alarm_Y.TabIndex = 57;
             // 
-            // panelSYNear
+            // panel_Near_Y
             // 
-            this.panelSYNear.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYNear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYNear.Location = new System.Drawing.Point(157, 118);
-            this.panelSYNear.Name = "panelSYNear";
-            this.panelSYNear.Size = new System.Drawing.Size(75, 22);
-            this.panelSYNear.TabIndex = 48;
+            this.panel_Near_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Near_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Near_Y.Location = new System.Drawing.Point(157, 118);
+            this.panel_Near_Y.Name = "panel_Near_Y";
+            this.panel_Near_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Near_Y.TabIndex = 48;
             // 
-            // panelSXHomeDone
+            // panel_Home_Done_X
             // 
-            this.panelSXHomeDone.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXHomeDone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXHomeDone.Location = new System.Drawing.Point(82, 202);
-            this.panelSXHomeDone.Name = "panelSXHomeDone";
-            this.panelSXHomeDone.Size = new System.Drawing.Size(75, 22);
-            this.panelSXHomeDone.TabIndex = 52;
+            this.panel_Home_Done_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Home_Done_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Home_Done_X.Location = new System.Drawing.Point(82, 202);
+            this.panel_Home_Done_X.Name = "panel_Home_Done_X";
+            this.panel_Home_Done_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Home_Done_X.TabIndex = 52;
             // 
-            // panelSXMinusLimit
+            // panel_Limit_Minus_X
             // 
-            this.panelSXMinusLimit.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXMinusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXMinusLimit.Location = new System.Drawing.Point(82, 139);
-            this.panelSXMinusLimit.Name = "panelSXMinusLimit";
-            this.panelSXMinusLimit.Size = new System.Drawing.Size(75, 22);
-            this.panelSXMinusLimit.TabIndex = 45;
+            this.panel_Limit_Minus_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Limit_Minus_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Limit_Minus_X.Location = new System.Drawing.Point(82, 139);
+            this.panel_Limit_Minus_X.Name = "panel_Limit_Minus_X";
+            this.panel_Limit_Minus_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Limit_Minus_X.TabIndex = 45;
             // 
-            // panelSXAlarm
+            // panel_Alarm_X
             // 
-            this.panelSXAlarm.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXAlarm.Location = new System.Drawing.Point(82, 181);
-            this.panelSXAlarm.Name = "panelSXAlarm";
-            this.panelSXAlarm.Size = new System.Drawing.Size(75, 22);
-            this.panelSXAlarm.TabIndex = 56;
+            this.panel_Alarm_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Alarm_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Alarm_X.Location = new System.Drawing.Point(82, 181);
+            this.panel_Alarm_X.Name = "panel_Alarm_X";
+            this.panel_Alarm_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Alarm_X.TabIndex = 56;
             // 
-            // labelSHomeDone
+            // label_Home_Done
             // 
-            this.labelSHomeDone.BackColor = System.Drawing.Color.Silver;
-            this.labelSHomeDone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSHomeDone.Location = new System.Drawing.Point(2, 202);
-            this.labelSHomeDone.Name = "labelSHomeDone";
-            this.labelSHomeDone.Size = new System.Drawing.Size(81, 22);
-            this.labelSHomeDone.TabIndex = 51;
-            this.labelSHomeDone.Text = "Home Done";
-            this.labelSHomeDone.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Home_Done.BackColor = System.Drawing.Color.Silver;
+            this.label_Home_Done.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Home_Done.Location = new System.Drawing.Point(2, 202);
+            this.label_Home_Done.Name = "label_Home_Done";
+            this.label_Home_Done.Size = new System.Drawing.Size(81, 22);
+            this.label_Home_Done.TabIndex = 51;
+            this.label_Home_Done.Text = "Home Done";
+            this.label_Home_Done.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelSXNear
+            // panel_Near_X
             // 
-            this.panelSXNear.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXNear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXNear.Location = new System.Drawing.Point(82, 118);
-            this.panelSXNear.Name = "panelSXNear";
-            this.panelSXNear.Size = new System.Drawing.Size(75, 22);
-            this.panelSXNear.TabIndex = 47;
+            this.panel_Near_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Near_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Near_X.Location = new System.Drawing.Point(82, 118);
+            this.panel_Near_X.Name = "panel_Near_X";
+            this.panel_Near_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Near_X.TabIndex = 47;
             // 
-            // labelSAlarm
+            // label_Alarm
             // 
-            this.labelSAlarm.BackColor = System.Drawing.Color.Silver;
-            this.labelSAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSAlarm.Location = new System.Drawing.Point(2, 181);
-            this.labelSAlarm.Name = "labelSAlarm";
-            this.labelSAlarm.Size = new System.Drawing.Size(81, 22);
-            this.labelSAlarm.TabIndex = 50;
-            this.labelSAlarm.Text = "Alarm";
-            this.labelSAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Alarm.BackColor = System.Drawing.Color.Silver;
+            this.label_Alarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Alarm.Location = new System.Drawing.Point(2, 181);
+            this.label_Alarm.Name = "label_Alarm";
+            this.label_Alarm.Size = new System.Drawing.Size(81, 22);
+            this.label_Alarm.TabIndex = 50;
+            this.label_Alarm.Text = "Alarm";
+            this.label_Alarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelSYEncZ
+            // panel_EncZ_Y
             // 
-            this.panelSYEncZ.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYEncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYEncZ.Location = new System.Drawing.Point(157, 97);
-            this.panelSYEncZ.Name = "panelSYEncZ";
-            this.panelSYEncZ.Size = new System.Drawing.Size(75, 22);
-            this.panelSYEncZ.TabIndex = 46;
+            this.panel_EncZ_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_EncZ_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_EncZ_Y.Location = new System.Drawing.Point(157, 97);
+            this.panel_EncZ_Y.Name = "panel_EncZ_Y";
+            this.panel_EncZ_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_EncZ_Y.TabIndex = 46;
             // 
-            // panelSYBusy
+            // panel_Busy_Y
             // 
-            this.panelSYBusy.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSYBusy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSYBusy.Location = new System.Drawing.Point(157, 76);
-            this.panelSYBusy.Name = "panelSYBusy";
-            this.panelSYBusy.Size = new System.Drawing.Size(75, 22);
-            this.panelSYBusy.TabIndex = 44;
+            this.panel_Busy_Y.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Busy_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Busy_Y.Location = new System.Drawing.Point(157, 76);
+            this.panel_Busy_Y.Name = "panel_Busy_Y";
+            this.panel_Busy_Y.Size = new System.Drawing.Size(75, 22);
+            this.panel_Busy_Y.TabIndex = 44;
             // 
-            // panelSXEncZ
+            // panel_EncZ_X
             // 
-            this.panelSXEncZ.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXEncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXEncZ.Location = new System.Drawing.Point(82, 97);
-            this.panelSXEncZ.Name = "panelSXEncZ";
-            this.panelSXEncZ.Size = new System.Drawing.Size(75, 22);
-            this.panelSXEncZ.TabIndex = 45;
+            this.panel_EncZ_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_EncZ_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_EncZ_X.Location = new System.Drawing.Point(82, 97);
+            this.panel_EncZ_X.Name = "panel_EncZ_X";
+            this.panel_EncZ_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_EncZ_X.TabIndex = 45;
             // 
-            // panelSXBusy
+            // panel_Busy_X
             // 
-            this.panelSXBusy.BackColor = System.Drawing.SystemColors.Info;
-            this.panelSXBusy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelSXBusy.Location = new System.Drawing.Point(82, 76);
-            this.panelSXBusy.Name = "panelSXBusy";
-            this.panelSXBusy.Size = new System.Drawing.Size(75, 22);
-            this.panelSXBusy.TabIndex = 43;
+            this.panel_Busy_X.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Busy_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Busy_X.Location = new System.Drawing.Point(82, 76);
+            this.panel_Busy_X.Name = "panel_Busy_X";
+            this.panel_Busy_X.Size = new System.Drawing.Size(75, 22);
+            this.panel_Busy_X.TabIndex = 43;
             // 
-            // panelEmergency
+            // panel_Emergency
             // 
-            this.panelEmergency.BackColor = System.Drawing.SystemColors.Info;
-            this.panelEmergency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelEmergency.Location = new System.Drawing.Point(82, 55);
-            this.panelEmergency.Name = "panelEmergency";
-            this.panelEmergency.Size = new System.Drawing.Size(151, 22);
-            this.panelEmergency.TabIndex = 42;
+            this.panel_Emergency.BackColor = System.Drawing.SystemColors.Info;
+            this.panel_Emergency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_Emergency.Location = new System.Drawing.Point(82, 55);
+            this.panel_Emergency.Name = "panel_Emergency";
+            this.panel_Emergency.Size = new System.Drawing.Size(151, 22);
+            this.panel_Emergency.TabIndex = 42;
             // 
-            // labelSMinusLimit
+            // label_Limit_Minus
             // 
-            this.labelSMinusLimit.BackColor = System.Drawing.Color.Silver;
-            this.labelSMinusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSMinusLimit.Location = new System.Drawing.Point(2, 139);
-            this.labelSMinusLimit.Name = "labelSMinusLimit";
-            this.labelSMinusLimit.Size = new System.Drawing.Size(81, 22);
-            this.labelSMinusLimit.TabIndex = 41;
-            this.labelSMinusLimit.Text = "- Limit";
-            this.labelSMinusLimit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Limit_Minus.BackColor = System.Drawing.Color.Silver;
+            this.label_Limit_Minus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Limit_Minus.Location = new System.Drawing.Point(2, 139);
+            this.label_Limit_Minus.Name = "label_Limit_Minus";
+            this.label_Limit_Minus.Size = new System.Drawing.Size(81, 22);
+            this.label_Limit_Minus.TabIndex = 41;
+            this.label_Limit_Minus.Text = "- Limit";
+            this.label_Limit_Minus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSBusy
+            // label_state_Busy
             // 
-            this.labelSBusy.BackColor = System.Drawing.Color.Silver;
-            this.labelSBusy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSBusy.Location = new System.Drawing.Point(2, 76);
-            this.labelSBusy.Name = "labelSBusy";
-            this.labelSBusy.Size = new System.Drawing.Size(81, 22);
-            this.labelSBusy.TabIndex = 38;
-            this.labelSBusy.Text = "Busy";
-            this.labelSBusy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_state_Busy.BackColor = System.Drawing.Color.Silver;
+            this.label_state_Busy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_state_Busy.Location = new System.Drawing.Point(2, 76);
+            this.label_state_Busy.Name = "label_state_Busy";
+            this.label_state_Busy.Size = new System.Drawing.Size(81, 22);
+            this.label_state_Busy.TabIndex = 38;
+            this.label_state_Busy.Text = "Busy";
+            this.label_state_Busy.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSNear
+            // label_state_Near
             // 
-            this.labelSNear.BackColor = System.Drawing.Color.Silver;
-            this.labelSNear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSNear.Location = new System.Drawing.Point(2, 118);
-            this.labelSNear.Name = "labelSNear";
-            this.labelSNear.Size = new System.Drawing.Size(81, 22);
-            this.labelSNear.TabIndex = 35;
-            this.labelSNear.Text = "Near";
-            this.labelSNear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_state_Near.BackColor = System.Drawing.Color.Silver;
+            this.label_state_Near.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_state_Near.Location = new System.Drawing.Point(2, 118);
+            this.label_state_Near.Name = "label_state_Near";
+            this.label_state_Near.Size = new System.Drawing.Size(81, 22);
+            this.label_state_Near.TabIndex = 35;
+            this.label_state_Near.Text = "Near";
+            this.label_state_Near.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSEncZ
+            // label_state_EncZ
             // 
-            this.labelSEncZ.BackColor = System.Drawing.Color.Silver;
-            this.labelSEncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSEncZ.Location = new System.Drawing.Point(2, 97);
-            this.labelSEncZ.Name = "labelSEncZ";
-            this.labelSEncZ.Size = new System.Drawing.Size(81, 22);
-            this.labelSEncZ.TabIndex = 32;
-            this.labelSEncZ.Text = "Enc(Z)";
-            this.labelSEncZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_state_EncZ.BackColor = System.Drawing.Color.Silver;
+            this.label_state_EncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_state_EncZ.Location = new System.Drawing.Point(2, 97);
+            this.label_state_EncZ.Name = "label_state_EncZ";
+            this.label_state_EncZ.Size = new System.Drawing.Size(81, 22);
+            this.label_state_EncZ.TabIndex = 32;
+            this.label_state_EncZ.Text = "Enc(Z)";
+            this.label_state_EncZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSPlusLimit
+            // label_Limit_Plus
             // 
-            this.labelSPlusLimit.BackColor = System.Drawing.Color.Silver;
-            this.labelSPlusLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSPlusLimit.Location = new System.Drawing.Point(2, 160);
-            this.labelSPlusLimit.Name = "labelSPlusLimit";
-            this.labelSPlusLimit.Size = new System.Drawing.Size(81, 22);
-            this.labelSPlusLimit.TabIndex = 29;
-            this.labelSPlusLimit.Text = "+ Limit";
-            this.labelSPlusLimit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Limit_Plus.BackColor = System.Drawing.Color.Silver;
+            this.label_Limit_Plus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Limit_Plus.Location = new System.Drawing.Point(2, 160);
+            this.label_Limit_Plus.Name = "label_Limit_Plus";
+            this.label_Limit_Plus.Size = new System.Drawing.Size(81, 22);
+            this.label_Limit_Plus.TabIndex = 29;
+            this.label_Limit_Plus.Text = "+ Limit";
+            this.label_Limit_Plus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSY
+            // label_State_Y
             // 
-            this.labelSY.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelSY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSY.Location = new System.Drawing.Point(157, 34);
-            this.labelSY.Name = "labelSY";
-            this.labelSY.Size = new System.Drawing.Size(75, 22);
-            this.labelSY.TabIndex = 8;
-            this.labelSY.Text = "Y";
-            this.labelSY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_State_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_State_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_State_Y.Location = new System.Drawing.Point(157, 34);
+            this.label_State_Y.Name = "label_State_Y";
+            this.label_State_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_State_Y.TabIndex = 8;
+            this.label_State_Y.Text = "Y";
+            this.label_State_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSX
+            // label_State_X
             // 
-            this.labelSX.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSX.Location = new System.Drawing.Point(82, 34);
-            this.labelSX.Name = "labelSX";
-            this.labelSX.Size = new System.Drawing.Size(75, 22);
-            this.labelSX.TabIndex = 6;
-            this.labelSX.Text = "X";
-            this.labelSX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_State_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_State_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_State_X.Location = new System.Drawing.Point(82, 34);
+            this.label_State_X.Name = "label_State_X";
+            this.label_State_X.Size = new System.Drawing.Size(75, 22);
+            this.label_State_X.TabIndex = 6;
+            this.label_State_X.Text = "X";
+            this.label_State_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelSEmergency
+            // label_state_Emergency
             // 
-            this.labelSEmergency.BackColor = System.Drawing.Color.Silver;
-            this.labelSEmergency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelSEmergency.Location = new System.Drawing.Point(2, 55);
-            this.labelSEmergency.Name = "labelSEmergency";
-            this.labelSEmergency.Size = new System.Drawing.Size(81, 22);
-            this.labelSEmergency.TabIndex = 3;
-            this.labelSEmergency.Text = "Emergency";
-            this.labelSEmergency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_state_Emergency.BackColor = System.Drawing.Color.Silver;
+            this.label_state_Emergency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_state_Emergency.Location = new System.Drawing.Point(2, 55);
+            this.label_state_Emergency.Name = "label_state_Emergency";
+            this.label_state_Emergency.Size = new System.Drawing.Size(81, 22);
+            this.label_state_Emergency.TabIndex = 3;
+            this.label_state_Emergency.Text = "Emergency";
+            this.label_state_Emergency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelSSlash
             // 
@@ -1271,46 +1219,46 @@
             this.labelSTitle.Name = "labelSTitle";
             this.labelSTitle.Size = new System.Drawing.Size(230, 28);
             this.labelSTitle.TabIndex = 2;
-            this.labelSTitle.Text = "Signal";
+            this.labelSTitle.Text = "State";
             this.labelSTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelLS
             // 
             this.panelLS.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelLS.Controls.Add(this.cBox_Axis1);
-            this.panelLS.Controls.Add(this.cBox_Axis0);
-            this.panelLS.Controls.Add(this.comboBoxLSYMLimit);
-            this.panelLS.Controls.Add(this.comboBoxLSXMLimit);
-            this.panelLS.Controls.Add(this.labelLSMLimit);
-            this.panelLS.Controls.Add(this.comboBoxLSEmergency);
-            this.panelLS.Controls.Add(this.comboBoxLSYHomeMode);
-            this.panelLS.Controls.Add(this.comboBoxLSXHomeMode);
-            this.panelLS.Controls.Add(this.comboBoxLSYAlarm);
-            this.panelLS.Controls.Add(this.comboBoxLSXAlarm);
-            this.panelLS.Controls.Add(this.comboBoxLSYPLimit);
-            this.panelLS.Controls.Add(this.comboBoxLSXPLimit);
-            this.panelLS.Controls.Add(this.comboBoxLSYNear);
-            this.panelLS.Controls.Add(this.comboBoxLSXNear);
-            this.panelLS.Controls.Add(this.comboBoxLSYEncInput);
-            this.panelLS.Controls.Add(this.comboBoxLSXEncInput);
-            this.panelLS.Controls.Add(this.comboBoxLSYEncZ);
-            this.panelLS.Controls.Add(this.comboBoxLSXEncZ);
-            this.panelLS.Controls.Add(this.comboBoxLSYEnc);
-            this.panelLS.Controls.Add(this.comboBoxLSXEnc);
-            this.panelLS.Controls.Add(this.labelLSClock);
-            this.panelLS.Controls.Add(this.labelLSHomeMode);
-            this.panelLS.Controls.Add(this.textBoxLSYRatio);
-            this.panelLS.Controls.Add(this.labelLSAlarm);
-            this.panelLS.Controls.Add(this.textBoxLSXRatio);
-            this.panelLS.Controls.Add(this.labelLSPLimit);
-            this.panelLS.Controls.Add(this.labelLSNear);
-            this.panelLS.Controls.Add(this.labelLSEncZ);
-            this.panelLS.Controls.Add(this.labelLSResolution);
-            this.panelLS.Controls.Add(this.labelLSEnc);
-            this.panelLS.Controls.Add(this.labelEncInput);
-            this.panelLS.Controls.Add(this.labelLSY);
-            this.panelLS.Controls.Add(this.labelLSX);
-            this.panelLS.Controls.Add(this.label10);
+            this.panelLS.Controls.Add(this.combobox_Pulse_Mode_Y);
+            this.panelLS.Controls.Add(this.combobox_Pulse_Mode_X);
+            this.panelLS.Controls.Add(this.combobox_Limit_Minus_Y);
+            this.panelLS.Controls.Add(this.combobox_Limit_Minus_X);
+            this.panelLS.Controls.Add(this.label_Setting_Limit_Minus);
+            this.panelLS.Controls.Add(this.combobox_Emergency);
+            this.panelLS.Controls.Add(this.combobox_Home_Mode_Y);
+            this.panelLS.Controls.Add(this.combobox_Home_Mode_X);
+            this.panelLS.Controls.Add(this.combobox_Alarm_Y);
+            this.panelLS.Controls.Add(this.combobox_Alarm_X);
+            this.panelLS.Controls.Add(this.combobox_Limit_Plus_Y);
+            this.panelLS.Controls.Add(this.combobox_Limit_Plus_X);
+            this.panelLS.Controls.Add(this.combobox_Near_Y);
+            this.panelLS.Controls.Add(this.combobox_Near_X);
+            this.panelLS.Controls.Add(this.combobox_Enc_Dir_Y);
+            this.panelLS.Controls.Add(this.combobox_Enc_Dir_X);
+            this.panelLS.Controls.Add(this.combobox_EncZ_Y);
+            this.panelLS.Controls.Add(this.combobox_EncZ_X);
+            this.panelLS.Controls.Add(this.combobox_Enc_Mode_Y);
+            this.panelLS.Controls.Add(this.combobox_Enc_Mode_X);
+            this.panelLS.Controls.Add(this.label_Setting_Pulse_Mode);
+            this.panelLS.Controls.Add(this.label_Setting_Home_Mode);
+            this.panelLS.Controls.Add(this.textBox_UnitPerPulse_Y);
+            this.panelLS.Controls.Add(this.label_Setting_Alarm);
+            this.panelLS.Controls.Add(this.textbox_UnitPerPulse_X);
+            this.panelLS.Controls.Add(this.label_Setting_Limit_Plus);
+            this.panelLS.Controls.Add(this.label_Setting_Near);
+            this.panelLS.Controls.Add(this.label_Setting_EncZ);
+            this.panelLS.Controls.Add(this.label_Setting_UnitPerPulse);
+            this.panelLS.Controls.Add(this.label_Setting_Enc_Mode);
+            this.panelLS.Controls.Add(this.label_Setting_Enc_Dir);
+            this.panelLS.Controls.Add(this.label_Logic_Y);
+            this.panelLS.Controls.Add(this.label_Logic_X);
+            this.panelLS.Controls.Add(this.label_Setting_Emergency);
             this.panelLS.Controls.Add(this.labelLSSlash);
             this.panelLS.Controls.Add(this.labelLSTitle);
             this.panelLS.Location = new System.Drawing.Point(489, 29);
@@ -1318,10 +1266,10 @@
             this.panelLS.Size = new System.Drawing.Size(236, 301);
             this.panelLS.TabIndex = 58;
             // 
-            // cBox_Axis1
+            // combobox_Pulse_Mode_Y
             // 
-            this.cBox_Axis1.FormattingEnabled = true;
-            this.cBox_Axis1.Items.AddRange(new object[] {
+            this.combobox_Pulse_Mode_Y.FormattingEnabled = true;
+            this.combobox_Pulse_Mode_Y.Items.AddRange(new object[] {
             "2P,Low,CW/CCW",
             "2P,Low,CCW/CW",
             "2P,High,CW/CCW",
@@ -1330,18 +1278,18 @@
             "1P,Low,CCW/CCW",
             "1P,High,CW/CCW",
             "1P,High,CCW/CW"});
-            this.cBox_Axis1.Location = new System.Drawing.Point(160, 267);
-            this.cBox_Axis1.Name = "cBox_Axis1";
-            this.cBox_Axis1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cBox_Axis1.Size = new System.Drawing.Size(76, 20);
-            this.cBox_Axis1.TabIndex = 79;
-            this.cBox_Axis1.Text = "2P,Low,CW/CCW";
-            this.cBox_Axis1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.combobox_Pulse_Mode_Y.Location = new System.Drawing.Point(160, 267);
+            this.combobox_Pulse_Mode_Y.Name = "combobox_Pulse_Mode_Y";
+            this.combobox_Pulse_Mode_Y.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Pulse_Mode_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Pulse_Mode_Y.TabIndex = 79;
+            this.combobox_Pulse_Mode_Y.Text = "2P,Low,CW/CCW";
+            this.combobox_Pulse_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Pulse_Mode_Y_SelectedIndexChanged);
             // 
-            // cBox_Axis0
+            // combobox_Pulse_Mode_X
             // 
-            this.cBox_Axis0.FormattingEnabled = true;
-            this.cBox_Axis0.Items.AddRange(new object[] {
+            this.combobox_Pulse_Mode_X.FormattingEnabled = true;
+            this.combobox_Pulse_Mode_X.Items.AddRange(new object[] {
             "2P,Low,CW/CCW",
             "2P,Low,CCW/CW",
             "2P,High,CW/CCW",
@@ -1350,70 +1298,70 @@
             "1P,Low,CCW/CCW",
             "1P,High,CW/CCW",
             "1P,High,CCW/CW"});
-            this.cBox_Axis0.Location = new System.Drawing.Point(84, 268);
-            this.cBox_Axis0.Name = "cBox_Axis0";
-            this.cBox_Axis0.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.cBox_Axis0.Size = new System.Drawing.Size(76, 20);
-            this.cBox_Axis0.TabIndex = 78;
-            this.cBox_Axis0.Text = "2P,Low,CW/CCW";
-            this.cBox_Axis0.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.combobox_Pulse_Mode_X.Location = new System.Drawing.Point(84, 268);
+            this.combobox_Pulse_Mode_X.Name = "combobox_Pulse_Mode_X";
+            this.combobox_Pulse_Mode_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Pulse_Mode_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Pulse_Mode_X.TabIndex = 78;
+            this.combobox_Pulse_Mode_X.Text = "2P,Low,CW/CCW";
+            this.combobox_Pulse_Mode_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Pulse_Mode_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYMLimit
+            // combobox_Limit_Minus_Y
             // 
-            this.comboBoxLSYMLimit.FormattingEnabled = true;
-            this.comboBoxLSYMLimit.Items.AddRange(new object[] {
+            this.combobox_Limit_Minus_Y.FormattingEnabled = true;
+            this.combobox_Limit_Minus_Y.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSYMLimit.Location = new System.Drawing.Point(157, 183);
-            this.comboBoxLSYMLimit.Name = "comboBoxLSYMLimit";
-            this.comboBoxLSYMLimit.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYMLimit.TabIndex = 75;
-            this.comboBoxLSYMLimit.Text = "NC";
-            this.comboBoxLSYMLimit.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYMLimit_SelectedIndexChanged);
+            this.combobox_Limit_Minus_Y.Location = new System.Drawing.Point(157, 183);
+            this.combobox_Limit_Minus_Y.Name = "combobox_Limit_Minus_Y";
+            this.combobox_Limit_Minus_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Limit_Minus_Y.TabIndex = 75;
+            this.combobox_Limit_Minus_Y.Text = "NC";
+            this.combobox_Limit_Minus_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Minus_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXMLimit
+            // combobox_Limit_Minus_X
             // 
-            this.comboBoxLSXMLimit.FormattingEnabled = true;
-            this.comboBoxLSXMLimit.Items.AddRange(new object[] {
+            this.combobox_Limit_Minus_X.FormattingEnabled = true;
+            this.combobox_Limit_Minus_X.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSXMLimit.Location = new System.Drawing.Point(83, 183);
-            this.comboBoxLSXMLimit.Name = "comboBoxLSXMLimit";
-            this.comboBoxLSXMLimit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXMLimit.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXMLimit.TabIndex = 74;
-            this.comboBoxLSXMLimit.Text = "NC";
-            this.comboBoxLSXMLimit.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXMLimit_SelectedIndexChanged);
+            this.combobox_Limit_Minus_X.Location = new System.Drawing.Point(83, 183);
+            this.combobox_Limit_Minus_X.Name = "combobox_Limit_Minus_X";
+            this.combobox_Limit_Minus_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Limit_Minus_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Limit_Minus_X.TabIndex = 74;
+            this.combobox_Limit_Minus_X.Text = "NC";
+            this.combobox_Limit_Minus_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Minus_X_SelectedIndexChanged);
             // 
-            // labelLSMLimit
+            // label_Setting_Limit_Minus
             // 
-            this.labelLSMLimit.BackColor = System.Drawing.Color.Silver;
-            this.labelLSMLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSMLimit.Location = new System.Drawing.Point(2, 182);
-            this.labelLSMLimit.Name = "labelLSMLimit";
-            this.labelLSMLimit.Size = new System.Drawing.Size(81, 22);
-            this.labelLSMLimit.TabIndex = 73;
-            this.labelLSMLimit.Text = "-Limit";
-            this.labelLSMLimit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Limit_Minus.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Limit_Minus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Limit_Minus.Location = new System.Drawing.Point(2, 182);
+            this.label_Setting_Limit_Minus.Name = "label_Setting_Limit_Minus";
+            this.label_Setting_Limit_Minus.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Limit_Minus.TabIndex = 73;
+            this.label_Setting_Limit_Minus.Text = "-Limit";
+            this.label_Setting_Limit_Minus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // comboBoxLSEmergency
+            // combobox_Emergency
             // 
-            this.comboBoxLSEmergency.FormattingEnabled = true;
-            this.comboBoxLSEmergency.Items.AddRange(new object[] {
+            this.combobox_Emergency.FormattingEnabled = true;
+            this.combobox_Emergency.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSEmergency.Location = new System.Drawing.Point(83, 56);
-            this.comboBoxLSEmergency.Name = "comboBoxLSEmergency";
-            this.comboBoxLSEmergency.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSEmergency.Size = new System.Drawing.Size(151, 20);
-            this.comboBoxLSEmergency.TabIndex = 72;
-            this.comboBoxLSEmergency.Text = "NO";
-            this.comboBoxLSEmergency.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSEmergency_SelectedIndexChanged);
+            this.combobox_Emergency.Location = new System.Drawing.Point(83, 56);
+            this.combobox_Emergency.Name = "combobox_Emergency";
+            this.combobox_Emergency.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Emergency.Size = new System.Drawing.Size(151, 20);
+            this.combobox_Emergency.TabIndex = 72;
+            this.combobox_Emergency.Text = "NO";
+            this.combobox_Emergency.SelectedIndexChanged += new System.EventHandler(this.combobox_Emergency_SelectedIndexChanged);
             // 
-            // comboBoxLSYHomeMode
+            // combobox_Home_Mode_Y
             // 
-            this.comboBoxLSYHomeMode.FormattingEnabled = true;
-            this.comboBoxLSYHomeMode.Items.AddRange(new object[] {
+            this.combobox_Home_Mode_Y.FormattingEnabled = true;
+            this.combobox_Home_Mode_Y.Items.AddRange(new object[] {
             "+Limit",
             "-Limit",
             "+Near",
@@ -1424,16 +1372,16 @@
             "-Near + Z",
             "Z-",
             "Z+"});
-            this.comboBoxLSYHomeMode.Location = new System.Drawing.Point(157, 247);
-            this.comboBoxLSYHomeMode.Name = "comboBoxLSYHomeMode";
-            this.comboBoxLSYHomeMode.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYHomeMode.TabIndex = 69;
-            this.comboBoxLSYHomeMode.Text = "+Limit";
+            this.combobox_Home_Mode_Y.Location = new System.Drawing.Point(157, 247);
+            this.combobox_Home_Mode_Y.Name = "combobox_Home_Mode_Y";
+            this.combobox_Home_Mode_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Home_Mode_Y.TabIndex = 69;
+            this.combobox_Home_Mode_Y.Text = "+Limit";
             // 
-            // comboBoxLSXHomeMode
+            // combobox_Home_Mode_X
             // 
-            this.comboBoxLSXHomeMode.FormattingEnabled = true;
-            this.comboBoxLSXHomeMode.Items.AddRange(new object[] {
+            this.combobox_Home_Mode_X.FormattingEnabled = true;
+            this.combobox_Home_Mode_X.Items.AddRange(new object[] {
             "+Limit",
             "-Limit",
             "+Near",
@@ -1444,330 +1392,330 @@
             "-Near + Z",
             "Z-",
             "Z+"});
-            this.comboBoxLSXHomeMode.Location = new System.Drawing.Point(84, 247);
-            this.comboBoxLSXHomeMode.Name = "comboBoxLSXHomeMode";
-            this.comboBoxLSXHomeMode.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXHomeMode.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXHomeMode.TabIndex = 68;
-            this.comboBoxLSXHomeMode.Text = "+Limit";
+            this.combobox_Home_Mode_X.Location = new System.Drawing.Point(84, 247);
+            this.combobox_Home_Mode_X.Name = "combobox_Home_Mode_X";
+            this.combobox_Home_Mode_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Home_Mode_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Home_Mode_X.TabIndex = 68;
+            this.combobox_Home_Mode_X.Text = "+Limit";
             // 
-            // comboBoxLSYAlarm
+            // combobox_Alarm_Y
             // 
-            this.comboBoxLSYAlarm.FormattingEnabled = true;
-            this.comboBoxLSYAlarm.Items.AddRange(new object[] {
+            this.combobox_Alarm_Y.FormattingEnabled = true;
+            this.combobox_Alarm_Y.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSYAlarm.Location = new System.Drawing.Point(157, 224);
-            this.comboBoxLSYAlarm.Name = "comboBoxLSYAlarm";
-            this.comboBoxLSYAlarm.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYAlarm.TabIndex = 65;
-            this.comboBoxLSYAlarm.Text = "NC";
-            this.comboBoxLSYAlarm.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYAlarm_SelectedIndexChanged);
+            this.combobox_Alarm_Y.Location = new System.Drawing.Point(157, 224);
+            this.combobox_Alarm_Y.Name = "combobox_Alarm_Y";
+            this.combobox_Alarm_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Alarm_Y.TabIndex = 65;
+            this.combobox_Alarm_Y.Text = "NC";
+            this.combobox_Alarm_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Alarm_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXAlarm
+            // combobox_Alarm_X
             // 
-            this.comboBoxLSXAlarm.FormattingEnabled = true;
-            this.comboBoxLSXAlarm.Items.AddRange(new object[] {
+            this.combobox_Alarm_X.FormattingEnabled = true;
+            this.combobox_Alarm_X.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSXAlarm.Location = new System.Drawing.Point(83, 224);
-            this.comboBoxLSXAlarm.Name = "comboBoxLSXAlarm";
-            this.comboBoxLSXAlarm.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXAlarm.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXAlarm.TabIndex = 64;
-            this.comboBoxLSXAlarm.Text = "NC";
-            this.comboBoxLSXAlarm.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXAlarm_SelectedIndexChanged);
+            this.combobox_Alarm_X.Location = new System.Drawing.Point(83, 224);
+            this.combobox_Alarm_X.Name = "combobox_Alarm_X";
+            this.combobox_Alarm_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Alarm_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Alarm_X.TabIndex = 64;
+            this.combobox_Alarm_X.Text = "NC";
+            this.combobox_Alarm_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Alarm_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYPLimit
+            // combobox_Limit_Plus_Y
             // 
-            this.comboBoxLSYPLimit.FormattingEnabled = true;
-            this.comboBoxLSYPLimit.Items.AddRange(new object[] {
+            this.combobox_Limit_Plus_Y.FormattingEnabled = true;
+            this.combobox_Limit_Plus_Y.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSYPLimit.Location = new System.Drawing.Point(157, 204);
-            this.comboBoxLSYPLimit.Name = "comboBoxLSYPLimit";
-            this.comboBoxLSYPLimit.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYPLimit.TabIndex = 63;
-            this.comboBoxLSYPLimit.Text = "NC";
-            this.comboBoxLSYPLimit.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYPLimit_SelectedIndexChanged);
+            this.combobox_Limit_Plus_Y.Location = new System.Drawing.Point(157, 204);
+            this.combobox_Limit_Plus_Y.Name = "combobox_Limit_Plus_Y";
+            this.combobox_Limit_Plus_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Limit_Plus_Y.TabIndex = 63;
+            this.combobox_Limit_Plus_Y.Text = "NC";
+            this.combobox_Limit_Plus_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Plus_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXPLimit
+            // combobox_Limit_Plus_X
             // 
-            this.comboBoxLSXPLimit.FormattingEnabled = true;
-            this.comboBoxLSXPLimit.Items.AddRange(new object[] {
+            this.combobox_Limit_Plus_X.FormattingEnabled = true;
+            this.combobox_Limit_Plus_X.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSXPLimit.Location = new System.Drawing.Point(83, 204);
-            this.comboBoxLSXPLimit.Name = "comboBoxLSXPLimit";
-            this.comboBoxLSXPLimit.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXPLimit.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXPLimit.TabIndex = 62;
-            this.comboBoxLSXPLimit.Text = "NC";
-            this.comboBoxLSXPLimit.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXPLimit_SelectedIndexChanged);
+            this.combobox_Limit_Plus_X.Location = new System.Drawing.Point(83, 204);
+            this.combobox_Limit_Plus_X.Name = "combobox_Limit_Plus_X";
+            this.combobox_Limit_Plus_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Limit_Plus_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Limit_Plus_X.TabIndex = 62;
+            this.combobox_Limit_Plus_X.Text = "NC";
+            this.combobox_Limit_Plus_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Limit_Plus_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYNear
+            // combobox_Near_Y
             // 
-            this.comboBoxLSYNear.FormattingEnabled = true;
-            this.comboBoxLSYNear.Items.AddRange(new object[] {
+            this.combobox_Near_Y.FormattingEnabled = true;
+            this.combobox_Near_Y.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSYNear.Location = new System.Drawing.Point(157, 162);
-            this.comboBoxLSYNear.Name = "comboBoxLSYNear";
-            this.comboBoxLSYNear.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYNear.TabIndex = 61;
-            this.comboBoxLSYNear.Text = "NC";
-            this.comboBoxLSYNear.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYNear_SelectedIndexChanged);
+            this.combobox_Near_Y.Location = new System.Drawing.Point(157, 162);
+            this.combobox_Near_Y.Name = "combobox_Near_Y";
+            this.combobox_Near_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Near_Y.TabIndex = 61;
+            this.combobox_Near_Y.Text = "NC";
+            this.combobox_Near_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Near_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXNear
+            // combobox_Near_X
             // 
-            this.comboBoxLSXNear.FormattingEnabled = true;
-            this.comboBoxLSXNear.Items.AddRange(new object[] {
+            this.combobox_Near_X.FormattingEnabled = true;
+            this.combobox_Near_X.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSXNear.Location = new System.Drawing.Point(83, 162);
-            this.comboBoxLSXNear.Name = "comboBoxLSXNear";
-            this.comboBoxLSXNear.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXNear.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXNear.TabIndex = 60;
-            this.comboBoxLSXNear.Text = "NC";
-            this.comboBoxLSXNear.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXNear_SelectedIndexChanged);
+            this.combobox_Near_X.Location = new System.Drawing.Point(83, 162);
+            this.combobox_Near_X.Name = "combobox_Near_X";
+            this.combobox_Near_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Near_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Near_X.TabIndex = 60;
+            this.combobox_Near_X.Text = "NC";
+            this.combobox_Near_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Near_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYEncInput
+            // combobox_Enc_Dir_Y
             // 
-            this.comboBoxLSYEncInput.FormattingEnabled = true;
-            this.comboBoxLSYEncInput.Items.AddRange(new object[] {
+            this.combobox_Enc_Dir_Y.FormattingEnabled = true;
+            this.combobox_Enc_Dir_Y.Items.AddRange(new object[] {
             "EA/EB",
             "EB/EA"});
-            this.comboBoxLSYEncInput.Location = new System.Drawing.Point(157, 141);
-            this.comboBoxLSYEncInput.Name = "comboBoxLSYEncInput";
-            this.comboBoxLSYEncInput.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYEncInput.TabIndex = 59;
-            this.comboBoxLSYEncInput.Text = "EA/EB";
-            this.comboBoxLSYEncInput.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYEncInput_SelectedIndexChanged);
+            this.combobox_Enc_Dir_Y.Location = new System.Drawing.Point(157, 141);
+            this.combobox_Enc_Dir_Y.Name = "combobox_Enc_Dir_Y";
+            this.combobox_Enc_Dir_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Enc_Dir_Y.TabIndex = 59;
+            this.combobox_Enc_Dir_Y.Text = "EA/EB";
+            this.combobox_Enc_Dir_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Dir_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXEncInput
+            // combobox_Enc_Dir_X
             // 
-            this.comboBoxLSXEncInput.FormattingEnabled = true;
-            this.comboBoxLSXEncInput.Items.AddRange(new object[] {
+            this.combobox_Enc_Dir_X.FormattingEnabled = true;
+            this.combobox_Enc_Dir_X.Items.AddRange(new object[] {
             "EA/EB",
             "EB/EA"});
-            this.comboBoxLSXEncInput.Location = new System.Drawing.Point(83, 141);
-            this.comboBoxLSXEncInput.Name = "comboBoxLSXEncInput";
-            this.comboBoxLSXEncInput.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXEncInput.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXEncInput.TabIndex = 58;
-            this.comboBoxLSXEncInput.Text = "EA/EB";
-            this.comboBoxLSXEncInput.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXEncInput_SelectedIndexChanged);
+            this.combobox_Enc_Dir_X.Location = new System.Drawing.Point(83, 141);
+            this.combobox_Enc_Dir_X.Name = "combobox_Enc_Dir_X";
+            this.combobox_Enc_Dir_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Enc_Dir_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Enc_Dir_X.TabIndex = 58;
+            this.combobox_Enc_Dir_X.Text = "EA/EB";
+            this.combobox_Enc_Dir_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Dir_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYEncZ
+            // combobox_EncZ_Y
             // 
-            this.comboBoxLSYEncZ.FormattingEnabled = true;
-            this.comboBoxLSYEncZ.Items.AddRange(new object[] {
+            this.combobox_EncZ_Y.FormattingEnabled = true;
+            this.combobox_EncZ_Y.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSYEncZ.Location = new System.Drawing.Point(157, 120);
-            this.comboBoxLSYEncZ.Name = "comboBoxLSYEncZ";
-            this.comboBoxLSYEncZ.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYEncZ.TabIndex = 57;
-            this.comboBoxLSYEncZ.Text = "NC";
-            this.comboBoxLSYEncZ.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYEncZ_SelectedIndexChanged);
+            this.combobox_EncZ_Y.Location = new System.Drawing.Point(157, 120);
+            this.combobox_EncZ_Y.Name = "combobox_EncZ_Y";
+            this.combobox_EncZ_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_EncZ_Y.TabIndex = 57;
+            this.combobox_EncZ_Y.Text = "NC";
+            this.combobox_EncZ_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_EncZ_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXEncZ
+            // combobox_EncZ_X
             // 
-            this.comboBoxLSXEncZ.FormattingEnabled = true;
-            this.comboBoxLSXEncZ.Items.AddRange(new object[] {
+            this.combobox_EncZ_X.FormattingEnabled = true;
+            this.combobox_EncZ_X.Items.AddRange(new object[] {
             "NC",
             "NO"});
-            this.comboBoxLSXEncZ.Location = new System.Drawing.Point(83, 120);
-            this.comboBoxLSXEncZ.Name = "comboBoxLSXEncZ";
-            this.comboBoxLSXEncZ.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXEncZ.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXEncZ.TabIndex = 56;
-            this.comboBoxLSXEncZ.Text = "NC";
-            this.comboBoxLSXEncZ.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXEncZ_SelectedIndexChanged);
+            this.combobox_EncZ_X.Location = new System.Drawing.Point(83, 120);
+            this.combobox_EncZ_X.Name = "combobox_EncZ_X";
+            this.combobox_EncZ_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_EncZ_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_EncZ_X.TabIndex = 56;
+            this.combobox_EncZ_X.Text = "NC";
+            this.combobox_EncZ_X.SelectedIndexChanged += new System.EventHandler(this.combobox_EncZ_X_SelectedIndexChanged);
             // 
-            // comboBoxLSYEnc
+            // combobox_Enc_Mode_Y
             // 
-            this.comboBoxLSYEnc.FormattingEnabled = true;
-            this.comboBoxLSYEnc.Items.AddRange(new object[] {
+            this.combobox_Enc_Mode_Y.FormattingEnabled = true;
+            this.combobox_Enc_Mode_Y.Items.AddRange(new object[] {
             "4채배",
             "2채배",
             "1채배"});
-            this.comboBoxLSYEnc.Location = new System.Drawing.Point(157, 99);
-            this.comboBoxLSYEnc.Name = "comboBoxLSYEnc";
-            this.comboBoxLSYEnc.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSYEnc.TabIndex = 45;
-            this.comboBoxLSYEnc.Text = "4채배";
-            this.comboBoxLSYEnc.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSYEnc_SelectedIndexChanged);
+            this.combobox_Enc_Mode_Y.Location = new System.Drawing.Point(157, 99);
+            this.combobox_Enc_Mode_Y.Name = "combobox_Enc_Mode_Y";
+            this.combobox_Enc_Mode_Y.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Enc_Mode_Y.TabIndex = 45;
+            this.combobox_Enc_Mode_Y.Text = "4채배";
+            this.combobox_Enc_Mode_Y.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Mode_Y_SelectedIndexChanged);
             // 
-            // comboBoxLSXEnc
+            // combobox_Enc_Mode_X
             // 
-            this.comboBoxLSXEnc.FormattingEnabled = true;
-            this.comboBoxLSXEnc.Items.AddRange(new object[] {
+            this.combobox_Enc_Mode_X.FormattingEnabled = true;
+            this.combobox_Enc_Mode_X.Items.AddRange(new object[] {
             "4채배",
             "2채배",
             "1채배"});
-            this.comboBoxLSXEnc.Location = new System.Drawing.Point(83, 99);
-            this.comboBoxLSXEnc.Name = "comboBoxLSXEnc";
-            this.comboBoxLSXEnc.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.comboBoxLSXEnc.Size = new System.Drawing.Size(76, 20);
-            this.comboBoxLSXEnc.TabIndex = 44;
-            this.comboBoxLSXEnc.Text = "4채배";
-            this.comboBoxLSXEnc.SelectedIndexChanged += new System.EventHandler(this.comboBoxLSXEnc_SelectedIndexChanged);
+            this.combobox_Enc_Mode_X.Location = new System.Drawing.Point(83, 99);
+            this.combobox_Enc_Mode_X.Name = "combobox_Enc_Mode_X";
+            this.combobox_Enc_Mode_X.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.combobox_Enc_Mode_X.Size = new System.Drawing.Size(76, 20);
+            this.combobox_Enc_Mode_X.TabIndex = 44;
+            this.combobox_Enc_Mode_X.Text = "4채배";
+            this.combobox_Enc_Mode_X.SelectedIndexChanged += new System.EventHandler(this.combobox_Enc_Mode_X_SelectedIndexChanged);
             // 
-            // labelLSClock
+            // label_Setting_Pulse_Mode
             // 
-            this.labelLSClock.BackColor = System.Drawing.Color.Silver;
-            this.labelLSClock.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSClock.Location = new System.Drawing.Point(3, 268);
-            this.labelLSClock.Name = "labelLSClock";
-            this.labelLSClock.Size = new System.Drawing.Size(81, 22);
-            this.labelLSClock.TabIndex = 55;
-            this.labelLSClock.Text = "Pulse Mode";
-            this.labelLSClock.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Pulse_Mode.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Pulse_Mode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Pulse_Mode.Location = new System.Drawing.Point(3, 268);
+            this.label_Setting_Pulse_Mode.Name = "label_Setting_Pulse_Mode";
+            this.label_Setting_Pulse_Mode.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Pulse_Mode.TabIndex = 55;
+            this.label_Setting_Pulse_Mode.Text = "Pulse Mode";
+            this.label_Setting_Pulse_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSHomeMode
+            // label_Setting_Home_Mode
             // 
-            this.labelLSHomeMode.BackColor = System.Drawing.Color.Silver;
-            this.labelLSHomeMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSHomeMode.Location = new System.Drawing.Point(3, 247);
-            this.labelLSHomeMode.Name = "labelLSHomeMode";
-            this.labelLSHomeMode.Size = new System.Drawing.Size(81, 22);
-            this.labelLSHomeMode.TabIndex = 54;
-            this.labelLSHomeMode.Text = "Home Mode";
-            this.labelLSHomeMode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Home_Mode.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Home_Mode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Home_Mode.Location = new System.Drawing.Point(3, 247);
+            this.label_Setting_Home_Mode.Name = "label_Setting_Home_Mode";
+            this.label_Setting_Home_Mode.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Home_Mode.TabIndex = 54;
+            this.label_Setting_Home_Mode.Text = "Home Mode";
+            this.label_Setting_Home_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxLSYRatio
+            // textBox_UnitPerPulse_Y
             // 
-            this.textBoxLSYRatio.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxLSYRatio.Location = new System.Drawing.Point(157, 76);
-            this.textBoxLSYRatio.Name = "textBoxLSYRatio";
-            this.textBoxLSYRatio.Size = new System.Drawing.Size(76, 22);
-            this.textBoxLSYRatio.TabIndex = 45;
-            this.textBoxLSYRatio.Text = "1";
-            this.textBoxLSYRatio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxLSYRatio.TextChanged += new System.EventHandler(this.textBoxLSYRatio_TextChanged);
+            this.textBox_UnitPerPulse_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_UnitPerPulse_Y.Location = new System.Drawing.Point(157, 76);
+            this.textBox_UnitPerPulse_Y.Name = "textBox_UnitPerPulse_Y";
+            this.textBox_UnitPerPulse_Y.Size = new System.Drawing.Size(76, 22);
+            this.textBox_UnitPerPulse_Y.TabIndex = 45;
+            this.textBox_UnitPerPulse_Y.Text = "1";
+            this.textBox_UnitPerPulse_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox_UnitPerPulse_Y.TextChanged += new System.EventHandler(this.textBox_UnitPerPulse_Y_TextChanged);
             // 
-            // labelLSAlarm
+            // label_Setting_Alarm
             // 
-            this.labelLSAlarm.BackColor = System.Drawing.Color.Silver;
-            this.labelLSAlarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSAlarm.Location = new System.Drawing.Point(2, 224);
-            this.labelLSAlarm.Name = "labelLSAlarm";
-            this.labelLSAlarm.Size = new System.Drawing.Size(81, 22);
-            this.labelLSAlarm.TabIndex = 53;
-            this.labelLSAlarm.Text = "Alarm";
-            this.labelLSAlarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Alarm.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Alarm.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Alarm.Location = new System.Drawing.Point(2, 224);
+            this.label_Setting_Alarm.Name = "label_Setting_Alarm";
+            this.label_Setting_Alarm.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Alarm.TabIndex = 53;
+            this.label_Setting_Alarm.Text = "Alarm";
+            this.label_Setting_Alarm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBoxLSXRatio
+            // textbox_UnitPerPulse_X
             // 
-            this.textBoxLSXRatio.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBoxLSXRatio.Location = new System.Drawing.Point(83, 76);
-            this.textBoxLSXRatio.Name = "textBoxLSXRatio";
-            this.textBoxLSXRatio.Size = new System.Drawing.Size(75, 22);
-            this.textBoxLSXRatio.TabIndex = 44;
-            this.textBoxLSXRatio.Text = "1";
-            this.textBoxLSXRatio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBoxLSXRatio.TextChanged += new System.EventHandler(this.textBoxLSXResolution_TextChanged);
+            this.textbox_UnitPerPulse_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_UnitPerPulse_X.Location = new System.Drawing.Point(83, 76);
+            this.textbox_UnitPerPulse_X.Name = "textbox_UnitPerPulse_X";
+            this.textbox_UnitPerPulse_X.Size = new System.Drawing.Size(75, 22);
+            this.textbox_UnitPerPulse_X.TabIndex = 44;
+            this.textbox_UnitPerPulse_X.Text = "1";
+            this.textbox_UnitPerPulse_X.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_UnitPerPulse_X.TextChanged += new System.EventHandler(this.textbox_UnitPerPulse_X_TextChanged);
             // 
-            // labelLSPLimit
+            // label_Setting_Limit_Plus
             // 
-            this.labelLSPLimit.BackColor = System.Drawing.Color.Silver;
-            this.labelLSPLimit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSPLimit.Location = new System.Drawing.Point(2, 203);
-            this.labelLSPLimit.Name = "labelLSPLimit";
-            this.labelLSPLimit.Size = new System.Drawing.Size(81, 22);
-            this.labelLSPLimit.TabIndex = 51;
-            this.labelLSPLimit.Text = "+Limit";
-            this.labelLSPLimit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Limit_Plus.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Limit_Plus.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Limit_Plus.Location = new System.Drawing.Point(2, 203);
+            this.label_Setting_Limit_Plus.Name = "label_Setting_Limit_Plus";
+            this.label_Setting_Limit_Plus.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Limit_Plus.TabIndex = 51;
+            this.label_Setting_Limit_Plus.Text = "+Limit";
+            this.label_Setting_Limit_Plus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSNear
+            // label_Setting_Near
             // 
-            this.labelLSNear.BackColor = System.Drawing.Color.Silver;
-            this.labelLSNear.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSNear.Location = new System.Drawing.Point(2, 161);
-            this.labelLSNear.Name = "labelLSNear";
-            this.labelLSNear.Size = new System.Drawing.Size(81, 22);
-            this.labelLSNear.TabIndex = 50;
-            this.labelLSNear.Text = "Near";
-            this.labelLSNear.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Near.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Near.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Near.Location = new System.Drawing.Point(2, 161);
+            this.label_Setting_Near.Name = "label_Setting_Near";
+            this.label_Setting_Near.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Near.TabIndex = 50;
+            this.label_Setting_Near.Text = "Near";
+            this.label_Setting_Near.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSEncZ
+            // label_Setting_EncZ
             // 
-            this.labelLSEncZ.BackColor = System.Drawing.Color.Silver;
-            this.labelLSEncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSEncZ.Location = new System.Drawing.Point(2, 119);
-            this.labelLSEncZ.Name = "labelLSEncZ";
-            this.labelLSEncZ.Size = new System.Drawing.Size(81, 22);
-            this.labelLSEncZ.TabIndex = 41;
-            this.labelLSEncZ.Text = "Enc(Z)";
-            this.labelLSEncZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_EncZ.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_EncZ.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_EncZ.Location = new System.Drawing.Point(2, 119);
+            this.label_Setting_EncZ.Name = "label_Setting_EncZ";
+            this.label_Setting_EncZ.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_EncZ.TabIndex = 41;
+            this.label_Setting_EncZ.Text = "Enc(Z)";
+            this.label_Setting_EncZ.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSResolution
+            // label_Setting_UnitPerPulse
             // 
-            this.labelLSResolution.BackColor = System.Drawing.Color.Silver;
-            this.labelLSResolution.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSResolution.Location = new System.Drawing.Point(2, 76);
-            this.labelLSResolution.Name = "labelLSResolution";
-            this.labelLSResolution.Size = new System.Drawing.Size(81, 22);
-            this.labelLSResolution.TabIndex = 38;
-            this.labelLSResolution.Text = "UnitPerPulse";
-            this.labelLSResolution.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_UnitPerPulse.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_UnitPerPulse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_UnitPerPulse.Location = new System.Drawing.Point(2, 76);
+            this.label_Setting_UnitPerPulse.Name = "label_Setting_UnitPerPulse";
+            this.label_Setting_UnitPerPulse.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_UnitPerPulse.TabIndex = 38;
+            this.label_Setting_UnitPerPulse.Text = "UnitPerPulse";
+            this.label_Setting_UnitPerPulse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSEnc
+            // label_Setting_Enc_Mode
             // 
-            this.labelLSEnc.BackColor = System.Drawing.Color.Silver;
-            this.labelLSEnc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSEnc.Location = new System.Drawing.Point(2, 98);
-            this.labelLSEnc.Name = "labelLSEnc";
-            this.labelLSEnc.Size = new System.Drawing.Size(81, 22);
-            this.labelLSEnc.TabIndex = 35;
-            this.labelLSEnc.Text = "Enc";
-            this.labelLSEnc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Enc_Mode.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Enc_Mode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Enc_Mode.Location = new System.Drawing.Point(2, 98);
+            this.label_Setting_Enc_Mode.Name = "label_Setting_Enc_Mode";
+            this.label_Setting_Enc_Mode.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Enc_Mode.TabIndex = 35;
+            this.label_Setting_Enc_Mode.Text = "Enc";
+            this.label_Setting_Enc_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelEncInput
+            // label_Setting_Enc_Dir
             // 
-            this.labelEncInput.BackColor = System.Drawing.Color.Silver;
-            this.labelEncInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelEncInput.Location = new System.Drawing.Point(2, 140);
-            this.labelEncInput.Name = "labelEncInput";
-            this.labelEncInput.Size = new System.Drawing.Size(81, 22);
-            this.labelEncInput.TabIndex = 29;
-            this.labelEncInput.Text = "Enc Input";
-            this.labelEncInput.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Enc_Dir.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Enc_Dir.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Enc_Dir.Location = new System.Drawing.Point(2, 140);
+            this.label_Setting_Enc_Dir.Name = "label_Setting_Enc_Dir";
+            this.label_Setting_Enc_Dir.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Enc_Dir.TabIndex = 29;
+            this.label_Setting_Enc_Dir.Text = "Enc Input";
+            this.label_Setting_Enc_Dir.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSY
+            // label_Logic_Y
             // 
-            this.labelLSY.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelLSY.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSY.Location = new System.Drawing.Point(157, 34);
-            this.labelLSY.Name = "labelLSY";
-            this.labelLSY.Size = new System.Drawing.Size(75, 22);
-            this.labelLSY.TabIndex = 8;
-            this.labelLSY.Text = "Y";
-            this.labelLSY.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Logic_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Logic_Y.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Logic_Y.Location = new System.Drawing.Point(157, 34);
+            this.label_Logic_Y.Name = "label_Logic_Y";
+            this.label_Logic_Y.Size = new System.Drawing.Size(75, 22);
+            this.label_Logic_Y.TabIndex = 8;
+            this.label_Logic_Y.Text = "Y";
+            this.label_Logic_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelLSX
+            // label_Logic_X
             // 
-            this.labelLSX.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.labelLSX.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelLSX.Location = new System.Drawing.Point(82, 34);
-            this.labelLSX.Name = "labelLSX";
-            this.labelLSX.Size = new System.Drawing.Size(75, 22);
-            this.labelLSX.TabIndex = 6;
-            this.labelLSX.Text = "X";
-            this.labelLSX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Logic_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.label_Logic_X.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Logic_X.Location = new System.Drawing.Point(82, 34);
+            this.label_Logic_X.Name = "label_Logic_X";
+            this.label_Logic_X.Size = new System.Drawing.Size(75, 22);
+            this.label_Logic_X.TabIndex = 6;
+            this.label_Logic_X.Text = "X";
+            this.label_Logic_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label10
+            // label_Setting_Emergency
             // 
-            this.label10.BackColor = System.Drawing.Color.Silver;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.Location = new System.Drawing.Point(2, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 22);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Emergency";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label_Setting_Emergency.BackColor = System.Drawing.Color.Silver;
+            this.label_Setting_Emergency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label_Setting_Emergency.Location = new System.Drawing.Point(2, 55);
+            this.label_Setting_Emergency.Name = "label_Setting_Emergency";
+            this.label_Setting_Emergency.Size = new System.Drawing.Size(81, 22);
+            this.label_Setting_Emergency.TabIndex = 3;
+            this.label_Setting_Emergency.Text = "Emergency";
+            this.label_Setting_Emergency.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelLSSlash
             // 
@@ -2032,10 +1980,6 @@
         private System.Windows.Forms.Button btn_Home_Y;
         private System.Windows.Forms.Button btn_Home_X;
         private System.Windows.Forms.Label labelMCHome;
-        private System.Windows.Forms.Button buttonMCAbsMultiMove;
-        private System.Windows.Forms.CheckBox checkBoxMCAbsSync;
-        private System.Windows.Forms.Button buttonMCIncMultiMove;
-        private System.Windows.Forms.CheckBox checkBoxMCIncSync;
         private System.Windows.Forms.Button btn_Stop_Y;
         private System.Windows.Forms.Button btn_Stop_X;
         private System.Windows.Forms.Button btn_Jog_Right_Y;
@@ -2052,8 +1996,8 @@
         private System.Windows.Forms.Button btn_Inc_Minus_Y;
         private System.Windows.Forms.Button btn_Inc_Plus_X;
         private System.Windows.Forms.Button btn_Inc_Minus_X;
-        private System.Windows.Forms.Label labelMCY;
-        private System.Windows.Forms.Label labelMCX;
+        private System.Windows.Forms.Label label_Control_Y;
+        private System.Windows.Forms.Label label_Control_X;
         private System.Windows.Forms.Label labelMCAbs;
         private System.Windows.Forms.Label labelMCInc;
         private System.Windows.Forms.Label labelMCOut;
@@ -2122,16 +2066,16 @@
 
 
 
-        private System.Windows.Forms.Label labelSSY;
-        private System.Windows.Forms.Label labelSSX;
+        private System.Windows.Forms.Label label_Velocity_Y;
+        private System.Windows.Forms.Label label_Velocity_X;
         private System.Windows.Forms.Label labelSSXStart;
         private System.Windows.Forms.Label labelSSSlash;
         private System.Windows.Forms.Label labelSpeedSetting;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelPEEnc;
-        private System.Windows.Forms.Label labelPEY;
-        private System.Windows.Forms.Label labelPEX;
-        private System.Windows.Forms.Label labelPECmd;
+        private System.Windows.Forms.Label label_Enc;
+        private System.Windows.Forms.Label label_CmdEnc_Y;
+        private System.Windows.Forms.Label label_CmdEnc_X;
+        private System.Windows.Forms.Label label_Cmd;
         private System.Windows.Forms.Label labelPESlash;
         private System.Windows.Forms.Label labelPE;
         private System.Windows.Forms.Label label_Enc_Y;
@@ -2139,72 +2083,72 @@
         private System.Windows.Forms.Label label_Cmd_Y;
         private System.Windows.Forms.Label label_Cmd_X;
         private System.Windows.Forms.Panel panelSignal;
-        private System.Windows.Forms.Label labelSMinusLimit;
-        private System.Windows.Forms.Label labelSBusy;
-        private System.Windows.Forms.Label labelSNear;
-        private System.Windows.Forms.Label labelSEncZ;
-        private System.Windows.Forms.Label labelSPlusLimit;
-        private System.Windows.Forms.Label labelSY;
-        private System.Windows.Forms.Label labelSX;
-        private System.Windows.Forms.Label labelSEmergency;
+        private System.Windows.Forms.Label label_Limit_Minus;
+        private System.Windows.Forms.Label label_state_Busy;
+        private System.Windows.Forms.Label label_state_Near;
+        private System.Windows.Forms.Label label_state_EncZ;
+        private System.Windows.Forms.Label label_Limit_Plus;
+        private System.Windows.Forms.Label label_State_Y;
+        private System.Windows.Forms.Label label_State_X;
+        private System.Windows.Forms.Label label_state_Emergency;
         private System.Windows.Forms.Label labelSSlash;
-        private System.Windows.Forms.Panel panelEmergency;
-        private System.Windows.Forms.Panel panelSYMinusLimit;
-        private System.Windows.Forms.Panel panelSYNear;
-        private System.Windows.Forms.Panel panelSXMinusLimit;
-        private System.Windows.Forms.Panel panelSYPlusLimit;
-        private System.Windows.Forms.Panel panelSXPlusLimit;
-        private System.Windows.Forms.Panel panelSXNear;
-        private System.Windows.Forms.Panel panelSYEncZ;
-        private System.Windows.Forms.Panel panelSYBusy;
-        private System.Windows.Forms.Panel panelSXEncZ;
-        private System.Windows.Forms.Panel panelSXBusy;
-        private System.Windows.Forms.Panel panelSYHomeDone;
-        private System.Windows.Forms.Panel panelSYAlarm;
-        private System.Windows.Forms.Panel panelSXHomeDone;
-        private System.Windows.Forms.Panel panelSXAlarm;
-        private System.Windows.Forms.Label labelSHomeDone;
-        private System.Windows.Forms.Label labelSAlarm;
+        private System.Windows.Forms.Panel panel_Emergency;
+        private System.Windows.Forms.Panel panel_Limit_Minus_Y;
+        private System.Windows.Forms.Panel panel_Near_Y;
+        private System.Windows.Forms.Panel panel_Limit_Minus_X;
+        private System.Windows.Forms.Panel panel_Limit_Plus_Y;
+        private System.Windows.Forms.Panel panel_Limit_Plus_X;
+        private System.Windows.Forms.Panel panel_Near_X;
+        private System.Windows.Forms.Panel panel_EncZ_Y;
+        private System.Windows.Forms.Panel panel_Busy_Y;
+        private System.Windows.Forms.Panel panel_EncZ_X;
+        private System.Windows.Forms.Panel panel_Busy_X;
+        private System.Windows.Forms.Panel panel_Home_Done_Y;
+        private System.Windows.Forms.Panel panel_Alarm_Y;
+        private System.Windows.Forms.Panel panel_Home_Done_X;
+        private System.Windows.Forms.Panel panel_Alarm_X;
+        private System.Windows.Forms.Label label_Home_Done;
+        private System.Windows.Forms.Label label_Alarm;
         private System.Windows.Forms.Panel panelLS;
-        private System.Windows.Forms.Label labelLSPLimit;
-        private System.Windows.Forms.Label labelLSNear;
-        private System.Windows.Forms.Label labelLSEncZ;
-        private System.Windows.Forms.Label labelLSResolution;
-        private System.Windows.Forms.Label labelLSEnc;
-        private System.Windows.Forms.Label labelEncInput;
-        private System.Windows.Forms.Label labelLSY;
-        private System.Windows.Forms.Label labelLSX;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label_Setting_Limit_Plus;
+        private System.Windows.Forms.Label label_Setting_Near;
+        private System.Windows.Forms.Label label_Setting_EncZ;
+        private System.Windows.Forms.Label label_Setting_UnitPerPulse;
+        private System.Windows.Forms.Label label_Setting_Enc_Mode;
+        private System.Windows.Forms.Label label_Setting_Enc_Dir;
+        private System.Windows.Forms.Label label_Logic_Y;
+        private System.Windows.Forms.Label label_Logic_X;
+        private System.Windows.Forms.Label label_Setting_Emergency;
         private System.Windows.Forms.Label labelLSSlash;
         private System.Windows.Forms.Label labelLSTitle;
-        private System.Windows.Forms.Label labelLSClock;
-        private System.Windows.Forms.Label labelLSHomeMode;
-        private System.Windows.Forms.Label labelLSAlarm;
+        private System.Windows.Forms.Label label_Setting_Pulse_Mode;
+        private System.Windows.Forms.Label label_Setting_Home_Mode;
+        private System.Windows.Forms.Label label_Setting_Alarm;
         private System.Windows.Forms.Label labelSTitle;
-        private System.Windows.Forms.ComboBox comboBoxLSYNear;
-        private System.Windows.Forms.ComboBox comboBoxLSXNear;
-        private System.Windows.Forms.ComboBox comboBoxLSYEncInput;
-        private System.Windows.Forms.ComboBox comboBoxLSXEncInput;
-        private System.Windows.Forms.ComboBox comboBoxLSYEncZ;
-        private System.Windows.Forms.ComboBox comboBoxLSXEncZ;
-        private System.Windows.Forms.ComboBox comboBoxLSYEnc;
-        private System.Windows.Forms.ComboBox comboBoxLSXEnc;
-        private System.Windows.Forms.TextBox textBoxLSYRatio;
-        private System.Windows.Forms.TextBox textBoxLSXRatio;
-        private System.Windows.Forms.ComboBox comboBoxLSEmergency;
-        private System.Windows.Forms.ComboBox comboBoxLSYHomeMode;
-        private System.Windows.Forms.ComboBox comboBoxLSXHomeMode;
-        private System.Windows.Forms.ComboBox comboBoxLSYAlarm;
-        private System.Windows.Forms.ComboBox comboBoxLSXAlarm;
-        private System.Windows.Forms.ComboBox comboBoxLSYPLimit;
-        private System.Windows.Forms.ComboBox comboBoxLSXPLimit;
-        private System.Windows.Forms.ComboBox comboBoxLSYMLimit;
-        private System.Windows.Forms.ComboBox comboBoxLSXMLimit;
-        private System.Windows.Forms.Label labelLSMLimit;
+        private System.Windows.Forms.ComboBox combobox_Near_Y;
+        private System.Windows.Forms.ComboBox combobox_Near_X;
+        private System.Windows.Forms.ComboBox combobox_Enc_Dir_Y;
+        private System.Windows.Forms.ComboBox combobox_Enc_Dir_X;
+        private System.Windows.Forms.ComboBox combobox_EncZ_Y;
+        private System.Windows.Forms.ComboBox combobox_EncZ_X;
+        private System.Windows.Forms.ComboBox combobox_Enc_Mode_Y;
+        private System.Windows.Forms.ComboBox combobox_Enc_Mode_X;
+        private System.Windows.Forms.TextBox textBox_UnitPerPulse_Y;
+        private System.Windows.Forms.TextBox textbox_UnitPerPulse_X;
+        private System.Windows.Forms.ComboBox combobox_Emergency;
+        private System.Windows.Forms.ComboBox combobox_Home_Mode_Y;
+        private System.Windows.Forms.ComboBox combobox_Home_Mode_X;
+        private System.Windows.Forms.ComboBox combobox_Alarm_Y;
+        private System.Windows.Forms.ComboBox combobox_Alarm_X;
+        private System.Windows.Forms.ComboBox combobox_Limit_Plus_Y;
+        private System.Windows.Forms.ComboBox combobox_Limit_Plus_X;
+        private System.Windows.Forms.ComboBox combobox_Limit_Minus_Y;
+        private System.Windows.Forms.ComboBox combobox_Limit_Minus_X;
+        private System.Windows.Forms.Label label_Setting_Limit_Minus;
 
         private System.Windows.Forms.Label labelSSDec;
-        private System.Windows.Forms.ComboBox cBox_Axis1;
-        private System.Windows.Forms.ComboBox cBox_Axis0;
+        private System.Windows.Forms.ComboBox combobox_Pulse_Mode_Y;
+        private System.Windows.Forms.ComboBox combobox_Pulse_Mode_X;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
