@@ -176,6 +176,7 @@
             this.btn_Current_X = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Group_ScanRange = new System.Windows.Forms.GroupBox();
+            this.Btn_Save_Scanrange = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Textbox_Scan_Interval_Y = new System.Windows.Forms.TextBox();
@@ -188,7 +189,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Textbox_Scan_End_X = new System.Windows.Forms.TextBox();
             this.Textbox_Scan_Start_X = new System.Windows.Forms.TextBox();
-            this.Btn_Save_Scanrange = new System.Windows.Forms.Button();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
             this.panelSS.SuspendLayout();
@@ -224,7 +224,7 @@
             // 
             // textBoxDevNo
             // 
-            this.textBoxDevNo.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxDevNo.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBoxDevNo.Location = new System.Drawing.Point(3, 34);
             this.textBoxDevNo.Name = "textBoxDevNo";
             this.textBoxDevNo.Size = new System.Drawing.Size(35, 22);
@@ -235,7 +235,7 @@
             // labelConnTitle
             // 
             this.labelConnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelConnTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelConnTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelConnTitle.ForeColor = System.Drawing.Color.White;
             this.labelConnTitle.Location = new System.Drawing.Point(3, 3);
             this.labelConnTitle.Name = "labelConnTitle";
@@ -479,7 +479,7 @@
             // 
             // textbox_Distance_Y
             // 
-            this.textbox_Distance_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Distance_Y.Location = new System.Drawing.Point(157, 56);
             this.textbox_Distance_Y.Name = "textbox_Distance_Y";
             this.textbox_Distance_Y.Size = new System.Drawing.Size(76, 22);
@@ -500,7 +500,7 @@
             // 
             // textbox_Distance_X
             // 
-            this.textbox_Distance_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Distance_X.Location = new System.Drawing.Point(83, 56);
             this.textbox_Distance_X.Name = "textbox_Distance_X";
             this.textbox_Distance_X.Size = new System.Drawing.Size(76, 22);
@@ -566,7 +566,7 @@
             // labelMCTitle
             // 
             this.labelMCTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelMCTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelMCTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelMCTitle.ForeColor = System.Drawing.Color.White;
             this.labelMCTitle.Location = new System.Drawing.Point(3, 3);
             this.labelMCTitle.Name = "labelMCTitle";
@@ -604,7 +604,7 @@
             // 
             // textbox_Dec_Y
             // 
-            this.textbox_Dec_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Dec_Y.Location = new System.Drawing.Point(157, 98);
             this.textbox_Dec_Y.Name = "textbox_Dec_Y";
             this.textbox_Dec_Y.Size = new System.Drawing.Size(76, 22);
@@ -614,7 +614,7 @@
             // 
             // textbox_Dec_X
             // 
-            this.textbox_Dec_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Dec_X.Location = new System.Drawing.Point(83, 98);
             this.textbox_Dec_X.Name = "textbox_Dec_X";
             this.textbox_Dec_X.Size = new System.Drawing.Size(76, 22);
@@ -635,7 +635,7 @@
             // 
             // textbox_Acc_Y
             // 
-            this.textbox_Acc_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Acc_Y.Location = new System.Drawing.Point(157, 77);
             this.textbox_Acc_Y.Name = "textbox_Acc_Y";
             this.textbox_Acc_Y.Size = new System.Drawing.Size(76, 22);
@@ -645,7 +645,7 @@
             // 
             // textbox_Acc_X
             // 
-            this.textbox_Acc_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Acc_X.Location = new System.Drawing.Point(83, 77);
             this.textbox_Acc_X.Name = "textbox_Acc_X";
             this.textbox_Acc_X.Size = new System.Drawing.Size(76, 22);
@@ -666,7 +666,7 @@
             // 
             // textbox_Max_Y
             // 
-            this.textbox_Max_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Max_Y.Location = new System.Drawing.Point(157, 119);
             this.textbox_Max_Y.Name = "textbox_Max_Y";
             this.textbox_Max_Y.Size = new System.Drawing.Size(76, 22);
@@ -676,7 +676,7 @@
             // 
             // textbox_Max_X
             // 
-            this.textbox_Max_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Max_X.Location = new System.Drawing.Point(84, 119);
             this.textbox_Max_X.Name = "textbox_Max_X";
             this.textbox_Max_X.Size = new System.Drawing.Size(76, 22);
@@ -728,7 +728,7 @@
             // 
             // textbox_Start_Y
             // 
-            this.textbox_Start_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Start_Y.Location = new System.Drawing.Point(157, 56);
             this.textbox_Start_Y.Name = "textbox_Start_Y";
             this.textbox_Start_Y.Size = new System.Drawing.Size(76, 22);
@@ -749,7 +749,7 @@
             // 
             // textbox_Start_X
             // 
-            this.textbox_Start_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Start_X.Location = new System.Drawing.Point(83, 56);
             this.textbox_Start_X.Name = "textbox_Start_X";
             this.textbox_Start_X.Size = new System.Drawing.Size(76, 22);
@@ -793,7 +793,7 @@
             // labelSpeedSetting
             // 
             this.labelSpeedSetting.BackColor = System.Drawing.Color.Gray;
-            this.labelSpeedSetting.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelSpeedSetting.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelSpeedSetting.ForeColor = System.Drawing.Color.White;
             this.labelSpeedSetting.Location = new System.Drawing.Point(3, 3);
             this.labelSpeedSetting.Name = "labelSpeedSetting";
@@ -926,7 +926,7 @@
             // labelPE
             // 
             this.labelPE.BackColor = System.Drawing.Color.Gray;
-            this.labelPE.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelPE.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelPE.ForeColor = System.Drawing.Color.White;
             this.labelPE.Location = new System.Drawing.Point(3, 3);
             this.labelPE.Name = "labelPE";
@@ -1229,7 +1229,7 @@
             // labelSTitle
             // 
             this.labelSTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelSTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelSTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelSTitle.ForeColor = System.Drawing.Color.White;
             this.labelSTitle.Location = new System.Drawing.Point(3, 3);
             this.labelSTitle.Name = "labelSTitle";
@@ -1603,7 +1603,7 @@
             // 
             // textBox_UnitPerPulse_Y
             // 
-            this.textBox_UnitPerPulse_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBox_UnitPerPulse_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBox_UnitPerPulse_Y.Location = new System.Drawing.Point(157, 76);
             this.textBox_UnitPerPulse_Y.Name = "textBox_UnitPerPulse_Y";
             this.textBox_UnitPerPulse_Y.Size = new System.Drawing.Size(76, 22);
@@ -1625,7 +1625,7 @@
             // 
             // textbox_UnitPerPulse_X
             // 
-            this.textbox_UnitPerPulse_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_UnitPerPulse_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_UnitPerPulse_X.Location = new System.Drawing.Point(83, 76);
             this.textbox_UnitPerPulse_X.Name = "textbox_UnitPerPulse_X";
             this.textbox_UnitPerPulse_X.Size = new System.Drawing.Size(75, 22);
@@ -1747,7 +1747,7 @@
             // labelLSTitle
             // 
             this.labelLSTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelLSTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelLSTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelLSTitle.ForeColor = System.Drawing.Color.White;
             this.labelLSTitle.Location = new System.Drawing.Point(3, 3);
             this.labelLSTitle.Name = "labelLSTitle";
@@ -1981,6 +1981,16 @@
             this.Group_ScanRange.TabStop = false;
             this.Group_ScanRange.Text = "Scan range";
             // 
+            // Btn_Save_Scanrange
+            // 
+            this.Btn_Save_Scanrange.Location = new System.Drawing.Point(80, 168);
+            this.Btn_Save_Scanrange.Name = "Btn_Save_Scanrange";
+            this.Btn_Save_Scanrange.Size = new System.Drawing.Size(150, 23);
+            this.Btn_Save_Scanrange.TabIndex = 44;
+            this.Btn_Save_Scanrange.Text = "Save";
+            this.Btn_Save_Scanrange.UseVisualStyleBackColor = true;
+            this.Btn_Save_Scanrange.Click += new System.EventHandler(this.Btn_Save_Scanrange_Click);
+            // 
             // label6
             // 
             this.label6.BackColor = System.Drawing.Color.Silver;
@@ -2095,16 +2105,6 @@
             this.Textbox_Scan_Start_X.Size = new System.Drawing.Size(74, 21);
             this.Textbox_Scan_Start_X.TabIndex = 0;
             this.Textbox_Scan_Start_X.Text = "0";
-            // 
-            // Btn_Save_Scanrange
-            // 
-            this.Btn_Save_Scanrange.Location = new System.Drawing.Point(80, 168);
-            this.Btn_Save_Scanrange.Name = "Btn_Save_Scanrange";
-            this.Btn_Save_Scanrange.Size = new System.Drawing.Size(150, 23);
-            this.Btn_Save_Scanrange.TabIndex = 44;
-            this.Btn_Save_Scanrange.Text = "Save";
-            this.Btn_Save_Scanrange.UseVisualStyleBackColor = true;
-            this.Btn_Save_Scanrange.Click += new System.EventHandler(this.Btn_Save_Scanrange_Click);
             // 
             // GUI
             // 

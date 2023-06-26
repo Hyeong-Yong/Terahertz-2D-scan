@@ -168,9 +168,5 @@ namespace THz_2D_scan
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
 
-        private void Btn_Save_Scanrange_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
