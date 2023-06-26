@@ -20,7 +20,7 @@ namespace THz_2D_scan
          */
         private static PaixMotion instance = null;
         private PaixMotion(){}
-        public static PaixMotion getInstance
+        public static PaixMotion GetInstance
         {
             get
             {
@@ -368,8 +368,6 @@ namespace THz_2D_scan
 
         }
 
-
-
         //  false - A 접점  ,   true  - B 접점
         public bool SetEmerLogic(short logic)
         {
@@ -410,7 +408,7 @@ namespace THz_2D_scan
         /// 모션 구동의 완료 여부를 확인
         /// </summary>
         /// <param name="nAxis">축 번호</param>
-        /// <param name="nValue">"펄스 출력상태를 읽을 포인터" 1: 펄스출력 ON, 2: 펄스출력 OFF </param>
+        /// <param name="nValue">"펄스 출력상태를 읽을 포인터" 1: 이동완료(펄스출력 ON), 2: 이동 중(펄스출력 OFF) </param>
         /// <returns></returns>
         public bool GetBusy(short nAxis, out short nValue)
         {
@@ -633,12 +631,21 @@ namespace THz_2D_scan
             short nRet = NMC2.nmc_GetStateInfo(m_nDev_no, out tState, 0);
 
             NMC2.nmc_StateInfoToAxisInfo(0, ref tState, out tAxis);
+            
+            switch (nRet)
+            {
+                case NMC2.NMC_NOTCONNECT:
+                    m_bIsOpen = false;
+                    return false;
+                case 0:
+                    return true;
+            }
 
             return false;
         }
 
 
-        public NMC2.NMCAXISINFO updateAxisInfo(short nAxis)
+        public NMC2.NMCAXISINFO UpdateAxisInfo(short nAxis)
         {
             NMC2.NMCSTATEINFO tState;
             NMC2.NMCAXISINFO tAxis;
@@ -742,6 +749,7 @@ namespace THz_2D_scan
 
                 if (NmcContiStatus.nContiRun[GROUP] == 0) break;     // 연속보간 이동 끝, while 구문 탈출
             }
+
             return true;
         }
         public bool LoadFromRom()

@@ -166,6 +166,10 @@
       <DependentUpon>GUI.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GUI.Two_D_scan.cs">
+      <DependentUpon>GUI.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="nmc2.cs" />
     <Compile Include="PaixMotion.cs" />
     <Compile Include="Program.cs" />

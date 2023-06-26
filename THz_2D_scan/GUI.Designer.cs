@@ -176,18 +176,19 @@
             this.btn_Current_X = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Group_ScanRange = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.Textbox_Scan_Interval_Y = new System.Windows.Forms.TextBox();
+            this.Lbl_Scan_Y = new System.Windows.Forms.Label();
             this.Textbox_Scan_End_Y = new System.Windows.Forms.TextBox();
+            this.Lbl_Scan_X = new System.Windows.Forms.Label();
             this.Textbox_Scan_Start_Y = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.Textbox_Scan_Interval_X = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Textbox_Scan_End_X = new System.Windows.Forms.TextBox();
             this.Textbox_Scan_Start_X = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Lbl_Scan_Y = new System.Windows.Forms.Label();
-            this.Lbl_Scan_X = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Btn_Save_Scanrange = new System.Windows.Forms.Button();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
             this.panelSS.SuspendLayout();
@@ -1960,6 +1961,7 @@
             // 
             // Group_ScanRange
             // 
+            this.Group_ScanRange.Controls.Add(this.Btn_Save_Scanrange);
             this.Group_ScanRange.Controls.Add(this.label6);
             this.Group_ScanRange.Controls.Add(this.label1);
             this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Interval_Y);
@@ -1974,53 +1976,21 @@
             this.Group_ScanRange.Controls.Add(this.Textbox_Scan_Start_X);
             this.Group_ScanRange.Location = new System.Drawing.Point(80, 209);
             this.Group_ScanRange.Name = "Group_ScanRange";
-            this.Group_ScanRange.Size = new System.Drawing.Size(302, 290);
+            this.Group_ScanRange.Size = new System.Drawing.Size(300, 290);
             this.Group_ScanRange.TabIndex = 0;
             this.Group_ScanRange.TabStop = false;
             this.Group_ScanRange.Text = "Scan range";
             // 
-            // Textbox_Scan_Interval_Y
+            // label6
             // 
-            this.Textbox_Scan_Interval_Y.Location = new System.Drawing.Point(155, 141);
-            this.Textbox_Scan_Interval_Y.Name = "Textbox_Scan_Interval_Y";
-            this.Textbox_Scan_Interval_Y.Size = new System.Drawing.Size(75, 21);
-            this.Textbox_Scan_Interval_Y.TabIndex = 0;
-            // 
-            // Textbox_Scan_End_Y
-            // 
-            this.Textbox_Scan_End_Y.Location = new System.Drawing.Point(155, 119);
-            this.Textbox_Scan_End_Y.Name = "Textbox_Scan_End_Y";
-            this.Textbox_Scan_End_Y.Size = new System.Drawing.Size(75, 21);
-            this.Textbox_Scan_End_Y.TabIndex = 0;
-            // 
-            // Textbox_Scan_Start_Y
-            // 
-            this.Textbox_Scan_Start_Y.Location = new System.Drawing.Point(155, 98);
-            this.Textbox_Scan_Start_Y.Name = "Textbox_Scan_Start_Y";
-            this.Textbox_Scan_Start_Y.Size = new System.Drawing.Size(75, 21);
-            this.Textbox_Scan_Start_Y.TabIndex = 0;
-            // 
-            // Textbox_Scan_Interval_X
-            // 
-            this.Textbox_Scan_Interval_X.Location = new System.Drawing.Point(81, 141);
-            this.Textbox_Scan_Interval_X.Name = "Textbox_Scan_Interval_X";
-            this.Textbox_Scan_Interval_X.Size = new System.Drawing.Size(74, 21);
-            this.Textbox_Scan_Interval_X.TabIndex = 0;
-            // 
-            // Textbox_Scan_End_X
-            // 
-            this.Textbox_Scan_End_X.Location = new System.Drawing.Point(80, 120);
-            this.Textbox_Scan_End_X.Name = "Textbox_Scan_End_X";
-            this.Textbox_Scan_End_X.Size = new System.Drawing.Size(75, 21);
-            this.Textbox_Scan_End_X.TabIndex = 0;
-            // 
-            // Textbox_Scan_Start_X
-            // 
-            this.Textbox_Scan_Start_X.Location = new System.Drawing.Point(81, 98);
-            this.Textbox_Scan_Start_X.Name = "Textbox_Scan_Start_X";
-            this.Textbox_Scan_Start_X.Size = new System.Drawing.Size(74, 21);
-            this.Textbox_Scan_Start_X.TabIndex = 0;
-            this.Textbox_Scan_Start_X.TextChanged += new System.EventHandler(this.Textbox_scan_start_x_TextChanged);
+            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(0, 141);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(81, 22);
+            this.label6.TabIndex = 43;
+            this.label6.Text = "Interval";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -2033,6 +2003,14 @@
             this.label1.Text = "End";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Textbox_Scan_Interval_Y
+            // 
+            this.Textbox_Scan_Interval_Y.Location = new System.Drawing.Point(155, 141);
+            this.Textbox_Scan_Interval_Y.Name = "Textbox_Scan_Interval_Y";
+            this.Textbox_Scan_Interval_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_Interval_Y.TabIndex = 0;
+            this.Textbox_Scan_Interval_Y.Text = "1";
+            // 
             // Lbl_Scan_Y
             // 
             this.Lbl_Scan_Y.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -2044,6 +2022,14 @@
             this.Lbl_Scan_Y.Text = "Y";
             this.Lbl_Scan_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Textbox_Scan_End_Y
+            // 
+            this.Textbox_Scan_End_Y.Location = new System.Drawing.Point(155, 119);
+            this.Textbox_Scan_End_Y.Name = "Textbox_Scan_End_Y";
+            this.Textbox_Scan_End_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_End_Y.TabIndex = 0;
+            this.Textbox_Scan_End_Y.Text = "290";
+            // 
             // Lbl_Scan_X
             // 
             this.Lbl_Scan_X.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -2054,6 +2040,14 @@
             this.Lbl_Scan_X.TabIndex = 41;
             this.Lbl_Scan_X.Text = "X";
             this.Lbl_Scan_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Textbox_Scan_Start_Y
+            // 
+            this.Textbox_Scan_Start_Y.Location = new System.Drawing.Point(155, 98);
+            this.Textbox_Scan_Start_Y.Name = "Textbox_Scan_Start_Y";
+            this.Textbox_Scan_Start_Y.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_Start_Y.TabIndex = 0;
+            this.Textbox_Scan_Start_Y.Text = "0";
             // 
             // label4
             // 
@@ -2067,6 +2061,14 @@
             this.label4.Text = "Start";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Textbox_Scan_Interval_X
+            // 
+            this.Textbox_Scan_Interval_X.Location = new System.Drawing.Point(81, 141);
+            this.Textbox_Scan_Interval_X.Name = "Textbox_Scan_Interval_X";
+            this.Textbox_Scan_Interval_X.Size = new System.Drawing.Size(74, 21);
+            this.Textbox_Scan_Interval_X.TabIndex = 0;
+            this.Textbox_Scan_Interval_X.Text = "1";
+            // 
             // label5
             // 
             this.label5.BackColor = System.Drawing.Color.Silver;
@@ -2078,16 +2080,31 @@
             this.label5.Text = "/";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label6
+            // Textbox_Scan_End_X
             // 
-            this.label6.BackColor = System.Drawing.Color.Silver;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.Location = new System.Drawing.Point(0, 141);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 22);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Interval";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Textbox_Scan_End_X.Location = new System.Drawing.Point(80, 120);
+            this.Textbox_Scan_End_X.Name = "Textbox_Scan_End_X";
+            this.Textbox_Scan_End_X.Size = new System.Drawing.Size(75, 21);
+            this.Textbox_Scan_End_X.TabIndex = 0;
+            this.Textbox_Scan_End_X.Text = "290";
+            // 
+            // Textbox_Scan_Start_X
+            // 
+            this.Textbox_Scan_Start_X.Location = new System.Drawing.Point(81, 98);
+            this.Textbox_Scan_Start_X.Name = "Textbox_Scan_Start_X";
+            this.Textbox_Scan_Start_X.Size = new System.Drawing.Size(74, 21);
+            this.Textbox_Scan_Start_X.TabIndex = 0;
+            this.Textbox_Scan_Start_X.Text = "0";
+            // 
+            // Btn_Save_Scanrange
+            // 
+            this.Btn_Save_Scanrange.Location = new System.Drawing.Point(80, 168);
+            this.Btn_Save_Scanrange.Name = "Btn_Save_Scanrange";
+            this.Btn_Save_Scanrange.Size = new System.Drawing.Size(150, 23);
+            this.Btn_Save_Scanrange.TabIndex = 44;
+            this.Btn_Save_Scanrange.Text = "Save";
+            this.Btn_Save_Scanrange.UseVisualStyleBackColor = true;
+            this.Btn_Save_Scanrange.Click += new System.EventHandler(this.Btn_Save_Scanrange_Click);
             // 
             // GUI
             // 
@@ -2330,5 +2347,6 @@
         private System.Windows.Forms.Label Lbl_Scan_X;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button Btn_Save_Scanrange;
     }
 }

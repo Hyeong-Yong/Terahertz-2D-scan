@@ -233,7 +233,7 @@ namespace THz_2D_scan
 
         private void Btn_current_X_Click(object sender, EventArgs e)
         {
-            short nCurrentOn = PaixMotion.updateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
+            short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
 
             if (nCurrentOn == 0)
             {
@@ -249,7 +249,7 @@ namespace THz_2D_scan
 
         private void Btn_servo_X_Click(object sender, EventArgs e)
         {
-            short nCurrentOn = PaixMotion.updateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
+            short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
 
             if (nCurrentOn == 0)
             {
@@ -266,7 +266,7 @@ namespace THz_2D_scan
 
         private void Btn_Current_Y_Click(object sender, EventArgs e)
         {
-            short nServoOn = PaixMotion.updateAxisInfo(1).nServoOn; // ServoOn 신호 값
+            short nServoOn = PaixMotion.UpdateAxisInfo(1).nServoOn; // ServoOn 신호 값
 
             if (nServoOn == 0)
             {

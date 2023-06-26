@@ -38,7 +38,7 @@ namespace THz_2D_scan
         {
             if (!checkBoxMCJogCont.Checked)
             {
-                stop(0);
+                Stop(0);
             }
         }
 
@@ -51,7 +51,7 @@ namespace THz_2D_scan
         {
             if (!checkBoxMCJogCont.Checked)
             {
-                stop(0);
+                Stop(0);
             }
         }
 
@@ -84,7 +84,7 @@ namespace THz_2D_scan
         {
             if (!checkBoxMCJogCont.Checked)
             {
-                stop(1);
+                Stop(1);
             }
         }
 
@@ -97,13 +97,13 @@ namespace THz_2D_scan
         {
             if (!checkBoxMCJogCont.Checked)
             {
-                stop(1);
+                Stop(1);
             }
         }
 
         private void Btn_Stop_Y_Click(object sender, EventArgs e)
         {
-            stop(1);
+            Stop(1);
         }
 
 
@@ -131,10 +131,10 @@ namespace THz_2D_scan
         }
         private void Btn_Stop_X_Click(object sender, EventArgs e)
         {
-            stop(0);
+            Stop(0);
         }
 
-        private void stop(short nAxis)
+        private void Stop(short nAxis)
         {
 
             if (checkBoxMCSlowStop.Checked)
@@ -156,7 +156,6 @@ namespace THz_2D_scan
         private void Label_Enc_Y_Click(object sender, EventArgs e)
         {
             PaixMotion.SetEnc(1, 0);
-
         }
 
     }
