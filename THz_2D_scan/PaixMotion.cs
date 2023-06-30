@@ -408,7 +408,7 @@ namespace THz_2D_scan
         /// 모션 구동의 완료 여부를 확인
         /// </summary>
         /// <param name="nAxis">축 번호</param>
-        /// <param name="nValue">"펄스 출력상태를 읽을 포인터" 1: 이동완료(펄스출력 ON), 2: 이동 중(펄스출력 OFF) </param>
+        /// <param name="nValue">"펄스 출력상태를 읽을 포인터" 0: 이동 중(펄스출력 OFF), 1: 이동완료(펄스출력 ON) </param>
         /// <returns></returns>
         public bool GetBusy(short nAxis, out short nValue)
         {
@@ -425,6 +425,28 @@ namespace THz_2D_scan
             return false;
 
         }
+
+        /// <summary>
+        /// 여러 축의 펄스 출력 여부를 확인
+        /// </summary>
+        /// <param name="BusyState">"8축의 펄스 출력 상태를 읽을 8개의 배열" 0: 이동 완료, 1: 이동 중</param>
+        /// <returns></returns>
+        public bool GetBusyAll(short[] BusyStatus)
+        {
+            short nRet = NMC2.nmc_GetBusyStatusAll(m_nDev_no, BusyStatus);
+            switch (nRet)
+            {
+                case NMC2.NMC_NOTCONNECT:
+                    m_bIsOpen = false;
+                    return false;
+                case 0:
+                    return true;
+            }
+
+            return false;
+
+        }
+
 
         //  false - A 접점  ,   true  - B 접점
         public bool SetNearLogic(short nAxis, short logic)
@@ -509,10 +531,6 @@ namespace THz_2D_scan
             return false;
 
         }
-
-
-
-
 
 
         public bool SetEncCountMode( short nAxis,short nEncMode)
@@ -1005,7 +1023,46 @@ namespace THz_2D_scan
         }
 
 
+        /// <summary>
+        /// 축의 지령 위치를 읽음
+        /// </summary>
+        /// <param name="nAxis">축 번호</param>
+        /// <param name="plCmdPos">축 지령 위치를 받을 포인터</param>
+        /// <returns></returns>
+        public bool GetCmdPos(short nAxis, out int plCmdPos)
+        {
+            short nRet = nmc_GetCmdPos(m_nDev_no, nAxis, out plCmdPos);
+            switch (nRet)
+            {
+                case NMC2.NMC_NOTCONNECT:
+                    m_bIsOpen = false;
+                    return false;
+                case 0:
+                    return true;
+            }
+            return false;
+        }
 
+
+        /// <summary>
+        /// 축의 엔코더 위치를 읽음
+        /// </summary>
+        /// <param name="nAxis">축 번호</param>
+        /// <param name="plEncPos">축 엔코더 위치를 받을 포인터</param>
+        /// <returns></returns>
+        public bool GetEncPos(short nAxis, out int plEncPos)
+        {
+            short nRet = nmc_GetEncPos(m_nDev_no, nAxis, out plEncPos);
+            switch (nRet)
+            {
+                case NMC2.NMC_NOTCONNECT:
+                    m_bIsOpen = false;
+                    return false;
+                case 0:
+                    return true;
+            }
+            return false;
+        }
 
     }
 }

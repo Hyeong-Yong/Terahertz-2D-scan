@@ -79,7 +79,12 @@ namespace THz_2D_scan
                 TdWatchSensor.Start();
                 btn_Open.Text = "Close";
 
-                Init_Btn_Status(); // 버튼 초기화
+                // 버튼 초기화
+                Init_Btn_Status(); 
+
+                // Unit per Pulse 설정값 불러오기
+                PaixMotion.SetUnitPulse(0, Convert.ToDouble(textbox_UnitPerPulse_X.Text)); 
+                PaixMotion.SetUnitPulse(1, Convert.ToDouble(textbox_UnitPerPulse_Y.Text));
 
             }
             else if (btn_Open.Text == "Close" && PaixMotion.Close())
@@ -167,6 +172,7 @@ namespace THz_2D_scan
             
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
+
 
     }
 }

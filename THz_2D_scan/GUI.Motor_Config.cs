@@ -11,6 +11,29 @@ namespace THz_2D_scan
     public partial class GUI
     {
 
+
+        #region Logic Setting
+
+        private void Textbox_UnitPerPulse_X_TextChanged(object sender, EventArgs e)
+        {
+            PaixMotion.SetUnitPulse(0, Convert.ToDouble(textbox_UnitPerPulse_X.Text));
+        }
+
+        private void TextBox_UnitPerPulse_Y_TextChanged(object sender, EventArgs e)
+        {
+            PaixMotion.SetUnitPulse(1, Convert.ToDouble(textbox_UnitPerPulse_Y.Text));
+        }
+
+        private void Combobox_Pulse_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PaixMotion.SetPulseLogic(0, combobox_Pulse_Mode_X.SelectedIndex);
+        }
+
+        private void Combobox_Pulse_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PaixMotion.SetPulseLogic(1, combobox_Pulse_Mode_Y.SelectedIndex);
+        }
+
         private void Combobox_Emergency_SelectedIndexChanged(object sender, EventArgs e)
         {
             PaixMotion.SetEmerLogic(combobox_Emergency.SelectedIndex == 0 ? (short)0 : (short)1);
@@ -86,30 +109,26 @@ namespace THz_2D_scan
             PaixMotion.SetEncInputMode(1, (short)combobox_Enc_Dir_Y.SelectedIndex);
         }
 
+        #endregion
 
 
 
+        #region Motion Control
 
-
-        private void Textbox_UnitPerPulse_X_TextChanged(object sender, EventArgs e)
+        private void Btn_Home_X_Click(object sender, EventArgs e)
         {
-            PaixMotion.SetUnitPulse(0, Convert.ToDouble(textbox_UnitPerPulse_X.Text));
+            PaixMotion.HomeMove(0, 2, 0xF, 0); // Go to Home x-position        }
+//            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex, 2, 0);
+
         }
 
-        private void TextBox_UnitPerPulse_Y_TextChanged(object sender, EventArgs e)
+        private void Btn_Home_Y_Click(object sender, EventArgs e)
         {
-            PaixMotion.SetUnitPulse(1, Convert.ToDouble(textBox_UnitPerPulse_Y.Text));
+            PaixMotion.HomeMove(1, 2, 0xF, 0); // Go to Home y-position        }
+//            PaixMotion.HomeMove(1, combobox_Home_Mode_Y.SelectedIndex, 2, 0);
         }
+        #endregion
 
-        private void Combobox_Pulse_Mode_X_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PaixMotion.SetPulseLogic(0, combobox_Pulse_Mode_X.SelectedIndex);
-        }
-
-        private void Combobox_Pulse_Mode_Y_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PaixMotion.SetPulseLogic(1, combobox_Pulse_Mode_Y.SelectedIndex);
-        }
 
 
 
@@ -231,6 +250,7 @@ namespace THz_2D_scan
             pNmcParaLogic.nPulseMode = (short)combobox_Pulse_Mode_Y.SelectedIndex;
         }
 
+
         private void Btn_current_X_Click(object sender, EventArgs e)
         {
             short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
@@ -247,9 +267,27 @@ namespace THz_2D_scan
             }
         }
 
+
         private void Btn_servo_X_Click(object sender, EventArgs e)
         {
-            short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
+            short nServoOn = PaixMotion.UpdateAxisInfo(0).nServoOn; // CurrentOn 신호 값
+
+            if (nServoOn == 0)
+            {
+                PaixMotion.SetServoOn(0, 1);
+                this.btn_Servo_X.BackColor = Color.Green;
+            }
+            else
+            {
+                PaixMotion.SetServoOn(0, 0);
+                this.btn_Servo_X.BackColor = Color.Red;
+            }
+        }
+
+
+        private void Btn_Current_Y_Click(object sender, EventArgs e)
+        {
+            short nCurrentOn = PaixMotion.UpdateAxisInfo(1).nCurrentOn; // ServoOn 신호 값
 
             if (nCurrentOn == 0)
             {
@@ -261,24 +299,25 @@ namespace THz_2D_scan
                 PaixMotion.SetCurrentOn(1, 0);
                 this.btn_Current_X.BackColor = Color.Red;
             }
-
         }
 
-        private void Btn_Current_Y_Click(object sender, EventArgs e)
+
+        private void Btn_Servo_Y_Click(object sender, EventArgs e)
         {
             short nServoOn = PaixMotion.UpdateAxisInfo(1).nServoOn; // ServoOn 신호 값
 
             if (nServoOn == 0)
             {
                 PaixMotion.SetServoOn(1, 1);
-                this.btn_Servo_X.BackColor = Color.Green;
+                this.Btn_Servo_Y.BackColor = Color.Green;
             }
             else
             {
                 PaixMotion.SetServoOn(1, 0);
-                this.btn_Servo_X.BackColor = Color.Red;
+                this.Btn_Servo_Y.BackColor = Color.Red;
             }
         }
+
 
         private void Init_Btn_Status()
         {
@@ -313,11 +352,11 @@ namespace THz_2D_scan
 
             if (MotOut.nServoOn[1] == 0)
             {
-                this.btn_Servo_Y.BackColor = Color.Red;
+                this.Btn_Servo_Y.BackColor = Color.Red;
             }
             else
             {
-                this.btn_Servo_Y.BackColor = Color.Green;
+                this.Btn_Servo_Y.BackColor = Color.Green;
             }
         }
 
@@ -329,28 +368,32 @@ namespace THz_2D_scan
             config.AppSettings.Settings.Remove("textbox_Acc_X");
             config.AppSettings.Settings.Remove("textbox_Dec_X");
             config.AppSettings.Settings.Remove("textbox_Max_X");
-
-            config.AppSettings.Settings.Remove("textbox_Start_Y");
-            config.AppSettings.Settings.Remove("textbox_Acc_Y");
-            config.AppSettings.Settings.Remove("textbox_Dec_X");
-            config.AppSettings.Settings.Remove("textbox_Max_X");
-
-            config.AppSettings.Settings.Remove("textbox_Distance_X");
-            config.AppSettings.Settings.Remove("textbox_Distance_Y");
-
             config.AppSettings.Settings.Add("textbox_Start_X", Textbox_Start_X.Text);
             config.AppSettings.Settings.Add("textbox_Acc_X", Textbox_Acc_X.Text);
             config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
             config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
 
+
+            config.AppSettings.Settings.Remove("textbox_Start_Y");
+            config.AppSettings.Settings.Remove("textbox_Acc_Y");
+            config.AppSettings.Settings.Remove("textbox_Dec_Y");
+            config.AppSettings.Settings.Remove("textbox_Max_Y");
             config.AppSettings.Settings.Add("textbox_Start_Y", Textbox_Start_Y.Text);
             config.AppSettings.Settings.Add("textbox_Acc_Y", Textbox_Acc_Y.Text);
-            config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
-            config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
+            config.AppSettings.Settings.Add("textbox_Dec_Y", Textbox_Dec_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Max_Y", Textbox_Max_Y.Text);
 
-
+            config.AppSettings.Settings.Remove("textbox_Distance_X");
+            config.AppSettings.Settings.Remove("textbox_Distance_Y");
             config.AppSettings.Settings.Add("textbox_Distance_X", Textbox_Distance_X.Text);
             config.AppSettings.Settings.Add("textbox_Distance_Y", Textbox_Distance_Y.Text);
+
+
+            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_X");
+            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_Y");
+            config.AppSettings.Settings.Add("textbox_UnitPerPulse_X", textbox_UnitPerPulse_X.Text);
+            config.AppSettings.Settings.Add("textbox_UnitPerPulse_Y", textbox_UnitPerPulse_Y.Text);
+
 
 
             config.Save(ConfigurationSaveMode.Modified);

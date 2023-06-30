@@ -107,17 +107,7 @@ namespace THz_2D_scan
         }
 
 
-
-        private void Btn_Home_X_Click(object sender, EventArgs e)
-        {
-            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex, 3, 0);
-        }
-
-        private void Btn_Home_Y_Click(object sender, EventArgs e)
-        {
-            PaixMotion.HomeMove(1, combobox_Home_Mode_Y.SelectedIndex, 3, 0);
-        }
-
+        
         private void Label_Cmd_X_Click(object sender, EventArgs e)
         {
             PaixMotion.SetCmd(0, 0);

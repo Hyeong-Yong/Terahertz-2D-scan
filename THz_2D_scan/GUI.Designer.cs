@@ -143,7 +143,7 @@
             this.combobox_Enc_Mode_X = new System.Windows.Forms.ComboBox();
             this.label_Setting_Pulse_Mode = new System.Windows.Forms.Label();
             this.label_Setting_Home_Mode = new System.Windows.Forms.Label();
-            this.textBox_UnitPerPulse_Y = new System.Windows.Forms.TextBox();
+            this.textbox_UnitPerPulse_Y = new System.Windows.Forms.TextBox();
             this.label_Setting_Alarm = new System.Windows.Forms.Label();
             this.textbox_UnitPerPulse_X = new System.Windows.Forms.TextBox();
             this.label_Setting_Limit_Plus = new System.Windows.Forms.Label();
@@ -170,7 +170,7 @@
             this.btn_save_config = new System.Windows.Forms.Button();
             this.btn_Alarm_Y = new System.Windows.Forms.Button();
             this.btn_Alarm_X = new System.Windows.Forms.Button();
-            this.btn_Servo_Y = new System.Windows.Forms.Button();
+            this.Btn_Servo_Y = new System.Windows.Forms.Button();
             this.btn_Servo_X = new System.Windows.Forms.Button();
             this.btn_Current_Y = new System.Windows.Forms.Button();
             this.btn_Current_X = new System.Windows.Forms.Button();
@@ -189,6 +189,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Textbox_Scan_End_X = new System.Windows.Forms.TextBox();
             this.Textbox_Scan_Start_X = new System.Windows.Forms.TextBox();
+            this.Btn_Run_Scan = new System.Windows.Forms.Button();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
             this.panelSS.SuspendLayout();
@@ -224,7 +225,7 @@
             // 
             // textBoxDevNo
             // 
-            this.textBoxDevNo.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textBoxDevNo.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textBoxDevNo.Location = new System.Drawing.Point(3, 34);
             this.textBoxDevNo.Name = "textBoxDevNo";
             this.textBoxDevNo.Size = new System.Drawing.Size(35, 22);
@@ -235,7 +236,7 @@
             // labelConnTitle
             // 
             this.labelConnTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.labelConnTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelConnTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelConnTitle.ForeColor = System.Drawing.Color.White;
             this.labelConnTitle.Location = new System.Drawing.Point(3, 3);
             this.labelConnTitle.Name = "labelConnTitle";
@@ -277,12 +278,12 @@
             this.panelMC.Controls.Add(this.labelMCTitle);
             this.panelMC.Location = new System.Drawing.Point(6, 197);
             this.panelMC.Name = "panelMC";
-            this.panelMC.Size = new System.Drawing.Size(236, 240);
+            this.panelMC.Size = new System.Drawing.Size(236, 190);
             this.panelMC.TabIndex = 32;
             // 
             // btn_Home_Y
             // 
-            this.btn_Home_Y.Location = new System.Drawing.Point(157, 213);
+            this.btn_Home_Y.Location = new System.Drawing.Point(157, 166);
             this.btn_Home_Y.Name = "btn_Home_Y";
             this.btn_Home_Y.Size = new System.Drawing.Size(75, 22);
             this.btn_Home_Y.TabIndex = 31;
@@ -292,7 +293,7 @@
             // 
             // btn_Home_X
             // 
-            this.btn_Home_X.Location = new System.Drawing.Point(83, 213);
+            this.btn_Home_X.Location = new System.Drawing.Point(83, 166);
             this.btn_Home_X.Name = "btn_Home_X";
             this.btn_Home_X.Size = new System.Drawing.Size(75, 22);
             this.btn_Home_X.TabIndex = 30;
@@ -304,7 +305,7 @@
             // 
             this.labelMCHome.BackColor = System.Drawing.Color.Silver;
             this.labelMCHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelMCHome.Location = new System.Drawing.Point(2, 213);
+            this.labelMCHome.Location = new System.Drawing.Point(2, 166);
             this.labelMCHome.Name = "labelMCHome";
             this.labelMCHome.Size = new System.Drawing.Size(81, 22);
             this.labelMCHome.TabIndex = 29;
@@ -479,7 +480,7 @@
             // 
             // textbox_Distance_Y
             // 
-            this.textbox_Distance_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Distance_Y.Location = new System.Drawing.Point(157, 56);
             this.textbox_Distance_Y.Name = "textbox_Distance_Y";
             this.textbox_Distance_Y.Size = new System.Drawing.Size(76, 22);
@@ -500,7 +501,7 @@
             // 
             // textbox_Distance_X
             // 
-            this.textbox_Distance_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Distance_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Distance_X.Location = new System.Drawing.Point(83, 56);
             this.textbox_Distance_X.Name = "textbox_Distance_X";
             this.textbox_Distance_X.Size = new System.Drawing.Size(76, 22);
@@ -566,7 +567,7 @@
             // labelMCTitle
             // 
             this.labelMCTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelMCTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelMCTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelMCTitle.ForeColor = System.Drawing.Color.White;
             this.labelMCTitle.Location = new System.Drawing.Point(3, 3);
             this.labelMCTitle.Name = "labelMCTitle";
@@ -604,7 +605,7 @@
             // 
             // textbox_Dec_Y
             // 
-            this.textbox_Dec_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Dec_Y.Location = new System.Drawing.Point(157, 98);
             this.textbox_Dec_Y.Name = "textbox_Dec_Y";
             this.textbox_Dec_Y.Size = new System.Drawing.Size(76, 22);
@@ -614,7 +615,7 @@
             // 
             // textbox_Dec_X
             // 
-            this.textbox_Dec_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Dec_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Dec_X.Location = new System.Drawing.Point(83, 98);
             this.textbox_Dec_X.Name = "textbox_Dec_X";
             this.textbox_Dec_X.Size = new System.Drawing.Size(76, 22);
@@ -635,7 +636,7 @@
             // 
             // textbox_Acc_Y
             // 
-            this.textbox_Acc_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Acc_Y.Location = new System.Drawing.Point(157, 77);
             this.textbox_Acc_Y.Name = "textbox_Acc_Y";
             this.textbox_Acc_Y.Size = new System.Drawing.Size(76, 22);
@@ -645,7 +646,7 @@
             // 
             // textbox_Acc_X
             // 
-            this.textbox_Acc_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Acc_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Acc_X.Location = new System.Drawing.Point(83, 77);
             this.textbox_Acc_X.Name = "textbox_Acc_X";
             this.textbox_Acc_X.Size = new System.Drawing.Size(76, 22);
@@ -666,7 +667,7 @@
             // 
             // textbox_Max_Y
             // 
-            this.textbox_Max_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Max_Y.Location = new System.Drawing.Point(157, 119);
             this.textbox_Max_Y.Name = "textbox_Max_Y";
             this.textbox_Max_Y.Size = new System.Drawing.Size(76, 22);
@@ -676,7 +677,7 @@
             // 
             // textbox_Max_X
             // 
-            this.textbox_Max_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Max_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Max_X.Location = new System.Drawing.Point(84, 119);
             this.textbox_Max_X.Name = "textbox_Max_X";
             this.textbox_Max_X.Size = new System.Drawing.Size(76, 22);
@@ -728,7 +729,7 @@
             // 
             // textbox_Start_Y
             // 
-            this.textbox_Start_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Start_Y.Location = new System.Drawing.Point(157, 56);
             this.textbox_Start_Y.Name = "textbox_Start_Y";
             this.textbox_Start_Y.Size = new System.Drawing.Size(76, 22);
@@ -749,7 +750,7 @@
             // 
             // textbox_Start_X
             // 
-            this.textbox_Start_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_Start_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_Start_X.Location = new System.Drawing.Point(83, 56);
             this.textbox_Start_X.Name = "textbox_Start_X";
             this.textbox_Start_X.Size = new System.Drawing.Size(76, 22);
@@ -793,7 +794,7 @@
             // labelSpeedSetting
             // 
             this.labelSpeedSetting.BackColor = System.Drawing.Color.Gray;
-            this.labelSpeedSetting.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelSpeedSetting.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelSpeedSetting.ForeColor = System.Drawing.Color.White;
             this.labelSpeedSetting.Location = new System.Drawing.Point(3, 3);
             this.labelSpeedSetting.Name = "labelSpeedSetting";
@@ -926,7 +927,7 @@
             // labelPE
             // 
             this.labelPE.BackColor = System.Drawing.Color.Gray;
-            this.labelPE.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelPE.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelPE.ForeColor = System.Drawing.Color.White;
             this.labelPE.Location = new System.Drawing.Point(3, 3);
             this.labelPE.Name = "labelPE";
@@ -1229,7 +1230,7 @@
             // labelSTitle
             // 
             this.labelSTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelSTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelSTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelSTitle.ForeColor = System.Drawing.Color.White;
             this.labelSTitle.Location = new System.Drawing.Point(3, 3);
             this.labelSTitle.Name = "labelSTitle";
@@ -1263,7 +1264,7 @@
             this.panelLS.Controls.Add(this.combobox_Enc_Mode_X);
             this.panelLS.Controls.Add(this.label_Setting_Pulse_Mode);
             this.panelLS.Controls.Add(this.label_Setting_Home_Mode);
-            this.panelLS.Controls.Add(this.textBox_UnitPerPulse_Y);
+            this.panelLS.Controls.Add(this.textbox_UnitPerPulse_Y);
             this.panelLS.Controls.Add(this.label_Setting_Alarm);
             this.panelLS.Controls.Add(this.textbox_UnitPerPulse_X);
             this.panelLS.Controls.Add(this.label_Setting_Limit_Plus);
@@ -1603,14 +1604,14 @@
             // 
             // textBox_UnitPerPulse_Y
             // 
-            this.textBox_UnitPerPulse_Y.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.textBox_UnitPerPulse_Y.Location = new System.Drawing.Point(157, 76);
-            this.textBox_UnitPerPulse_Y.Name = "textBox_UnitPerPulse_Y";
-            this.textBox_UnitPerPulse_Y.Size = new System.Drawing.Size(76, 22);
-            this.textBox_UnitPerPulse_Y.TabIndex = 45;
-            this.textBox_UnitPerPulse_Y.Text = "1";
-            this.textBox_UnitPerPulse_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox_UnitPerPulse_Y.TextChanged += new System.EventHandler(this.TextBox_UnitPerPulse_Y_TextChanged);
+            this.textbox_UnitPerPulse_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_UnitPerPulse_Y.Location = new System.Drawing.Point(157, 76);
+            this.textbox_UnitPerPulse_Y.Name = "textBox_UnitPerPulse_Y";
+            this.textbox_UnitPerPulse_Y.Size = new System.Drawing.Size(76, 22);
+            this.textbox_UnitPerPulse_Y.TabIndex = 45;
+            this.textbox_UnitPerPulse_Y.Text = "1";
+            this.textbox_UnitPerPulse_Y.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textbox_UnitPerPulse_Y.TextChanged += new System.EventHandler(this.TextBox_UnitPerPulse_Y_TextChanged);
             // 
             // label_Setting_Alarm
             // 
@@ -1625,7 +1626,7 @@
             // 
             // textbox_UnitPerPulse_X
             // 
-            this.textbox_UnitPerPulse_X.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.textbox_UnitPerPulse_X.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_UnitPerPulse_X.Location = new System.Drawing.Point(83, 76);
             this.textbox_UnitPerPulse_X.Name = "textbox_UnitPerPulse_X";
             this.textbox_UnitPerPulse_X.Size = new System.Drawing.Size(75, 22);
@@ -1747,7 +1748,7 @@
             // labelLSTitle
             // 
             this.labelLSTitle.BackColor = System.Drawing.Color.Gray;
-            this.labelLSTitle.Font = new System.Drawing.Font("Gulim", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.labelLSTitle.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.labelLSTitle.ForeColor = System.Drawing.Color.White;
             this.labelLSTitle.Location = new System.Drawing.Point(3, 3);
             this.labelLSTitle.Name = "labelLSTitle";
@@ -1853,7 +1854,7 @@
             this.tabPage1.Controls.Add(this.btn_save_config);
             this.tabPage1.Controls.Add(this.btn_Alarm_Y);
             this.tabPage1.Controls.Add(this.btn_Alarm_X);
-            this.tabPage1.Controls.Add(this.btn_Servo_Y);
+            this.tabPage1.Controls.Add(this.Btn_Servo_Y);
             this.tabPage1.Controls.Add(this.btn_Servo_X);
             this.tabPage1.Controls.Add(this.btn_Current_Y);
             this.tabPage1.Controls.Add(this.btn_Current_X);
@@ -1907,14 +1908,15 @@
             this.btn_Alarm_X.Text = "Alarm_X";
             this.btn_Alarm_X.UseVisualStyleBackColor = true;
             // 
-            // btn_Servo_Y
+            // Btn_Servo_Y
             // 
-            this.btn_Servo_Y.Location = new System.Drawing.Point(843, 129);
-            this.btn_Servo_Y.Name = "btn_Servo_Y";
-            this.btn_Servo_Y.Size = new System.Drawing.Size(75, 23);
-            this.btn_Servo_Y.TabIndex = 68;
-            this.btn_Servo_Y.Text = "Servo_Y";
-            this.btn_Servo_Y.UseVisualStyleBackColor = true;
+            this.Btn_Servo_Y.Location = new System.Drawing.Point(843, 129);
+            this.Btn_Servo_Y.Name = "Btn_Servo_Y";
+            this.Btn_Servo_Y.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Servo_Y.TabIndex = 68;
+            this.Btn_Servo_Y.Text = "Servo_Y";
+            this.Btn_Servo_Y.UseVisualStyleBackColor = true;
+            this.Btn_Servo_Y.Click += new System.EventHandler(this.Btn_Servo_Y_Click);
             // 
             // btn_Servo_X
             // 
@@ -1950,6 +1952,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Btn_Run_Scan);
             this.tabPage2.Controls.Add(this.Group_ScanRange);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
@@ -2105,6 +2108,16 @@
             this.Textbox_Scan_Start_X.Size = new System.Drawing.Size(74, 21);
             this.Textbox_Scan_Start_X.TabIndex = 0;
             this.Textbox_Scan_Start_X.Text = "0";
+            // 
+            // Btn_Run_Scan
+            // 
+            this.Btn_Run_Scan.Location = new System.Drawing.Point(463, 471);
+            this.Btn_Run_Scan.Name = "Btn_Run_Scan";
+            this.Btn_Run_Scan.Size = new System.Drawing.Size(94, 50);
+            this.Btn_Run_Scan.TabIndex = 1;
+            this.Btn_Run_Scan.Text = "Run";
+            this.Btn_Run_Scan.UseVisualStyleBackColor = true;
+            this.Btn_Run_Scan.Click += new System.EventHandler(this.Btn_Run_Scan_Click);
             // 
             // GUI
             // 
@@ -2300,7 +2313,7 @@
         private System.Windows.Forms.ComboBox combobox_EncZ_X;
         private System.Windows.Forms.ComboBox combobox_Enc_Mode_Y;
         private System.Windows.Forms.ComboBox combobox_Enc_Mode_X;
-        private System.Windows.Forms.TextBox textBox_UnitPerPulse_Y;
+        private System.Windows.Forms.TextBox textbox_UnitPerPulse_Y;
         private System.Windows.Forms.TextBox textbox_UnitPerPulse_X;
         private System.Windows.Forms.ComboBox combobox_Emergency;
         private System.Windows.Forms.ComboBox combobox_Home_Mode_Y;
@@ -2331,7 +2344,7 @@
         private System.Windows.Forms.Button btn_Current_X;
         private System.Windows.Forms.Button btn_Alarm_Y;
         private System.Windows.Forms.Button btn_Alarm_X;
-        private System.Windows.Forms.Button btn_Servo_Y;
+        private System.Windows.Forms.Button Btn_Servo_Y;
         private System.Windows.Forms.Button btn_Current_Y;
         private System.Windows.Forms.Button btn_save_config;
         private System.Windows.Forms.GroupBox Group_ScanRange;
@@ -2348,5 +2361,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btn_Save_Scanrange;
+        private System.Windows.Forms.Button Btn_Run_Scan;
     }
 }
