@@ -96,7 +96,17 @@ namespace THz_2D_scan
                         {
                             Console.WriteLine("Error, case 2: x_start => x_end");
                         }
-                        
+
+                        PaixMotion.GetStateInfo();
+                        if (PaixMotion.GetNmcStatus(ref NmcData) == false)
+                            return;
+                        current_position_x = NmcData.dCmd[0];
+                        current_position_y = NmcData.dCmd[1];
+
+                        if (current_position_x == end_x &&  current_position_y == end_y) {
+                            return;
+                        }
+
                         break;
                     case 3:// "y => y + y_interval"
                         
@@ -139,6 +149,17 @@ namespace THz_2D_scan
                             Console.WriteLine("Error, case 4: x_end => x_start");
                         }
 
+                        PaixMotion.GetStateInfo();
+                        if (PaixMotion.GetNmcStatus(ref NmcData) == false)
+                            return;
+                        current_position_x = NmcData.dCmd[0];
+                        current_position_y = NmcData.dCmd[1];
+
+                        if (current_position_x == end_x && current_position_y == end_y)
+                        {
+                            return;
+                        }
+
                         break;
                     default: 
                         break;
@@ -149,6 +170,7 @@ namespace THz_2D_scan
 
             //Trigger off
             PaixMotion.TriggerOutStop(0);
+            System.Threading.Thread.Sleep(500);
 
             //Go back to the Home 
             PaixMotion.HomeMove(0, 2, 0xF, 0); // Go to Home x-position

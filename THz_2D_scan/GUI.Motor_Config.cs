@@ -292,12 +292,12 @@ namespace THz_2D_scan
             if (nCurrentOn == 0)
             {
                 PaixMotion.SetCurrentOn(1, 1);
-                this.btn_Current_X.BackColor = Color.Green;
+                this.btn_Current_Y.BackColor = Color.Green;
             }
             else
             {
                 PaixMotion.SetCurrentOn(1, 0);
-                this.btn_Current_X.BackColor = Color.Red;
+                this.btn_Current_Y.BackColor = Color.Red;
             }
         }
 
