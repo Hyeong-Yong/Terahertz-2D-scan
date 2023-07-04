@@ -1,31 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
+using System.Threading;
 
 namespace THz_2D_scan
 {
     public partial class GUI
     {
-        Scan scan = new Scan();
+        Scan _Scan = new Scan();
 
-        private void Btn_Run_Scan_Click(object sender, EventArgs e)
+
+        private void ScanThreadStart()
         {
-
-            double start_x = Convert.ToDouble(Textbox_Scan_Start_X.Text);
-            double end_x = Convert.ToDouble(Textbox_Scan_End_X.Text);
-
-            double start_y = Convert.ToDouble(Textbox_Scan_Start_Y.Text);
-            double end_y = Convert.ToDouble(Textbox_Scan_End_Y.Text);
-
-            double interval_x = Convert.ToDouble(Textbox_Scan_Interval_X.Text);
-            double interval_y = Convert.ToDouble(Textbox_Scan_Interval_Y.Text);
-
-            scan.scan(start_x, end_x, interval_x, interval_y, start_y, end_y);
+            double[] param = { 
+                Convert.ToDouble(Textbox_Scan_Start_X.Text),    //start_x
+                Convert.ToDouble(Textbox_Scan_End_X.Text),      //end_x
+                Convert.ToDouble(Textbox_Scan_Start_Y.Text),    //start_y
+                Convert.ToDouble(Textbox_Scan_End_Y.Text),      //end_y
+                Convert.ToDouble(Textbox_Scan_Interval_X.Text), //interval_x
+                Convert.ToDouble(Textbox_Scan_Interval_Y.Text)  //interval_y
+        };
+            Thread _thread = new Thread(new ParameterizedThreadStart(_Scan.Run));
+            _thread.Start(param);
         }
 
 
+
+
+        private void Btn_Run_Scan_Click(object sender, EventArgs e)
+        {
+            ScanThreadStart();
+        }
+
+
+        private void Btn_Stop_Scan_Click(object sender, EventArgs e)
+        {
+            _Scan.Stop_flag = false;
+        }
 
         private void Btn_Save_Scanrange_Click(object sender, EventArgs e)
         {

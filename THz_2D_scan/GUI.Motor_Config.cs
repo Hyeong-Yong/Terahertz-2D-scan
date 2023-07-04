@@ -119,7 +119,6 @@ namespace THz_2D_scan
         {
             PaixMotion.HomeMove(0, 2, 0xF, 0); // Go to Home x-position        }
 //            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex, 2, 0);
-
         }
 
         private void Btn_Home_Y_Click(object sender, EventArgs e)

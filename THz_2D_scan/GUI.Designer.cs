@@ -175,6 +175,7 @@
             this.btn_Current_Y = new System.Windows.Forms.Button();
             this.btn_Current_X = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Btn_Run_Scan = new System.Windows.Forms.Button();
             this.Group_ScanRange = new System.Windows.Forms.GroupBox();
             this.Btn_Save_Scanrange = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -189,7 +190,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Textbox_Scan_End_X = new System.Windows.Forms.TextBox();
             this.Textbox_Scan_Start_X = new System.Windows.Forms.TextBox();
-            this.Btn_Run_Scan = new System.Windows.Forms.Button();
+            this.Btn_Stop_Scan = new System.Windows.Forms.Button();
             this.panelConnection.SuspendLayout();
             this.panelMC.SuspendLayout();
             this.panelSS.SuspendLayout();
@@ -1602,11 +1603,11 @@
             this.label_Setting_Home_Mode.Text = "Home Mode";
             this.label_Setting_Home_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox_UnitPerPulse_Y
+            // textbox_UnitPerPulse_Y
             // 
             this.textbox_UnitPerPulse_Y.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.textbox_UnitPerPulse_Y.Location = new System.Drawing.Point(157, 76);
-            this.textbox_UnitPerPulse_Y.Name = "textBox_UnitPerPulse_Y";
+            this.textbox_UnitPerPulse_Y.Name = "textbox_UnitPerPulse_Y";
             this.textbox_UnitPerPulse_Y.Size = new System.Drawing.Size(76, 22);
             this.textbox_UnitPerPulse_Y.TabIndex = 45;
             this.textbox_UnitPerPulse_Y.Text = "1";
@@ -1952,6 +1953,7 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.Btn_Stop_Scan);
             this.tabPage2.Controls.Add(this.Btn_Run_Scan);
             this.tabPage2.Controls.Add(this.Group_ScanRange);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -1961,6 +1963,16 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "2D Map";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Run_Scan
+            // 
+            this.Btn_Run_Scan.Location = new System.Drawing.Point(463, 471);
+            this.Btn_Run_Scan.Name = "Btn_Run_Scan";
+            this.Btn_Run_Scan.Size = new System.Drawing.Size(94, 50);
+            this.Btn_Run_Scan.TabIndex = 1;
+            this.Btn_Run_Scan.Text = "Run";
+            this.Btn_Run_Scan.UseVisualStyleBackColor = true;
+            this.Btn_Run_Scan.Click += new System.EventHandler(this.Btn_Run_Scan_Click);
             // 
             // Group_ScanRange
             // 
@@ -2109,15 +2121,15 @@
             this.Textbox_Scan_Start_X.TabIndex = 0;
             this.Textbox_Scan_Start_X.Text = "0";
             // 
-            // Btn_Run_Scan
+            // Btn_Stop_Scan
             // 
-            this.Btn_Run_Scan.Location = new System.Drawing.Point(463, 471);
-            this.Btn_Run_Scan.Name = "Btn_Run_Scan";
-            this.Btn_Run_Scan.Size = new System.Drawing.Size(94, 50);
-            this.Btn_Run_Scan.TabIndex = 1;
-            this.Btn_Run_Scan.Text = "Run";
-            this.Btn_Run_Scan.UseVisualStyleBackColor = true;
-            this.Btn_Run_Scan.Click += new System.EventHandler(this.Btn_Run_Scan_Click);
+            this.Btn_Stop_Scan.Location = new System.Drawing.Point(581, 471);
+            this.Btn_Stop_Scan.Name = "Btn_Stop_Scan";
+            this.Btn_Stop_Scan.Size = new System.Drawing.Size(88, 50);
+            this.Btn_Stop_Scan.TabIndex = 2;
+            this.Btn_Stop_Scan.Text = "Stop";
+            this.Btn_Stop_Scan.UseVisualStyleBackColor = true;
+            this.Btn_Stop_Scan.Click += new System.EventHandler(this.Btn_Stop_Scan_Click);
             // 
             // GUI
             // 
@@ -2362,5 +2374,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btn_Save_Scanrange;
         private System.Windows.Forms.Button Btn_Run_Scan;
+        private System.Windows.Forms.Button Btn_Stop_Scan;
     }
 }

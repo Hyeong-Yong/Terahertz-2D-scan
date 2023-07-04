@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using System.Threading;
-using System.Configuration;
 using static Paix_MotionController.NMC2;
 using Paix_MotionController;
 
@@ -172,7 +166,6 @@ namespace THz_2D_scan
             
             PaixMotion.SetSpeedPPS(1, dstart, dacc, ddec, dmax);
         }
-
 
     }
 }
