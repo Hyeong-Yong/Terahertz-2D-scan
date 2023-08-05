@@ -18,5 +18,10 @@ namespace THz_2D_scan
 //            Application.Run(new Form1());
             Application.Run(new GUI());
         }
+        /* TODO : 
+         *   1) 사용자 컨트롤 (클래스 분할)
+         *   2) 차트 표현 
+         *   3) Lock in amp.와 연동
+         */
     }
 }

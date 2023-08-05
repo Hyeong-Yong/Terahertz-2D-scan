@@ -34,7 +34,7 @@ namespace THz_2D_scan
 
         private void Btn_Stop_Scan_Click(object sender, EventArgs e)
         {
-            _Scan.Stop_flag = false;
+            _Scan.keepScan = false;
         }
 
         private void Btn_Save_Scanrange_Click(object sender, EventArgs e)
