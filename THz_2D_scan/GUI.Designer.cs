@@ -290,7 +290,7 @@
             this.btn_Home_Y.TabIndex = 31;
             this.btn_Home_Y.Text = "Move";
             this.btn_Home_Y.UseVisualStyleBackColor = true;
-            this.btn_Home_Y.Click += new System.EventHandler(this.Btn_Home_Y_Click);
+            this.btn_Home_Y.Click += new System.EventHandler(this.Btn_Home_Click);
             // 
             // btn_Home_X
             // 
@@ -300,7 +300,7 @@
             this.btn_Home_X.TabIndex = 30;
             this.btn_Home_X.Text = "Move";
             this.btn_Home_X.UseVisualStyleBackColor = true;
-            this.btn_Home_X.Click += new System.EventHandler(this.Btn_Home_X_Click);
+            this.btn_Home_X.Click += new System.EventHandler(this.Btn_Home_Click);
             // 
             // labelMCHome
             // 
@@ -321,7 +321,7 @@
             this.btn_Stop_Y.TabIndex = 24;
             this.btn_Stop_Y.Text = "Stop";
             this.btn_Stop_Y.UseVisualStyleBackColor = true;
-            this.btn_Stop_Y.Click += new System.EventHandler(this.Btn_Stop_Y_Click);
+            this.btn_Stop_Y.Click += new System.EventHandler(this.Btn_Stop_Click);
             // 
             // btn_Stop_X
             // 
@@ -331,7 +331,7 @@
             this.btn_Stop_X.TabIndex = 23;
             this.btn_Stop_X.Text = "Stop";
             this.btn_Stop_X.UseVisualStyleBackColor = true;
-            this.btn_Stop_X.Click += new System.EventHandler(this.Btn_Stop_X_Click);
+            this.btn_Stop_X.Click += new System.EventHandler(this.Btn_Stop_Click);
             // 
             // btn_Jog_Right_Y
             // 
@@ -341,8 +341,8 @@
             this.btn_Jog_Right_Y.TabIndex = 22;
             this.btn_Jog_Right_Y.Text = ">";
             this.btn_Jog_Right_Y.UseVisualStyleBackColor = true;
-            this.btn_Jog_Right_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_Y_MouseDown);
-            this.btn_Jog_Right_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_Y_MouseUp);
+            this.btn_Jog_Right_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseDown);
+            this.btn_Jog_Right_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseUp);
             // 
             // btn_Jog_Left_Y
             // 
@@ -352,8 +352,8 @@
             this.btn_Jog_Left_Y.TabIndex = 21;
             this.btn_Jog_Left_Y.Text = "<";
             this.btn_Jog_Left_Y.UseVisualStyleBackColor = true;
-            this.btn_Jog_Left_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_Y_MouseDown);
-            this.btn_Jog_Left_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_Y_MouseUp);
+            this.btn_Jog_Left_Y.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseDown);
+            this.btn_Jog_Left_Y.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseUp);
             // 
             // btn_Jog_Right_X
             // 
@@ -363,8 +363,8 @@
             this.btn_Jog_Right_X.TabIndex = 20;
             this.btn_Jog_Right_X.Text = ">";
             this.btn_Jog_Right_X.UseVisualStyleBackColor = true;
-            this.btn_Jog_Right_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_X_MouseDown);
-            this.btn_Jog_Right_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Right_X_MouseUp);
+            this.btn_Jog_Right_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseDown);
+            this.btn_Jog_Right_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseUp);
             // 
             // btn_Jog_Left_X
             // 
@@ -374,8 +374,8 @@
             this.btn_Jog_Left_X.TabIndex = 19;
             this.btn_Jog_Left_X.Text = "<";
             this.btn_Jog_Left_X.UseVisualStyleBackColor = true;
-            this.btn_Jog_Left_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_X_MouseDown);
-            this.btn_Jog_Left_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_Left_X_MouseUp);
+            this.btn_Jog_Left_X.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseDown);
+            this.btn_Jog_Left_X.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Btn_Jog_MouseUp);
             // 
             // checkBoxMCSlowStop
             // 
@@ -407,7 +407,7 @@
             this.btn_Abs_Plus_Y.TabIndex = 17;
             this.btn_Abs_Plus_Y.Text = "+";
             this.btn_Abs_Plus_Y.UseVisualStyleBackColor = true;
-            this.btn_Abs_Plus_Y.Click += new System.EventHandler(this.Btn_Abs_Plus_Y_Click);
+            this.btn_Abs_Plus_Y.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Abs_Minus_Y
             // 
@@ -417,7 +417,7 @@
             this.btn_Abs_Minus_Y.TabIndex = 16;
             this.btn_Abs_Minus_Y.Text = "-";
             this.btn_Abs_Minus_Y.UseVisualStyleBackColor = true;
-            this.btn_Abs_Minus_Y.Click += new System.EventHandler(this.Btn_Abs_Minus_Y_Click);
+            this.btn_Abs_Minus_Y.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Abs_Plus_X
             // 
@@ -427,7 +427,7 @@
             this.btn_Abs_Plus_X.TabIndex = 15;
             this.btn_Abs_Plus_X.Text = "+";
             this.btn_Abs_Plus_X.UseVisualStyleBackColor = true;
-            this.btn_Abs_Plus_X.Click += new System.EventHandler(this.Btn_Abs_Plus_X_Click);
+            this.btn_Abs_Plus_X.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Abs_Minus_X
             // 
@@ -437,7 +437,7 @@
             this.btn_Abs_Minus_X.TabIndex = 14;
             this.btn_Abs_Minus_X.Text = "-";
             this.btn_Abs_Minus_X.UseVisualStyleBackColor = true;
-            this.btn_Abs_Minus_X.Click += new System.EventHandler(this.Btn_Abs_Minus_X_Click);
+            this.btn_Abs_Minus_X.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Inc_Plus_Y
             // 
@@ -447,7 +447,7 @@
             this.btn_Inc_Plus_Y.TabIndex = 13;
             this.btn_Inc_Plus_Y.Text = "+";
             this.btn_Inc_Plus_Y.UseVisualStyleBackColor = true;
-            this.btn_Inc_Plus_Y.Click += new System.EventHandler(this.Btn_Inc_Plus_Y_Click);
+            this.btn_Inc_Plus_Y.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Inc_Minus_Y
             // 
@@ -457,7 +457,7 @@
             this.btn_Inc_Minus_Y.TabIndex = 12;
             this.btn_Inc_Minus_Y.Text = "-";
             this.btn_Inc_Minus_Y.UseVisualStyleBackColor = true;
-            this.btn_Inc_Minus_Y.Click += new System.EventHandler(this.Btn_Inc_Minus_Y_Click);
+            this.btn_Inc_Minus_Y.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Inc_Plus_X
             // 
@@ -467,7 +467,7 @@
             this.btn_Inc_Plus_X.TabIndex = 11;
             this.btn_Inc_Plus_X.Text = "+";
             this.btn_Inc_Plus_X.UseVisualStyleBackColor = true;
-            this.btn_Inc_Plus_X.Click += new System.EventHandler(this.Btn_Inc_Plus_X_Click);
+            this.btn_Inc_Plus_X.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // btn_Inc_Minus_X
             // 
@@ -477,7 +477,7 @@
             this.btn_Inc_Minus_X.TabIndex = 10;
             this.btn_Inc_Minus_X.Text = "-";
             this.btn_Inc_Minus_X.UseVisualStyleBackColor = true;
-            this.btn_Inc_Minus_X.Click += new System.EventHandler(this.Btn_Inc_Minus_X_Click);
+            this.btn_Inc_Minus_X.Click += new System.EventHandler(this.Btn_AbsInc_Click);
             // 
             // textbox_Distance_Y
             // 
@@ -832,7 +832,7 @@
             this.label_Enc_Y.TabIndex = 44;
             this.label_Enc_Y.Text = "0";
             this.label_Enc_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_Y.Click += new System.EventHandler(this.Label_Enc_Y_Click);
+            this.label_Enc_Y.Click += new System.EventHandler(this.Label_Enc_Click);
             // 
             // label_Enc_X
             // 
@@ -844,7 +844,7 @@
             this.label_Enc_X.TabIndex = 43;
             this.label_Enc_X.Text = "0";
             this.label_Enc_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Enc_X.Click += new System.EventHandler(this.Label_Enc_X_Click);
+            this.label_Enc_X.Click += new System.EventHandler(this.Label_Enc_Click);
             // 
             // label_Cmd_Y
             // 
@@ -856,7 +856,7 @@
             this.label_Cmd_Y.TabIndex = 42;
             this.label_Cmd_Y.Text = "0";
             this.label_Cmd_Y.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Cmd_Y.Click += new System.EventHandler(this.Label_Cmd_Y_Click);
+            this.label_Cmd_Y.Click += new System.EventHandler(this.Label_Cmd_Click);
             // 
             // label_Cmd_X
             // 
@@ -868,7 +868,7 @@
             this.label_Cmd_X.TabIndex = 41;
             this.label_Cmd_X.Text = "0";
             this.label_Cmd_X.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label_Cmd_X.Click += new System.EventHandler(this.Label_Cmd_X_Click);
+            this.label_Cmd_X.Click += new System.EventHandler(this.Label_Cmd_Click);
             // 
             // label_Enc
             // 
@@ -1889,7 +1889,7 @@
             this.btn_save_config.TabIndex = 70;
             this.btn_save_config.Text = "Save";
             this.btn_save_config.UseVisualStyleBackColor = true;
-            this.btn_save_config.Click += new System.EventHandler(this.Btn_save_config_Click);
+            this.btn_save_config.Click += new System.EventHandler(this.Btn_Save_Config_Click);
             // 
             // btn_Alarm_Y
             // 
@@ -1912,12 +1912,12 @@
             // Btn_Servo_Y
             // 
             this.Btn_Servo_Y.Location = new System.Drawing.Point(843, 129);
-            this.Btn_Servo_Y.Name = "Btn_Servo_Y";
+            this.Btn_Servo_Y.Name = "btn_Servo_Y";
             this.Btn_Servo_Y.Size = new System.Drawing.Size(75, 23);
             this.Btn_Servo_Y.TabIndex = 68;
             this.Btn_Servo_Y.Text = "Servo_Y";
             this.Btn_Servo_Y.UseVisualStyleBackColor = true;
-            this.Btn_Servo_Y.Click += new System.EventHandler(this.Btn_Servo_Y_Click);
+            this.Btn_Servo_Y.Click += new System.EventHandler(this.Btn_Servo_Click);
             // 
             // btn_Servo_X
             // 
@@ -1927,7 +1927,7 @@
             this.btn_Servo_X.TabIndex = 68;
             this.btn_Servo_X.Text = "Servo_X";
             this.btn_Servo_X.UseVisualStyleBackColor = true;
-            this.btn_Servo_X.Click += new System.EventHandler(this.Btn_servo_X_Click);
+            this.btn_Servo_X.Click += new System.EventHandler(this.Btn_Servo_Click);
             // 
             // btn_Current_Y
             // 
@@ -1937,7 +1937,7 @@
             this.btn_Current_Y.TabIndex = 67;
             this.btn_Current_Y.Text = "Current_Y";
             this.btn_Current_Y.UseVisualStyleBackColor = true;
-            this.btn_Current_Y.Click += new System.EventHandler(this.Btn_Current_Y_Click);
+            this.btn_Current_Y.Click += new System.EventHandler(this.Btn_Current_Click);
             // 
             // btn_Current_X
             // 
@@ -1949,7 +1949,7 @@
             this.btn_Current_X.TabIndex = 67;
             this.btn_Current_X.Text = "Current_X";
             this.btn_Current_X.UseVisualStyleBackColor = false;
-            this.btn_Current_X.Click += new System.EventHandler(this.Btn_current_X_Click);
+            this.btn_Current_X.Click += new System.EventHandler(this.Btn_Current_Click);
             // 
             // tabPage2
             // 

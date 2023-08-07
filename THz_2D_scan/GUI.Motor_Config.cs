@@ -4,12 +4,229 @@ using System.Configuration;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using static Paix_MotionController.NMC2;
 
 namespace THz_2D_scan
 {
     public partial class GUI
     {
+        private void Btn_Servo_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            short ServoOn;
+            switch (button.Name)
+            {
+                case "btn_Servo_X":
+                    ServoOn = PaixMotion.UpdateAxisInfo(0).nServoOn; // CurrentOn 신호 값
+                    if (ServoOn == 0)
+                    {
+                        PaixMotion.SetServoOn(0, 1);
+                        this.btn_Servo_X.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        PaixMotion.SetServoOn(0, 0);
+                        this.btn_Servo_X.BackColor = Color.Red;
+                    }
+                    break;
+
+                case "btn_Servo_Y":
+                    ServoOn = PaixMotion.UpdateAxisInfo(1).nServoOn; // ServoOn 신호 값
+
+                    if (ServoOn == 0)
+                    {
+                        PaixMotion.SetServoOn(1, 1);
+                        this.Btn_Servo_Y.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        PaixMotion.SetServoOn(1, 0);
+                        this.Btn_Servo_Y.BackColor = Color.Red;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+        private void Btn_Current_Click(object sender, EventArgs e)
+        {
+            Button button = sender as Button;
+            short CurrentOn;
+            switch (button.Name)
+            {
+                case "btn_Current_X":
+                    CurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
+                    if (CurrentOn == 0)
+                    {
+                        PaixMotion.SetCurrentOn(0, 1);
+                        this.btn_Current_X.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        PaixMotion.SetCurrentOn(0, 0);
+                        this.btn_Current_X.BackColor = Color.Red;
+                    }
+                    break;
+                case "btn_Current_Y":
+                    CurrentOn = PaixMotion.UpdateAxisInfo(1).nCurrentOn; // ServoOn 신호 값
+
+                    if (CurrentOn == 0)
+                    {
+                        PaixMotion.SetCurrentOn(1, 1);
+                        this.btn_Current_Y.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        PaixMotion.SetCurrentOn(1, 0);
+                        this.btn_Current_Y.BackColor = Color.Red;
+                    }
+                    break;
+            }
+            
+        }
+
+        //private void Btn_current_X_Click(object sender, EventArgs e)
+        //{
+        //    short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
+
+        //    if (nCurrentOn == 0)
+        //    {
+        //        PaixMotion.SetCurrentOn(0, 1);
+        //        this.btn_Current_X.BackColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        PaixMotion.SetCurrentOn(0, 0);
+        //        this.btn_Current_X.BackColor = Color.Red;
+        //    }
+        //}
+        //private void Btn_servo_X_Click(object sender, EventArgs e)
+        //{
+        //    short nServoOn = PaixMotion.UpdateAxisInfo(0).nServoOn; // CurrentOn 신호 값
+
+        //    if (nServoOn == 0)
+        //    {
+        //        PaixMotion.SetServoOn(0, 1);
+        //        this.btn_Servo_X.BackColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        PaixMotion.SetServoOn(0, 0);
+        //        this.btn_Servo_X.BackColor = Color.Red;
+        //    }
+        //}
+        //private void Btn_Current_Y_Click(object sender, EventArgs e)
+        //{
+        //    short nCurrentOn = PaixMotion.UpdateAxisInfo(1).nCurrentOn; // ServoOn 신호 값
+
+        //    if (nCurrentOn == 0)
+        //    {
+        //        PaixMotion.SetCurrentOn(1, 1);
+        //        this.btn_Current_Y.BackColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        PaixMotion.SetCurrentOn(1, 0);
+        //        this.btn_Current_Y.BackColor = Color.Red;
+        //    }
+        //}
+        //private void Btn_Servo_Y_Click(object sender, EventArgs e)
+        //{
+        //    short nServoOn = PaixMotion.UpdateAxisInfo(1).nServoOn; // ServoOn 신호 값
+
+        //    if (nServoOn == 0)
+        //    {
+        //        PaixMotion.SetServoOn(1, 1);
+        //        this.Btn_Servo_Y.BackColor = Color.Green;
+        //    }
+        //    else
+        //    {
+        //        PaixMotion.SetServoOn(1, 0);
+        //        this.Btn_Servo_Y.BackColor = Color.Red;
+        //    }
+        //}
+
+        private void Init_Btn_Status()
+        {
+            PaixMotion.GetAxesMotionOut(out MotOut);
+
+            if (MotOut.nCurrentOn[0] == 0)
+            {
+                this.btn_Current_X.BackColor = Color.Red;
+            }
+            else
+            {
+                this.btn_Current_X.BackColor = Color.Green;
+            }
+
+            if (MotOut.nCurrentOn[1] == 0)
+            {
+                this.btn_Current_Y.BackColor = Color.Red;
+            }
+            else
+            {
+                this.btn_Current_Y.BackColor = Color.Green;
+            }
+
+            if (MotOut.nServoOn[0] == 0)
+            {
+                this.btn_Servo_X.BackColor = Color.Red;
+            }
+            else
+            {
+                this.btn_Servo_X.BackColor = Color.Green;
+            }
+
+            if (MotOut.nServoOn[1] == 0)
+            {
+                this.Btn_Servo_Y.BackColor = Color.Red;
+            }
+            else
+            {
+                this.Btn_Servo_Y.BackColor = Color.Green;
+            }
+        }
+
+        private void Btn_Save_Config_Click(object sender, EventArgs e)
+        {
+            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+            config.AppSettings.Settings.Remove("texbtox_Start_X");
+            config.AppSettings.Settings.Remove("textbox_Acc_X");
+            config.AppSettings.Settings.Remove("textbox_Dec_X");
+            config.AppSettings.Settings.Remove("textbox_Max_X");
+            config.AppSettings.Settings.Add("textbox_Start_X", Textbox_Start_X.Text);
+            config.AppSettings.Settings.Add("textbox_Acc_X", Textbox_Acc_X.Text);
+            config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
+            config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
+
+
+            config.AppSettings.Settings.Remove("textbox_Start_Y");
+            config.AppSettings.Settings.Remove("textbox_Acc_Y");
+            config.AppSettings.Settings.Remove("textbox_Dec_Y");
+            config.AppSettings.Settings.Remove("textbox_Max_Y");
+            config.AppSettings.Settings.Add("textbox_Start_Y", Textbox_Start_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Acc_Y", Textbox_Acc_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Dec_Y", Textbox_Dec_Y.Text);
+            config.AppSettings.Settings.Add("textbox_Max_Y", Textbox_Max_Y.Text);
+
+            config.AppSettings.Settings.Remove("textbox_Distance_X");
+            config.AppSettings.Settings.Remove("textbox_Distance_Y");
+            config.AppSettings.Settings.Add("textbox_Distance_X", Textbox_Distance_X.Text);
+            config.AppSettings.Settings.Add("textbox_Distance_Y", Textbox_Distance_Y.Text);
+
+
+            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_X");
+            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_Y");
+            config.AppSettings.Settings.Add("textbox_UnitPerPulse_X", textbox_UnitPerPulse_X.Text);
+            config.AppSettings.Settings.Add("textbox_UnitPerPulse_Y", textbox_UnitPerPulse_Y.Text);
+
+
+
+            config.Save(ConfigurationSaveMode.Modified);
+            ConfigurationManager.RefreshSection("appSettings");
+        }
 
 
         #region Logic Setting
@@ -109,24 +326,8 @@ namespace THz_2D_scan
             PaixMotion.SetEncInputMode(1, (short)combobox_Enc_Dir_Y.SelectedIndex);
         }
 
-        #endregion
 
 
-
-        #region Motion Control
-
-        private void Btn_Home_X_Click(object sender, EventArgs e)
-        {
-            PaixMotion.HomeMove(0, 2, 0xF, 0); // Go to Home x-position        }
-//            PaixMotion.HomeMove(0, combobox_Home_Mode_X.SelectedIndex, 2, 0);
-        }
-
-        private void Btn_Home_Y_Click(object sender, EventArgs e)
-        {
-            PaixMotion.HomeMove(1, 2, 0xF, 0); // Go to Home y-position        }
-//            PaixMotion.HomeMove(1, combobox_Home_Mode_Y.SelectedIndex, 2, 0);
-        }
-        #endregion
 
 
 
@@ -248,156 +449,6 @@ namespace THz_2D_scan
             pNmcParaLogic.nAlarm = (short)combobox_Alarm_Y.SelectedIndex;
             pNmcParaLogic.nPulseMode = (short)combobox_Pulse_Mode_Y.SelectedIndex;
         }
-
-
-        private void Btn_current_X_Click(object sender, EventArgs e)
-        {
-            short nCurrentOn = PaixMotion.UpdateAxisInfo(0).nCurrentOn; // CurrentOn 신호 값
-
-            if (nCurrentOn == 0)
-            {
-                PaixMotion.SetCurrentOn(0, 1);
-                this.btn_Current_X.BackColor = Color.Green;
-            }
-            else
-            {
-                PaixMotion.SetCurrentOn(0, 0);
-                this.btn_Current_X.BackColor = Color.Red;
-            }
-        }
-
-
-        private void Btn_servo_X_Click(object sender, EventArgs e)
-        {
-            short nServoOn = PaixMotion.UpdateAxisInfo(0).nServoOn; // CurrentOn 신호 값
-
-            if (nServoOn == 0)
-            {
-                PaixMotion.SetServoOn(0, 1);
-                this.btn_Servo_X.BackColor = Color.Green;
-            }
-            else
-            {
-                PaixMotion.SetServoOn(0, 0);
-                this.btn_Servo_X.BackColor = Color.Red;
-            }
-        }
-
-
-        private void Btn_Current_Y_Click(object sender, EventArgs e)
-        {
-            short nCurrentOn = PaixMotion.UpdateAxisInfo(1).nCurrentOn; // ServoOn 신호 값
-
-            if (nCurrentOn == 0)
-            {
-                PaixMotion.SetCurrentOn(1, 1);
-                this.btn_Current_Y.BackColor = Color.Green;
-            }
-            else
-            {
-                PaixMotion.SetCurrentOn(1, 0);
-                this.btn_Current_Y.BackColor = Color.Red;
-            }
-        }
-
-
-        private void Btn_Servo_Y_Click(object sender, EventArgs e)
-        {
-            short nServoOn = PaixMotion.UpdateAxisInfo(1).nServoOn; // ServoOn 신호 값
-
-            if (nServoOn == 0)
-            {
-                PaixMotion.SetServoOn(1, 1);
-                this.Btn_Servo_Y.BackColor = Color.Green;
-            }
-            else
-            {
-                PaixMotion.SetServoOn(1, 0);
-                this.Btn_Servo_Y.BackColor = Color.Red;
-            }
-        }
-
-
-        private void Init_Btn_Status()
-        {
-            PaixMotion.GetAxesMotionOut(out MotOut);
-                        
-            if (MotOut.nCurrentOn[0] == 0)
-            {
-                this.btn_Current_X.BackColor = Color.Red;
-            }
-            else
-            {
-                this.btn_Current_X.BackColor = Color.Green;
-            }
-
-            if (MotOut.nCurrentOn[1] == 0)
-            {
-                this.btn_Current_Y.BackColor = Color.Red;
-            }
-            else
-            {
-                this.btn_Current_Y.BackColor = Color.Green;
-            }
-
-            if (MotOut.nServoOn[0] == 0)
-            {
-                this.btn_Servo_X.BackColor = Color.Red;
-            }
-            else
-            {
-                this.btn_Servo_X.BackColor = Color.Green;
-            }
-
-            if (MotOut.nServoOn[1] == 0)
-            {
-                this.Btn_Servo_Y.BackColor = Color.Red;
-            }
-            else
-            {
-                this.Btn_Servo_Y.BackColor = Color.Green;
-            }
-        }
-
-        private void Btn_save_config_Click(object sender, EventArgs e)
-        {
-            var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-
-            config.AppSettings.Settings.Remove("texbtox_Start_X");
-            config.AppSettings.Settings.Remove("textbox_Acc_X");
-            config.AppSettings.Settings.Remove("textbox_Dec_X");
-            config.AppSettings.Settings.Remove("textbox_Max_X");
-            config.AppSettings.Settings.Add("textbox_Start_X", Textbox_Start_X.Text);
-            config.AppSettings.Settings.Add("textbox_Acc_X", Textbox_Acc_X.Text);
-            config.AppSettings.Settings.Add("textbox_Dec_X", Textbox_Dec_X.Text);
-            config.AppSettings.Settings.Add("textbox_Max_X", Textbox_Max_X.Text);
-
-
-            config.AppSettings.Settings.Remove("textbox_Start_Y");
-            config.AppSettings.Settings.Remove("textbox_Acc_Y");
-            config.AppSettings.Settings.Remove("textbox_Dec_Y");
-            config.AppSettings.Settings.Remove("textbox_Max_Y");
-            config.AppSettings.Settings.Add("textbox_Start_Y", Textbox_Start_Y.Text);
-            config.AppSettings.Settings.Add("textbox_Acc_Y", Textbox_Acc_Y.Text);
-            config.AppSettings.Settings.Add("textbox_Dec_Y", Textbox_Dec_Y.Text);
-            config.AppSettings.Settings.Add("textbox_Max_Y", Textbox_Max_Y.Text);
-
-            config.AppSettings.Settings.Remove("textbox_Distance_X");
-            config.AppSettings.Settings.Remove("textbox_Distance_Y");
-            config.AppSettings.Settings.Add("textbox_Distance_X", Textbox_Distance_X.Text);
-            config.AppSettings.Settings.Add("textbox_Distance_Y", Textbox_Distance_Y.Text);
-
-
-            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_X");
-            config.AppSettings.Settings.Remove("textbox_UnitPerPulse_Y");
-            config.AppSettings.Settings.Add("textbox_UnitPerPulse_X", textbox_UnitPerPulse_X.Text);
-            config.AppSettings.Settings.Add("textbox_UnitPerPulse_Y", textbox_UnitPerPulse_Y.Text);
-
-
-
-            config.Save(ConfigurationSaveMode.Modified);
-            ConfigurationManager.RefreshSection("appSettings");
-        }
-
+        #endregion
     }
 }

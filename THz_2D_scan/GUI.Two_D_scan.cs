@@ -8,7 +8,6 @@ namespace THz_2D_scan
     {
         Scan _Scan = new Scan();
 
-
         private void ScanThreadStart()
         {
             double[] param = { 
@@ -22,21 +21,14 @@ namespace THz_2D_scan
             Thread _thread = new Thread(new ParameterizedThreadStart(_Scan.Run));
             _thread.Start(param);
         }
-
-
-
-
         private void Btn_Run_Scan_Click(object sender, EventArgs e)
         {
             ScanThreadStart();
         }
-
-
         private void Btn_Stop_Scan_Click(object sender, EventArgs e)
         {
             _Scan.keepScan = false;
         }
-
         private void Btn_Save_Scanrange_Click(object sender, EventArgs e)
         {
             var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
